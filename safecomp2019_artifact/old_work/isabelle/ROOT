@@ -1,0 +1,13 @@
+session reassembly_datatypes = "HOL-Word" +
+  theories MachineDatatypes
+session reassembly_machine = reassembly_datatypes +
+  theories Machine
+
+session reassembly_rewriting = reassembly_machine +
+  theories Memory_Rewriting
+session reassembly_manual_execution = reassembly_rewriting +
+  theories Manual_Execution
+session reassembly_all_execution_debug = reassembly_manual_execution +
+  theories
+    "../x86-64_parser/Leviathan_Setup"
+    "Monads/More_Eisbach_Tools"

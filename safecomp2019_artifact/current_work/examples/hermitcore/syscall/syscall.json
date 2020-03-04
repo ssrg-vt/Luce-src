@@ -1,0 +1,2165 @@
+{
+    "flagData": [
+        {
+            "flags": [
+                "flag_zf"
+            ],
+            "locations": [
+                42,
+                61,
+                417,
+                428,
+                474,
+                576,
+                944,
+                1000,
+                1411,
+                1476,
+                1537,
+                1651,
+                1700,
+                1781,
+                1883,
+                2155,
+                2185,
+                2196,
+                2235,
+                2244,
+                2274,
+                2323,
+                2334,
+                2361,
+                2396,
+                2407,
+                2445,
+                2456,
+                2497,
+                2508,
+                2547,
+                2556,
+                2591,
+                2640,
+                2651,
+                2678,
+                2713,
+                2724,
+                2767,
+                2778,
+                2819,
+                2830,
+                2876,
+                2887
+            ]
+        },
+        {
+            "flags": [
+                "flag_cf",
+                "flag_zf"
+            ],
+            "locations": [
+                194,
+                297,
+                710,
+                884
+            ]
+        },
+        {
+            "flags": [
+                "flag_sf"
+            ],
+            "locations": [
+                170,
+                273,
+                536,
+                641,
+                840,
+                1096,
+                1169,
+                1205,
+                1266,
+                1319,
+                1351,
+                1501,
+                1601,
+                1843,
+                1956,
+                2092
+            ]
+        },
+        {
+            "flags": [
+                "flag_zf",
+                "flag_sf",
+                "flag_of"
+            ],
+            "locations": [
+                890
+            ]
+        },
+        {
+            "flags": [
+                "flag_cf"
+            ],
+            "locations": [
+                1286
+            ]
+        },
+        {
+            "flags": [
+                "flag_sf",
+                "flag_of"
+            ],
+            "locations": [
+                2129
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 0
+                }
+            ],
+            "end": 23,
+            "loopEntries": [],
+            "name": "sys_getpid",
+            "postCallsiteOffsets": [],
+            "start": 0
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    23,
+                    47
+                ],
+                [
+                    49,
+                    63
+                ]
+            ],
+            "cutpoints": [
+                65,
+                83
+            ],
+            "edges": [
+                {
+                    "children": [
+                        65,
+                        49
+                    ],
+                    "vertex": 23
+                },
+                {
+                    "children": [
+                        83
+                    ],
+                    "vertex": 65
+                },
+                {
+                    "children": [
+                        78,
+                        65
+                    ],
+                    "vertex": 49
+                },
+                {
+                    "children": [],
+                    "vertex": 83
+                },
+                {
+                    "children": [
+                        83
+                    ],
+                    "vertex": 78
+                }
+            ],
+            "end": 85,
+            "loopEntries": [],
+            "name": "sys_getprio",
+            "postCallsiteOffsets": [],
+            "start": 23
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 85
+                }
+            ],
+            "end": 103,
+            "loopEntries": [],
+            "name": "sys_setprio",
+            "postCallsiteOffsets": [],
+            "start": 85
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    167,
+                    174
+                ],
+                [
+                    189,
+                    198
+                ]
+            ],
+            "cutpoints": [
+                162,
+                167,
+                204
+            ],
+            "edges": [
+                {
+                    "children": [
+                        129
+                    ],
+                    "vertex": 103
+                },
+                {
+                    "children": [
+                        184,
+                        176
+                    ],
+                    "vertex": 167
+                },
+                {
+                    "children": [
+                        189
+                    ],
+                    "vertex": 176
+                },
+                {
+                    "children": [
+                        204
+                    ],
+                    "vertex": 184
+                },
+                {
+                    "children": [
+                        129,
+                        200
+                    ],
+                    "vertex": 189
+                },
+                {
+                    "children": [],
+                    "vertex": 204
+                },
+                {
+                    "children": [
+                        167
+                    ],
+                    "vertex": 129
+                },
+                {
+                    "children": [
+                        204
+                    ],
+                    "vertex": 200
+                }
+            ],
+            "end": 206,
+            "loopEntries": [
+                129
+            ],
+            "name": "socket_send",
+            "postCallsiteOffsets": [
+                167
+            ],
+            "start": 103
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    270,
+                    277
+                ],
+                [
+                    292,
+                    301
+                ]
+            ],
+            "cutpoints": [
+                265,
+                270,
+                307
+            ],
+            "edges": [
+                {
+                    "children": [
+                        232
+                    ],
+                    "vertex": 206
+                },
+                {
+                    "children": [
+                        287,
+                        279
+                    ],
+                    "vertex": 270
+                },
+                {
+                    "children": [
+                        292
+                    ],
+                    "vertex": 279
+                },
+                {
+                    "children": [
+                        307
+                    ],
+                    "vertex": 287
+                },
+                {
+                    "children": [
+                        232,
+                        303
+                    ],
+                    "vertex": 292
+                },
+                {
+                    "children": [],
+                    "vertex": 307
+                },
+                {
+                    "children": [
+                        270
+                    ],
+                    "vertex": 232
+                },
+                {
+                    "children": [
+                        307
+                    ],
+                    "vertex": 303
+                }
+            ],
+            "end": 309,
+            "loopEntries": [
+                232
+            ],
+            "name": "socket_recv",
+            "postCallsiteOffsets": [
+                270
+            ],
+            "start": 206
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 309
+                }
+            ],
+            "end": 332,
+            "loopEntries": [],
+            "name": "readv",
+            "postCallsiteOffsets": [],
+            "start": 309
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 332
+                }
+            ],
+            "end": 355,
+            "loopEntries": [],
+            "name": "writev",
+            "postCallsiteOffsets": [],
+            "start": 332
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 355
+                }
+            ],
+            "end": 383,
+            "loopEntries": [],
+            "name": "uhyve_send",
+            "postCallsiteOffsets": [],
+            "start": 355
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    383,
+                    431
+                ],
+                [
+                    445,
+                    476
+                ],
+                [
+                    536,
+                    541
+                ],
+                [
+                    576,
+                    578
+                ],
+                [
+                    635,
+                    643
+                ],
+                [
+                    706,
+                    714
+                ],
+                [
+                    834,
+                    845
+                ],
+                [
+                    880,
+                    888
+                ],
+                [
+                    890,
+                    894
+                ],
+                [
+                    940,
+                    953
+                ]
+            ],
+            "cutpoints": [
+                485,
+                490,
+                513,
+                518,
+                531,
+                536,
+                571,
+                576,
+                609,
+                614,
+                621,
+                626,
+                652,
+                657,
+                689,
+                694,
+                723,
+                728,
+                744,
+                749,
+                775,
+                780,
+                829,
+                834,
+                854,
+                859,
+                913,
+                918,
+                924,
+                931,
+                936,
+                940,
+                955,
+                960
+            ],
+            "edges": [
+                {
+                    "children": [
+                        445,
+                        433
+                    ],
+                    "vertex": 383
+                },
+                {
+                    "children": [
+                        571,
+                        478
+                    ],
+                    "vertex": 445
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 433
+                },
+                {
+                    "children": [
+                        576
+                    ],
+                    "vertex": 571
+                },
+                {
+                    "children": [
+                        490
+                    ],
+                    "vertex": 478
+                },
+                {
+                    "children": [
+                        960,
+                        955
+                    ],
+                    "vertex": 940
+                },
+                {
+                    "children": [],
+                    "vertex": 960
+                },
+                {
+                    "children": [],
+                    "vertex": 955
+                },
+                {
+                    "children": [
+                        635,
+                        580
+                    ],
+                    "vertex": 576
+                },
+                {
+                    "children": [
+                        737,
+                        645
+                    ],
+                    "vertex": 635
+                },
+                {
+                    "children": [
+                        614
+                    ],
+                    "vertex": 580
+                },
+                {
+                    "children": [
+                        749
+                    ],
+                    "vertex": 737
+                },
+                {
+                    "children": [
+                        657
+                    ],
+                    "vertex": 645
+                },
+                {
+                    "children": [
+                        518
+                    ],
+                    "vertex": 490
+                },
+                {
+                    "children": [
+                        626
+                    ],
+                    "vertex": 614
+                },
+                {
+                    "children": [
+                        536
+                    ],
+                    "vertex": 518
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 626
+                },
+                {
+                    "children": [
+                        780
+                    ],
+                    "vertex": 749
+                },
+                {
+                    "children": [
+                        706
+                    ],
+                    "vertex": 657
+                },
+                {
+                    "children": [
+                        667,
+                        716
+                    ],
+                    "vertex": 706
+                },
+                {
+                    "children": [
+                        728
+                    ],
+                    "vertex": 716
+                },
+                {
+                    "children": [
+                        694
+                    ],
+                    "vertex": 667
+                },
+                {
+                    "children": [
+                        562,
+                        543
+                    ],
+                    "vertex": 536
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 562
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 543
+                },
+                {
+                    "children": [
+                        880
+                    ],
+                    "vertex": 780
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 728
+                },
+                {
+                    "children": [
+                        790,
+                        890
+                    ],
+                    "vertex": 880
+                },
+                {
+                    "children": [
+                        924,
+                        896
+                    ],
+                    "vertex": 890
+                },
+                {
+                    "children": [
+                        834
+                    ],
+                    "vertex": 790
+                },
+                {
+                    "children": [
+                        936
+                    ],
+                    "vertex": 924
+                },
+                {
+                    "children": [
+                        918
+                    ],
+                    "vertex": 896
+                },
+                {
+                    "children": [
+                        865,
+                        847
+                    ],
+                    "vertex": 834
+                },
+                {
+                    "children": [
+                        859
+                    ],
+                    "vertex": 847
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 859
+                },
+                {
+                    "children": [
+                        940
+                    ],
+                    "vertex": 936
+                },
+                {
+                    "children": [
+                        706
+                    ],
+                    "vertex": 694
+                },
+                {
+                    "children": [
+                        880
+                    ],
+                    "vertex": 865
+                },
+                {
+                    "children": [
+                        924
+                    ],
+                    "vertex": 918
+                }
+            ],
+            "end": 962,
+            "loopEntries": [
+                880,
+                706
+            ],
+            "name": "sys_write",
+            "postCallsiteOffsets": [
+                490,
+                518,
+                536,
+                576,
+                614,
+                626,
+                657,
+                694,
+                728,
+                749,
+                780,
+                834,
+                859,
+                918,
+                936,
+                960
+            ],
+            "start": 383
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    1000,
+                    1002
+                ],
+                [
+                    1090,
+                    1098
+                ],
+                [
+                    1163,
+                    1171
+                ],
+                [
+                    1199,
+                    1207
+                ],
+                [
+                    1260,
+                    1268
+                ],
+                [
+                    1276,
+                    1289
+                ],
+                [
+                    1313,
+                    1321
+                ],
+                [
+                    1345,
+                    1353
+                ],
+                [
+                    1407,
+                    1420
+                ]
+            ],
+            "cutpoints": [
+                995,
+                1000,
+                1011,
+                1016,
+                1046,
+                1051,
+                1058,
+                1063,
+                1085,
+                1090,
+                1128,
+                1133,
+                1158,
+                1163,
+                1194,
+                1199,
+                1255,
+                1260,
+                1308,
+                1313,
+                1340,
+                1345,
+                1372,
+                1377,
+                1392,
+                1399,
+                1404,
+                1407,
+                1422,
+                1427
+            ],
+            "edges": [
+                {
+                    "children": [
+                        1000
+                    ],
+                    "vertex": 962
+                },
+                {
+                    "children": [
+                        1071,
+                        1004
+                    ],
+                    "vertex": 1000
+                },
+                {
+                    "children": [
+                        1090
+                    ],
+                    "vertex": 1071
+                },
+                {
+                    "children": [
+                        1016
+                    ],
+                    "vertex": 1004
+                },
+                {
+                    "children": [
+                        1051
+                    ],
+                    "vertex": 1016
+                },
+                {
+                    "children": [
+                        1112,
+                        1100
+                    ],
+                    "vertex": 1090
+                },
+                {
+                    "children": [
+                        1063
+                    ],
+                    "vertex": 1051
+                },
+                {
+                    "children": [
+                        1133
+                    ],
+                    "vertex": 1112
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1100
+                },
+                {
+                    "children": [
+                        1404
+                    ],
+                    "vertex": 1392
+                },
+                {
+                    "children": [
+                        1407
+                    ],
+                    "vertex": 1063
+                },
+                {
+                    "children": [
+                        1163
+                    ],
+                    "vertex": 1133
+                },
+                {
+                    "children": [
+                        1427,
+                        1422
+                    ],
+                    "vertex": 1407
+                },
+                {
+                    "children": [],
+                    "vertex": 1427
+                },
+                {
+                    "children": [],
+                    "vertex": 1422
+                },
+                {
+                    "children": [
+                        1379,
+                        1177
+                    ],
+                    "vertex": 1163
+                },
+                {
+                    "children": [
+                        1199
+                    ],
+                    "vertex": 1177
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1379
+                },
+                {
+                    "children": [
+                        1382,
+                        1213
+                    ],
+                    "vertex": 1199
+                },
+                {
+                    "children": [
+                        1276
+                    ],
+                    "vertex": 1213
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1382
+                },
+                {
+                    "children": [
+                        1222,
+                        1291
+                    ],
+                    "vertex": 1276
+                },
+                {
+                    "children": [
+                        1260
+                    ],
+                    "vertex": 1222
+                },
+                {
+                    "children": [
+                        1313
+                    ],
+                    "vertex": 1291
+                },
+                {
+                    "children": [
+                        1388,
+                        1323
+                    ],
+                    "vertex": 1313
+                },
+                {
+                    "children": [
+                        1345
+                    ],
+                    "vertex": 1323
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1388
+                },
+                {
+                    "children": [
+                        1391,
+                        1355
+                    ],
+                    "vertex": 1345
+                },
+                {
+                    "children": [
+                        1377
+                    ],
+                    "vertex": 1355
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1377
+                },
+                {
+                    "children": [
+                        1385,
+                        1270
+                    ],
+                    "vertex": 1260
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1385
+                },
+                {
+                    "children": [
+                        1392
+                    ],
+                    "vertex": 1391
+                },
+                {
+                    "children": [
+                        1407
+                    ],
+                    "vertex": 1404
+                },
+                {
+                    "children": [
+                        1276
+                    ],
+                    "vertex": 1270
+                }
+            ],
+            "end": 1429,
+            "loopEntries": [
+                1276
+            ],
+            "name": "sys_open",
+            "postCallsiteOffsets": [
+                1000,
+                1016,
+                1051,
+                1063,
+                1090,
+                1133,
+                1163,
+                1199,
+                1260,
+                1313,
+                1345,
+                1377,
+                1404,
+                1427
+            ],
+            "start": 962
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    1429,
+                    1478
+                ],
+                [
+                    1495,
+                    1503
+                ],
+                [
+                    1537,
+                    1539
+                ],
+                [
+                    1595,
+                    1603
+                ],
+                [
+                    1645,
+                    1654
+                ],
+                [
+                    1696,
+                    1709
+                ]
+            ],
+            "cutpoints": [
+                1490,
+                1495,
+                1532,
+                1537,
+                1561,
+                1566,
+                1573,
+                1578,
+                1590,
+                1595,
+                1640,
+                1645,
+                1673,
+                1678,
+                1681,
+                1688,
+                1693,
+                1696,
+                1711,
+                1716
+            ],
+            "edges": [
+                {
+                    "children": [
+                        1532,
+                        1480
+                    ],
+                    "vertex": 1429
+                },
+                {
+                    "children": [
+                        1537
+                    ],
+                    "vertex": 1532
+                },
+                {
+                    "children": [
+                        1495
+                    ],
+                    "vertex": 1480
+                },
+                {
+                    "children": [
+                        1583,
+                        1541
+                    ],
+                    "vertex": 1537
+                },
+                {
+                    "children": [
+                        1522,
+                        1505
+                    ],
+                    "vertex": 1495
+                },
+                {
+                    "children": [
+                        1595
+                    ],
+                    "vertex": 1583
+                },
+                {
+                    "children": [
+                        1566
+                    ],
+                    "vertex": 1541
+                },
+                {
+                    "children": [
+                        1696
+                    ],
+                    "vertex": 1522
+                },
+                {
+                    "children": [
+                        1696
+                    ],
+                    "vertex": 1505
+                },
+                {
+                    "children": [
+                        1716,
+                        1711
+                    ],
+                    "vertex": 1696
+                },
+                {
+                    "children": [
+                        1578
+                    ],
+                    "vertex": 1566
+                },
+                {
+                    "children": [],
+                    "vertex": 1716
+                },
+                {
+                    "children": [],
+                    "vertex": 1711
+                },
+                {
+                    "children": [
+                        1614,
+                        1605
+                    ],
+                    "vertex": 1595
+                },
+                {
+                    "children": [
+                        1696
+                    ],
+                    "vertex": 1578
+                },
+                {
+                    "children": [
+                        1645
+                    ],
+                    "vertex": 1614
+                },
+                {
+                    "children": [
+                        1681
+                    ],
+                    "vertex": 1605
+                },
+                {
+                    "children": [
+                        1693
+                    ],
+                    "vertex": 1681
+                },
+                {
+                    "children": [
+                        1680,
+                        1656
+                    ],
+                    "vertex": 1645
+                },
+                {
+                    "children": [
+                        1678
+                    ],
+                    "vertex": 1656
+                },
+                {
+                    "children": [
+                        1681
+                    ],
+                    "vertex": 1678
+                },
+                {
+                    "children": [
+                        1696
+                    ],
+                    "vertex": 1693
+                },
+                {
+                    "children": [
+                        1681
+                    ],
+                    "vertex": 1680
+                }
+            ],
+            "end": 1718,
+            "loopEntries": [],
+            "name": "sys_close",
+            "postCallsiteOffsets": [
+                1495,
+                1537,
+                1566,
+                1578,
+                1595,
+                1645,
+                1678,
+                1693,
+                1716
+            ],
+            "start": 1429
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    1718,
+                    1783
+                ],
+                [
+                    1843,
+                    1848
+                ],
+                [
+                    1883,
+                    1885
+                ],
+                [
+                    1950,
+                    1958
+                ],
+                [
+                    2086,
+                    2097
+                ],
+                [
+                    2125,
+                    2133
+                ],
+                [
+                    2151,
+                    2164
+                ]
+            ],
+            "cutpoints": [
+                1792,
+                1797,
+                1820,
+                1825,
+                1838,
+                1843,
+                1878,
+                1883,
+                1924,
+                1929,
+                1936,
+                1941,
+                1979,
+                1984,
+                2010,
+                2015,
+                2032,
+                2037,
+                2081,
+                2086,
+                2106,
+                2111,
+                2142,
+                2147,
+                2151,
+                2166,
+                2171
+            ],
+            "edges": [
+                {
+                    "children": [
+                        1878,
+                        1785
+                    ],
+                    "vertex": 1718
+                },
+                {
+                    "children": [
+                        1883
+                    ],
+                    "vertex": 1878
+                },
+                {
+                    "children": [
+                        1797
+                    ],
+                    "vertex": 1785
+                },
+                {
+                    "children": [
+                        1950,
+                        1887
+                    ],
+                    "vertex": 1883
+                },
+                {
+                    "children": [
+                        1972,
+                        1960
+                    ],
+                    "vertex": 1950
+                },
+                {
+                    "children": [
+                        1929
+                    ],
+                    "vertex": 1887
+                },
+                {
+                    "children": [
+                        1984
+                    ],
+                    "vertex": 1972
+                },
+                {
+                    "children": [
+                        2151
+                    ],
+                    "vertex": 1960
+                },
+                {
+                    "children": [
+                        1825
+                    ],
+                    "vertex": 1797
+                },
+                {
+                    "children": [
+                        2171,
+                        2166
+                    ],
+                    "vertex": 2151
+                },
+                {
+                    "children": [
+                        1941
+                    ],
+                    "vertex": 1929
+                },
+                {
+                    "children": [],
+                    "vertex": 2171
+                },
+                {
+                    "children": [],
+                    "vertex": 2166
+                },
+                {
+                    "children": [
+                        1843
+                    ],
+                    "vertex": 1825
+                },
+                {
+                    "children": [
+                        2151
+                    ],
+                    "vertex": 1941
+                },
+                {
+                    "children": [
+                        2015
+                    ],
+                    "vertex": 1984
+                },
+                {
+                    "children": [
+                        1869,
+                        1850
+                    ],
+                    "vertex": 1843
+                },
+                {
+                    "children": [
+                        2151
+                    ],
+                    "vertex": 1869
+                },
+                {
+                    "children": [
+                        2151
+                    ],
+                    "vertex": 1850
+                },
+                {
+                    "children": [
+                        2037
+                    ],
+                    "vertex": 2015
+                },
+                {
+                    "children": [
+                        2125
+                    ],
+                    "vertex": 2037
+                },
+                {
+                    "children": [
+                        2047,
+                        2135
+                    ],
+                    "vertex": 2125
+                },
+                {
+                    "children": [
+                        2086
+                    ],
+                    "vertex": 2047
+                },
+                {
+                    "children": [
+                        2147
+                    ],
+                    "vertex": 2135
+                },
+                {
+                    "children": [
+                        2117,
+                        2099
+                    ],
+                    "vertex": 2086
+                },
+                {
+                    "children": [
+                        2111
+                    ],
+                    "vertex": 2099
+                },
+                {
+                    "children": [
+                        2151
+                    ],
+                    "vertex": 2111
+                },
+                {
+                    "children": [
+                        2151
+                    ],
+                    "vertex": 2147
+                },
+                {
+                    "children": [
+                        2125
+                    ],
+                    "vertex": 2117
+                }
+            ],
+            "end": 2173,
+            "loopEntries": [
+                2125
+            ],
+            "name": "sys_read",
+            "postCallsiteOffsets": [
+                1797,
+                1825,
+                1843,
+                1883,
+                1929,
+                1941,
+                1984,
+                2015,
+                2037,
+                2086,
+                2111,
+                2147,
+                2171
+            ],
+            "start": 1718
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2173,
+                    2199
+                ],
+                [
+                    2218,
+                    2247
+                ],
+                [
+                    2271,
+                    2278
+                ]
+            ],
+            "cutpoints": [
+                2213,
+                2218,
+                2266,
+                2271,
+                2290,
+                2295,
+                2306,
+                2309
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2208,
+                        2201
+                    ],
+                    "vertex": 2173
+                },
+                {
+                    "children": [
+                        2218
+                    ],
+                    "vertex": 2208
+                },
+                {
+                    "children": [
+                        2309
+                    ],
+                    "vertex": 2201
+                },
+                {
+                    "children": [],
+                    "vertex": 2309
+                },
+                {
+                    "children": [
+                        2256,
+                        2249
+                    ],
+                    "vertex": 2218
+                },
+                {
+                    "children": [
+                        2271
+                    ],
+                    "vertex": 2256
+                },
+                {
+                    "children": [
+                        2309
+                    ],
+                    "vertex": 2249
+                },
+                {
+                    "children": [
+                        2306,
+                        2280
+                    ],
+                    "vertex": 2271
+                },
+                {
+                    "children": [
+                        2295
+                    ],
+                    "vertex": 2280
+                },
+                {
+                    "children": [
+                        2309
+                    ],
+                    "vertex": 2306
+                },
+                {
+                    "children": [
+                        2306
+                    ],
+                    "vertex": 2295
+                }
+            ],
+            "end": 2311,
+            "loopEntries": [],
+            "name": "sys_spinlock_init",
+            "postCallsiteOffsets": [
+                2218,
+                2271,
+                2295
+            ],
+            "start": 2173
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2311,
+                    2337
+                ],
+                [
+                    2358,
+                    2365
+                ]
+            ],
+            "cutpoints": [
+                2353,
+                2358,
+                2374,
+                2379,
+                2382
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2346,
+                        2339
+                    ],
+                    "vertex": 2311
+                },
+                {
+                    "children": [
+                        2358
+                    ],
+                    "vertex": 2346
+                },
+                {
+                    "children": [
+                        2382
+                    ],
+                    "vertex": 2339
+                },
+                {
+                    "children": [],
+                    "vertex": 2382
+                },
+                {
+                    "children": [
+                        2379,
+                        2367
+                    ],
+                    "vertex": 2358
+                },
+                {
+                    "children": [
+                        2379
+                    ],
+                    "vertex": 2367
+                },
+                {
+                    "children": [
+                        2382
+                    ],
+                    "vertex": 2379
+                }
+            ],
+            "end": 2384,
+            "loopEntries": [],
+            "name": "sys_spinlock_destroy",
+            "postCallsiteOffsets": [
+                2358,
+                2379
+            ],
+            "start": 2311
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2384,
+                    2410
+                ]
+            ],
+            "cutpoints": [
+                2426,
+                2431
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2419,
+                        2412
+                    ],
+                    "vertex": 2384
+                },
+                {
+                    "children": [
+                        2431
+                    ],
+                    "vertex": 2419
+                },
+                {
+                    "children": [
+                        2431
+                    ],
+                    "vertex": 2412
+                },
+                {
+                    "children": [],
+                    "vertex": 2431
+                }
+            ],
+            "end": 2433,
+            "loopEntries": [],
+            "name": "sys_spinlock_lock",
+            "postCallsiteOffsets": [
+                2431
+            ],
+            "start": 2384
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2433,
+                    2459
+                ]
+            ],
+            "cutpoints": [
+                2475,
+                2480
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2468,
+                        2461
+                    ],
+                    "vertex": 2433
+                },
+                {
+                    "children": [
+                        2480
+                    ],
+                    "vertex": 2468
+                },
+                {
+                    "children": [
+                        2480
+                    ],
+                    "vertex": 2461
+                },
+                {
+                    "children": [],
+                    "vertex": 2480
+                }
+            ],
+            "end": 2482,
+            "loopEntries": [],
+            "name": "sys_spinlock_unlock",
+            "postCallsiteOffsets": [
+                2480
+            ],
+            "start": 2433
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2482,
+                    2511
+                ],
+                [
+                    2530,
+                    2559
+                ],
+                [
+                    2588,
+                    2595
+                ]
+            ],
+            "cutpoints": [
+                2525,
+                2530,
+                2583,
+                2588,
+                2607,
+                2612,
+                2623,
+                2626
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2520,
+                        2513
+                    ],
+                    "vertex": 2482
+                },
+                {
+                    "children": [
+                        2530
+                    ],
+                    "vertex": 2520
+                },
+                {
+                    "children": [
+                        2626
+                    ],
+                    "vertex": 2513
+                },
+                {
+                    "children": [],
+                    "vertex": 2626
+                },
+                {
+                    "children": [
+                        2568,
+                        2561
+                    ],
+                    "vertex": 2530
+                },
+                {
+                    "children": [
+                        2588
+                    ],
+                    "vertex": 2568
+                },
+                {
+                    "children": [
+                        2626
+                    ],
+                    "vertex": 2561
+                },
+                {
+                    "children": [
+                        2623,
+                        2597
+                    ],
+                    "vertex": 2588
+                },
+                {
+                    "children": [
+                        2612
+                    ],
+                    "vertex": 2597
+                },
+                {
+                    "children": [
+                        2626
+                    ],
+                    "vertex": 2623
+                },
+                {
+                    "children": [
+                        2623
+                    ],
+                    "vertex": 2612
+                }
+            ],
+            "end": 2628,
+            "loopEntries": [],
+            "name": "sys_sem_init",
+            "postCallsiteOffsets": [
+                2530,
+                2588,
+                2612
+            ],
+            "start": 2482
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2628,
+                    2654
+                ],
+                [
+                    2675,
+                    2682
+                ]
+            ],
+            "cutpoints": [
+                2670,
+                2675,
+                2691,
+                2696,
+                2699
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2663,
+                        2656
+                    ],
+                    "vertex": 2628
+                },
+                {
+                    "children": [
+                        2675
+                    ],
+                    "vertex": 2663
+                },
+                {
+                    "children": [
+                        2699
+                    ],
+                    "vertex": 2656
+                },
+                {
+                    "children": [],
+                    "vertex": 2699
+                },
+                {
+                    "children": [
+                        2696,
+                        2684
+                    ],
+                    "vertex": 2675
+                },
+                {
+                    "children": [
+                        2696
+                    ],
+                    "vertex": 2684
+                },
+                {
+                    "children": [
+                        2699
+                    ],
+                    "vertex": 2696
+                }
+            ],
+            "end": 2701,
+            "loopEntries": [],
+            "name": "sys_sem_destroy",
+            "postCallsiteOffsets": [
+                2675,
+                2696
+            ],
+            "start": 2628
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2701,
+                    2727
+                ]
+            ],
+            "cutpoints": [
+                2748,
+                2753
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2736,
+                        2729
+                    ],
+                    "vertex": 2701
+                },
+                {
+                    "children": [
+                        2753
+                    ],
+                    "vertex": 2736
+                },
+                {
+                    "children": [
+                        2753
+                    ],
+                    "vertex": 2729
+                },
+                {
+                    "children": [],
+                    "vertex": 2753
+                }
+            ],
+            "end": 2755,
+            "loopEntries": [],
+            "name": "sys_sem_wait",
+            "postCallsiteOffsets": [
+                2753
+            ],
+            "start": 2701
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2755,
+                    2781
+                ]
+            ],
+            "cutpoints": [
+                2797,
+                2802
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2790,
+                        2783
+                    ],
+                    "vertex": 2755
+                },
+                {
+                    "children": [
+                        2802
+                    ],
+                    "vertex": 2790
+                },
+                {
+                    "children": [
+                        2802
+                    ],
+                    "vertex": 2783
+                },
+                {
+                    "children": [],
+                    "vertex": 2802
+                }
+            ],
+            "end": 2804,
+            "loopEntries": [],
+            "name": "sys_sem_post",
+            "postCallsiteOffsets": [
+                2802
+            ],
+            "start": 2755
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2804,
+                    2833
+                ]
+            ],
+            "cutpoints": [
+                2854,
+                2859
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2842,
+                        2835
+                    ],
+                    "vertex": 2804
+                },
+                {
+                    "children": [
+                        2859
+                    ],
+                    "vertex": 2842
+                },
+                {
+                    "children": [
+                        2859
+                    ],
+                    "vertex": 2835
+                },
+                {
+                    "children": [],
+                    "vertex": 2859
+                }
+            ],
+            "end": 2861,
+            "loopEntries": [],
+            "name": "sys_sem_timedwait",
+            "postCallsiteOffsets": [
+                2859
+            ],
+            "start": 2804
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2861,
+                    2890
+                ]
+            ],
+            "cutpoints": [
+                2911,
+                2916
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2899,
+                        2892
+                    ],
+                    "vertex": 2861
+                },
+                {
+                    "children": [
+                        2916
+                    ],
+                    "vertex": 2899
+                },
+                {
+                    "children": [
+                        2916
+                    ],
+                    "vertex": 2892
+                },
+                {
+                    "children": [],
+                    "vertex": 2916
+                }
+            ],
+            "end": 2918,
+            "loopEntries": [],
+            "name": "sys_sem_cancelablewait",
+            "postCallsiteOffsets": [
+                2916
+            ],
+            "start": 2861
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [
+                2967,
+                2972
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2972
+                    ],
+                    "vertex": 2918
+                },
+                {
+                    "children": [],
+                    "vertex": 2972
+                }
+            ],
+            "end": 2974,
+            "loopEntries": [],
+            "name": "sys_clone",
+            "postCallsiteOffsets": [
+                2972
+            ],
+            "start": 2918
+        }
+    ]
+}

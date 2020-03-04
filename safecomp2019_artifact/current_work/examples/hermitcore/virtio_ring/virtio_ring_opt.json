@@ -1,0 +1,59 @@
+{
+    "flagData": [
+        {
+            "flags": [
+                "flag_cf"
+            ],
+            "locations": [
+                72
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 3
+                }
+            ],
+            "end": 46,
+            "loopEntries": [],
+            "name": "vring_init",
+            "postCallsiteOffsets": [],
+            "start": 3
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 46
+                }
+            ],
+            "end": 63,
+            "loopEntries": [],
+            "name": "vring_size",
+            "postCallsiteOffsets": [],
+            "start": 46
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 63
+                }
+            ],
+            "end": 82,
+            "loopEntries": [],
+            "name": "vring_need_event",
+            "postCallsiteOffsets": [],
+            "start": 63
+        }
+    ]
+}

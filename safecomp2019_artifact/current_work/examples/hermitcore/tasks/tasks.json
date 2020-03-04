@@ -1,0 +1,758 @@
+{
+    "flagData": [
+        {
+            "flags": [
+                "flag_zf"
+            ],
+            "locations": [
+                20,
+                53,
+                86,
+                115,
+                151,
+                162,
+                171,
+                182,
+                195,
+                325,
+                336,
+                366,
+                396,
+                752,
+                859,
+                870,
+                892,
+                934,
+                942,
+                1012,
+                1021,
+                1162,
+                1261,
+                1689,
+                1758,
+                1822,
+                1831,
+                2162
+            ]
+        },
+        {
+            "flags": [
+                "flag_cf",
+                "flag_zf"
+            ],
+            "locations": [
+                882,
+                1652,
+                1777
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "blockAddrsToConditionals": [
+                [
+                    0,
+                    23
+                ],
+                [
+                    45,
+                    56
+                ],
+                [
+                    78,
+                    90
+                ],
+                [
+                    108,
+                    119
+                ]
+            ],
+            "cutpoints": [
+                45,
+                78,
+                108,
+                136
+            ],
+            "edges": [
+                {
+                    "children": [
+                        45,
+                        25
+                    ],
+                    "vertex": 0
+                },
+                {
+                    "children": [
+                        78,
+                        58
+                    ],
+                    "vertex": 45
+                },
+                {
+                    "children": [
+                        108,
+                        92
+                    ],
+                    "vertex": 78
+                },
+                {
+                    "children": [
+                        136,
+                        121
+                    ],
+                    "vertex": 108
+                },
+                {
+                    "children": [],
+                    "vertex": 136
+                },
+                {
+                    "children": [
+                        45
+                    ],
+                    "vertex": 25
+                },
+                {
+                    "children": [
+                        78
+                    ],
+                    "vertex": 58
+                },
+                {
+                    "children": [
+                        108
+                    ],
+                    "vertex": 92
+                },
+                {
+                    "children": [
+                        136
+                    ],
+                    "vertex": 121
+                }
+            ],
+            "end": 139,
+            "loopEntries": [],
+            "name": "task_list_remove_task",
+            "postCallsiteOffsets": [],
+            "start": 0
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    139,
+                    165
+                ],
+                [
+                    171,
+                    185
+                ],
+                [
+                    187,
+                    198
+                ]
+            ],
+            "cutpoints": [
+                314,
+                315
+            ],
+            "edges": [
+                {
+                    "children": [
+                        314,
+                        171
+                    ],
+                    "vertex": 139
+                },
+                {
+                    "children": [
+                        314,
+                        187
+                    ],
+                    "vertex": 171
+                },
+                {
+                    "children": [
+                        258,
+                        200
+                    ],
+                    "vertex": 187
+                },
+                {
+                    "children": [
+                        315
+                    ],
+                    "vertex": 258
+                },
+                {
+                    "children": [
+                        315
+                    ],
+                    "vertex": 200
+                },
+                {
+                    "children": [],
+                    "vertex": 315
+                },
+                {
+                    "children": [
+                        315
+                    ],
+                    "vertex": 314
+                }
+            ],
+            "end": 317,
+            "loopEntries": [],
+            "name": "task_list_push_back",
+            "postCallsiteOffsets": [],
+            "start": 139
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    317,
+                    339
+                ],
+                [
+                    348,
+                    369
+                ],
+                [
+                    371,
+                    399
+                ]
+            ],
+            "cutpoints": [
+                430,
+                462
+            ],
+            "edges": [
+                {
+                    "children": [
+                        348,
+                        341
+                    ],
+                    "vertex": 317
+                },
+                {
+                    "children": [
+                        430,
+                        371
+                    ],
+                    "vertex": 348
+                },
+                {
+                    "children": [
+                        462
+                    ],
+                    "vertex": 341
+                },
+                {
+                    "children": [
+                        418,
+                        401
+                    ],
+                    "vertex": 371
+                },
+                {
+                    "children": [],
+                    "vertex": 462
+                },
+                {
+                    "children": [
+                        430
+                    ],
+                    "vertex": 401
+                },
+                {
+                    "children": [
+                        462
+                    ],
+                    "vertex": 430
+                },
+                {
+                    "children": [
+                        430
+                    ],
+                    "vertex": 418
+                }
+            ],
+            "end": 464,
+            "loopEntries": [],
+            "name": "task_list_pop_front",
+            "postCallsiteOffsets": [],
+            "start": 317
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [
+                555,
+                560
+            ],
+            "edges": [
+                {
+                    "children": [
+                        560
+                    ],
+                    "vertex": 464
+                },
+                {
+                    "children": [],
+                    "vertex": 560
+                }
+            ],
+            "end": 649,
+            "loopEntries": [],
+            "name": "readyqueues_push_back",
+            "postCallsiteOffsets": [
+                560
+            ],
+            "start": 464
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    745,
+                    755
+                ]
+            ],
+            "cutpoints": [
+                740,
+                745,
+                845
+            ],
+            "edges": [
+                {
+                    "children": [
+                        745
+                    ],
+                    "vertex": 649
+                },
+                {
+                    "children": [
+                        845,
+                        757
+                    ],
+                    "vertex": 745
+                },
+                {
+                    "children": [],
+                    "vertex": 845
+                },
+                {
+                    "children": [
+                        845
+                    ],
+                    "vertex": 757
+                }
+            ],
+            "end": 848,
+            "loopEntries": [],
+            "name": "readyqueues_remove",
+            "postCallsiteOffsets": [
+                745
+            ],
+            "start": 649
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    848,
+                    873
+                ],
+                [
+                    882,
+                    895
+                ],
+                [
+                    904,
+                    945
+                ]
+            ],
+            "cutpoints": [
+                993
+            ],
+            "edges": [
+                {
+                    "children": [
+                        882,
+                        875
+                    ],
+                    "vertex": 848
+                },
+                {
+                    "children": [
+                        904,
+                        897
+                    ],
+                    "vertex": 882
+                },
+                {
+                    "children": [
+                        993
+                    ],
+                    "vertex": 875
+                },
+                {
+                    "children": [
+                        954,
+                        947
+                    ],
+                    "vertex": 904
+                },
+                {
+                    "children": [
+                        993
+                    ],
+                    "vertex": 897
+                },
+                {
+                    "children": [],
+                    "vertex": 993
+                },
+                {
+                    "children": [
+                        993
+                    ],
+                    "vertex": 947
+                },
+                {
+                    "children": [
+                        993
+                    ],
+                    "vertex": 954
+                }
+            ],
+            "end": 995,
+            "loopEntries": [],
+            "name": "get_task",
+            "postCallsiteOffsets": [],
+            "start": 848
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    995,
+                    1024
+                ]
+            ],
+            "cutpoints": [
+                1119
+            ],
+            "edges": [
+                {
+                    "children": [
+                        1033,
+                        1026
+                    ],
+                    "vertex": 995
+                },
+                {
+                    "children": [
+                        1119
+                    ],
+                    "vertex": 1026
+                },
+                {
+                    "children": [],
+                    "vertex": 1119
+                },
+                {
+                    "children": [
+                        1119
+                    ],
+                    "vertex": 1033
+                }
+            ],
+            "end": 1121,
+            "loopEntries": [],
+            "name": "multitasking_init",
+            "postCallsiteOffsets": [],
+            "start": 995
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 1121
+                }
+            ],
+            "end": 1172,
+            "loopEntries": [],
+            "name": "is_task_available",
+            "postCallsiteOffsets": [],
+            "start": 1121
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [],
+            "edges": [
+                {
+                    "children": [],
+                    "vertex": 1172
+                }
+            ],
+            "end": 1185,
+            "loopEntries": [],
+            "name": "get_readyqueue",
+            "postCallsiteOffsets": [],
+            "start": 1172
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    1231,
+                    1263
+                ],
+                [
+                    1652,
+                    1656
+                ]
+            ],
+            "cutpoints": [
+                1214,
+                1219,
+                1662,
+                1669,
+                1674
+            ],
+            "edges": [
+                {
+                    "children": [
+                        1219
+                    ],
+                    "vertex": 1185
+                },
+                {
+                    "children": [
+                        1652
+                    ],
+                    "vertex": 1219
+                },
+                {
+                    "children": [
+                        1231,
+                        1662
+                    ],
+                    "vertex": 1652
+                },
+                {
+                    "children": [
+                        1648,
+                        1269
+                    ],
+                    "vertex": 1231
+                },
+                {
+                    "children": [
+                        1674
+                    ],
+                    "vertex": 1662
+                },
+                {
+                    "children": [
+                        1662
+                    ],
+                    "vertex": 1269
+                },
+                {
+                    "children": [],
+                    "vertex": 1674
+                },
+                {
+                    "children": [
+                        1652
+                    ],
+                    "vertex": 1648
+                }
+            ],
+            "end": 1679,
+            "loopEntries": [
+                1652
+            ],
+            "name": "set_idle_task",
+            "postCallsiteOffsets": [
+                1219,
+                1674
+            ],
+            "start": 1185
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    1679,
+                    1691
+                ],
+                [
+                    1722,
+                    1761
+                ],
+                [
+                    1777,
+                    1781
+                ],
+                [
+                    1786,
+                    1834
+                ]
+            ],
+            "cutpoints": [
+                1703,
+                1786,
+                1849
+            ],
+            "edges": [
+                {
+                    "children": [
+                        1703,
+                        1693
+                    ],
+                    "vertex": 1679
+                },
+                {
+                    "children": [
+                        1777
+                    ],
+                    "vertex": 1703
+                },
+                {
+                    "children": [
+                        1722,
+                        1783
+                    ],
+                    "vertex": 1777
+                },
+                {
+                    "children": [
+                        1785,
+                        1763
+                    ],
+                    "vertex": 1722
+                },
+                {
+                    "children": [
+                        1786
+                    ],
+                    "vertex": 1783
+                },
+                {
+                    "children": [
+                        1843,
+                        1836
+                    ],
+                    "vertex": 1786
+                },
+                {
+                    "children": [
+                        1849
+                    ],
+                    "vertex": 1836
+                },
+                {
+                    "children": [],
+                    "vertex": 1849
+                },
+                {
+                    "children": [
+                        1703
+                    ],
+                    "vertex": 1693
+                },
+                {
+                    "children": [
+                        1777
+                    ],
+                    "vertex": 1763
+                },
+                {
+                    "children": [
+                        1786
+                    ],
+                    "vertex": 1785
+                },
+                {
+                    "children": [
+                        1849
+                    ],
+                    "vertex": 1843
+                }
+            ],
+            "end": 1851,
+            "loopEntries": [
+                1777
+            ],
+            "name": "get_next_core_id",
+            "postCallsiteOffsets": [],
+            "start": 1679
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [
+                2147,
+                2152
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2152
+                    ],
+                    "vertex": 2132
+                },
+                {
+                    "children": [],
+                    "vertex": 2152
+                }
+            ],
+            "end": 2154,
+            "loopEntries": [],
+            "name": "block_current_task",
+            "postCallsiteOffsets": [
+                2152
+            ],
+            "start": 2132
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    2154,
+                    2167
+                ]
+            ],
+            "cutpoints": [
+                2192
+            ],
+            "edges": [
+                {
+                    "children": [
+                        2176,
+                        2169
+                    ],
+                    "vertex": 2154
+                },
+                {
+                    "children": [
+                        2192
+                    ],
+                    "vertex": 2169
+                },
+                {
+                    "children": [],
+                    "vertex": 2192
+                },
+                {
+                    "children": [
+                        2192
+                    ],
+                    "vertex": 2176
+                }
+            ],
+            "end": 2194,
+            "loopEntries": [],
+            "name": "msb",
+            "postCallsiteOffsets": [],
+            "start": 2154
+        }
+    ]
+}

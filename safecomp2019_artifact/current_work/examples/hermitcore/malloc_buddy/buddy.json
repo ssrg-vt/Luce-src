@@ -1,0 +1,510 @@
+{
+    "flagData": [
+        {
+            "flags": [
+                "flag_zf"
+            ],
+            "locations": [
+                55,
+                60,
+                213,
+                256,
+                317,
+                328,
+                582,
+                593,
+                623,
+                634,
+                683,
+                739
+            ]
+        },
+        {
+            "flags": [
+                "flag_cf",
+                "flag_zf"
+            ],
+            "locations": [
+                21,
+                109,
+                239
+            ]
+        },
+        {
+            "flags": [
+                "flag_zf",
+                "flag_sf",
+                "flag_of"
+            ],
+            "locations": [
+                115,
+                128
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "blockAddrsToConditionals": [
+                [
+                    21,
+                    25
+                ],
+                [
+                    27,
+                    58
+                ]
+            ],
+            "cutpoints": [
+                60
+            ],
+            "edges": [
+                {
+                    "children": [
+                        21
+                    ],
+                    "vertex": 0
+                },
+                {
+                    "children": [
+                        60,
+                        27
+                    ],
+                    "vertex": 21
+                },
+                {
+                    "children": [
+                        11,
+                        60
+                    ],
+                    "vertex": 27
+                },
+                {
+                    "children": [],
+                    "vertex": 60
+                },
+                {
+                    "children": [
+                        21
+                    ],
+                    "vertex": 11
+                }
+            ],
+            "end": 72,
+            "loopEntries": [
+                21
+            ],
+            "name": "buddy_large_avail",
+            "postCallsiteOffsets": [],
+            "start": 0
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    93,
+                    113
+                ],
+                [
+                    115,
+                    119
+                ],
+                [
+                    128,
+                    132
+                ]
+            ],
+            "cutpoints": [
+                128,
+                141
+            ],
+            "edges": [
+                {
+                    "children": [
+                        93
+                    ],
+                    "vertex": 72
+                },
+                {
+                    "children": [
+                        89,
+                        115
+                    ],
+                    "vertex": 93
+                },
+                {
+                    "children": [
+                        128,
+                        121
+                    ],
+                    "vertex": 115
+                },
+                {
+                    "children": [
+                        141,
+                        134
+                    ],
+                    "vertex": 128
+                },
+                {
+                    "children": [],
+                    "vertex": 141
+                },
+                {
+                    "children": [
+                        93
+                    ],
+                    "vertex": 89
+                },
+                {
+                    "children": [
+                        128
+                    ],
+                    "vertex": 121
+                },
+                {
+                    "children": [
+                        141
+                    ],
+                    "vertex": 134
+                }
+            ],
+            "end": 146,
+            "loopEntries": [
+                93
+            ],
+            "name": "buddy_exp",
+            "postCallsiteOffsets": [],
+            "start": 72
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    171,
+                    218
+                ],
+                [
+                    239,
+                    243
+                ],
+                [
+                    256,
+                    258
+                ],
+                [
+                    313,
+                    331
+                ]
+            ],
+            "cutpoints": [
+                166,
+                171,
+                251,
+                256,
+                285,
+                290,
+                296,
+                308,
+                313,
+                390,
+                397,
+                402
+            ],
+            "edges": [
+                {
+                    "children": [
+                        171
+                    ],
+                    "vertex": 146
+                },
+                {
+                    "children": [
+                        239,
+                        220
+                    ],
+                    "vertex": 171
+                },
+                {
+                    "children": [
+                        296,
+                        245
+                    ],
+                    "vertex": 239
+                },
+                {
+                    "children": [
+                        390
+                    ],
+                    "vertex": 220
+                },
+                {
+                    "children": [
+                        313
+                    ],
+                    "vertex": 296
+                },
+                {
+                    "children": [
+                        256
+                    ],
+                    "vertex": 245
+                },
+                {
+                    "children": [
+                        402
+                    ],
+                    "vertex": 390
+                },
+                {
+                    "children": [
+                        296,
+                        260
+                    ],
+                    "vertex": 256
+                },
+                {
+                    "children": [],
+                    "vertex": 402
+                },
+                {
+                    "children": [
+                        290
+                    ],
+                    "vertex": 260
+                },
+                {
+                    "children": [
+                        390
+                    ],
+                    "vertex": 290
+                },
+                {
+                    "children": [
+                        389,
+                        333
+                    ],
+                    "vertex": 313
+                },
+                {
+                    "children": [
+                        390
+                    ],
+                    "vertex": 333
+                },
+                {
+                    "children": [
+                        390
+                    ],
+                    "vertex": 389
+                }
+            ],
+            "end": 408,
+            "loopEntries": [],
+            "name": "buddy_get",
+            "postCallsiteOffsets": [
+                171,
+                256,
+                290,
+                313,
+                402
+            ],
+            "start": 146
+        },
+        {
+            "blockAddrsToConditionals": [],
+            "cutpoints": [
+                427,
+                432,
+                501,
+                506
+            ],
+            "edges": [
+                {
+                    "children": [
+                        432
+                    ],
+                    "vertex": 408
+                },
+                {
+                    "children": [
+                        506
+                    ],
+                    "vertex": 432
+                },
+                {
+                    "children": [],
+                    "vertex": 506
+                }
+            ],
+            "end": 509,
+            "loopEntries": [],
+            "name": "buddy_put",
+            "postCallsiteOffsets": [
+                432,
+                506
+            ],
+            "start": 408
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    578,
+                    596
+                ],
+                [
+                    619,
+                    637
+                ],
+                [
+                    683,
+                    685
+                ],
+                [
+                    731,
+                    742
+                ]
+            ],
+            "cutpoints": [
+                573,
+                578,
+                614,
+                619,
+                666,
+                671,
+                678,
+                683,
+                704,
+                726,
+                731,
+                771,
+                776,
+                789,
+                794,
+                805
+            ],
+            "edges": [
+                {
+                    "children": [
+                        578
+                    ],
+                    "vertex": 509
+                },
+                {
+                    "children": [
+                        608,
+                        598
+                    ],
+                    "vertex": 578
+                },
+                {
+                    "children": [
+                        805
+                    ],
+                    "vertex": 598
+                },
+                {
+                    "children": [
+                        619
+                    ],
+                    "vertex": 608
+                },
+                {
+                    "children": [],
+                    "vertex": 805
+                },
+                {
+                    "children": [
+                        678,
+                        639
+                    ],
+                    "vertex": 619
+                },
+                {
+                    "children": [
+                        671
+                    ],
+                    "vertex": 639
+                },
+                {
+                    "children": [
+                        683
+                    ],
+                    "vertex": 678
+                },
+                {
+                    "children": [
+                        805
+                    ],
+                    "vertex": 671
+                },
+                {
+                    "children": [
+                        699,
+                        687
+                    ],
+                    "vertex": 683
+                },
+                {
+                    "children": [
+                        704
+                    ],
+                    "vertex": 687
+                },
+                {
+                    "children": [
+                        731
+                    ],
+                    "vertex": 704
+                },
+                {
+                    "children": [
+                        801,
+                        744
+                    ],
+                    "vertex": 731
+                },
+                {
+                    "children": [
+                        776
+                    ],
+                    "vertex": 744
+                },
+                {
+                    "children": [
+                        794
+                    ],
+                    "vertex": 776
+                },
+                {
+                    "children": [
+                        805
+                    ],
+                    "vertex": 794
+                },
+                {
+                    "children": [
+                        805
+                    ],
+                    "vertex": 801
+                },
+                {
+                    "children": [
+                        704
+                    ],
+                    "vertex": 699
+                }
+            ],
+            "end": 807,
+            "loopEntries": [],
+            "name": "palloc",
+            "postCallsiteOffsets": [
+                578,
+                619,
+                671,
+                683,
+                731,
+                776,
+                794
+            ],
+            "start": 509
+        }
+    ]
+}

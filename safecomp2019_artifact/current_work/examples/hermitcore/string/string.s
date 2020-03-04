@@ -1,0 +1,974 @@
+	.intel_syntax noprefix
+
+	.section	.text
+	.align	16
+	.globl main
+	.type main, @function
+main:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	eax, 0 # Size:5, Opcode: 0xb8,0x00,0x00,0x00
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _memcpy
+	.type _memcpy, @function
+_memcpy:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x20], rsi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x28], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	jne	label_10 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x20], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	label_11 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+label_10:
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	jmp	label_12 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+label_11:
+	mov	qword ptr [rbp - 8], 0 # Size:8, Opcode: 0xc7,0x00,0x00,0x00
+	jmp	label_13 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+label_14:
+	mov	rdx, qword ptr [rbp - 0x20] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	rcx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rdx, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rdx, rcx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	byte ptr [rdx], al # Size:2, Opcode: 0x88,0x00,0x00,0x00
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+label_13:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	cmp	rax, qword ptr [rbp - 0x28] # Size:4, Opcode: 0x3b,0x00,0x00,0x00
+	jb	label_14 # Size:2, Opcode: 0x72,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+label_12:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _memset
+	.type _memset, @function
+_memset:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+.label_50:
+	mov	qword ptr [rbp - 0x18], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	dword ptr [rbp - 0x1c], esi # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x28], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	.label_15 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	jmp	.label_17 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_15:
+	mov	qword ptr [rbp - 8], 0 # Size:8, Opcode: 0xc7,0x00,0x00,0x00
+	jmp	.label_16 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_18:
+	mov	rdx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	edx, dword ptr [rbp - 0x1c] # Size:3, Opcode: 0x8b,0x00,0x00,0x00
+	mov	byte ptr [rax], dl # Size:2, Opcode: 0x88,0x00,0x00,0x00
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+.label_16:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	cmp	rax, qword ptr [rbp - 0x28] # Size:4, Opcode: 0x3b,0x00,0x00,0x00
+	jb	.label_18 # Size:2, Opcode: 0x72,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+.label_17:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _memcmp
+	.type _memcmp, @function
+_memcmp:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x20], rsi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x28], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x28], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	je	.label_19 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x10], rax # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x20] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	qword ptr [rbp - 8], rax # Size:4, Opcode: 0x89,0x00,0x00,0x00
+.label_21:
+	mov	rax, qword ptr [rbp - 0x10] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	lea	rdx, qword ptr [rax + 1] # Size:4, Opcode: 0x8d,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x10], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	movzx	ecx, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	lea	rdx, qword ptr [rax + 1] # Size:4, Opcode: 0x8d,0x00,0x00,0x00
+	mov	qword ptr [rbp - 8], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	cmp	cl, al # Size:2, Opcode: 0x38,0x00,0x00,0x00
+	je	.label_20 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	sub	qword ptr [rbp - 0x10], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x10] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	movzx	edx, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	sub	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	sub	edx, eax # Size:2, Opcode: 0x29,0x00,0x00,0x00
+	mov	eax, edx # Size:2, Opcode: 0x89,0x00,0x00,0x00
+	jmp	.label_22 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_20:
+	sub	qword ptr [rbp - 0x28], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x28], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	jne	.label_21 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+.label_19:
+	mov	eax, 0 # Size:5, Opcode: 0xb8,0x00,0x00,0x00
+.label_22:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _strlen
+	.type _strlen, @function
+_strlen:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 8], 0 # Size:8, Opcode: 0xc7,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	.label_23 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	jmp	.label_25 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_24:
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+.label_23:
+	mov	rdx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	al, al # Size:2, Opcode: 0x84,0x00,0x00,0x00
+	jne	.label_24 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+.label_25:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _strncpy
+	.type _strncpy, @function
+_strncpy:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x20], rsi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x28], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	jne	.label_26 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x20], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	.label_27 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+.label_26:
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	jmp	.label_28 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_27:
+	mov	qword ptr [rbp - 8], 0 # Size:8, Opcode: 0xc7,0x00,0x00,0x00
+	jmp	.label_29 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_31:
+	mov	rdx, qword ptr [rbp - 0x20] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	rcx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rdx, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rdx, rcx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	byte ptr [rdx], al # Size:2, Opcode: 0x88,0x00,0x00,0x00
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+.label_29:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	cmp	rax, qword ptr [rbp - 0x28] # Size:4, Opcode: 0x3b,0x00,0x00,0x00
+	jae	.label_30 # Size:2, Opcode: 0x73,0x00,0x00,0x00
+	mov	rdx, qword ptr [rbp - 0x20] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	al, al # Size:2, Opcode: 0x84,0x00,0x00,0x00
+	jne	.label_31 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+.label_30:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	cmp	rax, qword ptr [rbp - 0x28] # Size:4, Opcode: 0x3b,0x00,0x00,0x00
+	jae	.label_32 # Size:2, Opcode: 0x73,0x00,0x00,0x00
+	mov	rdx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	byte ptr [rax], 0 # Size:3, Opcode: 0xc6,0x00,0x00,0x00
+	jmp	.label_33 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_32:
+	mov	rax, qword ptr [rbp - 0x28] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	lea	rdx, qword ptr [rax - 1] # Size:4, Opcode: 0x8d,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	byte ptr [rax], 0 # Size:3, Opcode: 0xc6,0x00,0x00,0x00
+.label_33:
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+.label_28:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _strcpy
+	.type _strcpy, @function
+_strcpy:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x20], rsi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	jne	.label_34 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x20], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	.label_35 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+.label_34:
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	jmp	.label_36 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_35:
+	mov	qword ptr [rbp - 8], 0 # Size:8, Opcode: 0xc7,0x00,0x00,0x00
+	jmp	.label_37 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_38:
+	mov	rdx, qword ptr [rbp - 0x20] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	rcx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rdx, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rdx, rcx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	byte ptr [rdx], al # Size:2, Opcode: 0x88,0x00,0x00,0x00
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+.label_37:
+	mov	rdx, qword ptr [rbp - 0x20] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	al, al # Size:2, Opcode: 0x84,0x00,0x00,0x00
+	jne	.label_38 # Size:2, Opcode: 0x75,0x00,0x00,0x00
+	mov	rdx, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	add	rax, rdx # Size:3, Opcode: 0x01,0x00,0x00,0x00
+	mov	byte ptr [rax], 0 # Size:3, Opcode: 0xc6,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+.label_36:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _strcmp
+	.type _strcmp, @function
+_strcmp:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 8], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x10], rsi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	jmp	.label_39 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_41:
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	add	qword ptr [rbp - 0x10], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+.label_39:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	al, al # Size:2, Opcode: 0x84,0x00,0x00,0x00
+	je	.label_40 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	edx, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x10] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	cmp	dl, al # Size:2, Opcode: 0x38,0x00,0x00,0x00
+	je	.label_41 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+.label_40:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	movzx	edx, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x10] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	sub	edx, eax # Size:2, Opcode: 0x29,0x00,0x00,0x00
+	mov	eax, edx # Size:2, Opcode: 0x89,0x00,0x00,0x00
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+	.section	.text
+	.align	16
+	.globl _strncmp
+	.type _strncmp, @function
+_strncmp:
+	push	rbp # Size:1, Opcode: 0x55,0x00,0x00,0x00
+	mov	rbp, rsp # Size:3, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 8], rdi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x10], rsi # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	sete	al # Size:3, Opcode: 0x0f,0x94,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	.label_42 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	eax, 0 # Size:5, Opcode: 0xb8,0x00,0x00,0x00
+	jmp	.label_44 # Size:2, Opcode: 0xeb,0x00,0x00,0x00
+.label_45:
+	cmp	qword ptr [rbp - 0x18], 0 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	je	.label_43 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	test	al, al # Size:2, Opcode: 0x84,0x00,0x00,0x00
+	je	.label_43 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	add	qword ptr [rbp - 8], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+	add	qword ptr [rbp - 0x10], 1 # Size:5, Opcode: 0x83,0x00,0x00,0x00
+.label_42:
+	mov	rax, qword ptr [rbp - 0x18] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	lea	rdx, qword ptr [rax - 1] # Size:4, Opcode: 0x8d,0x00,0x00,0x00
+	mov	qword ptr [rbp - 0x18], rdx # Size:4, Opcode: 0x89,0x00,0x00,0x00
+	test	rax, rax # Size:3, Opcode: 0x85,0x00,0x00,0x00
+	je	.label_43 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	edx, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x10] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	cmp	dl, al # Size:2, Opcode: 0x38,0x00,0x00,0x00
+	je	.label_45 # Size:2, Opcode: 0x74,0x00,0x00,0x00
+.label_43:
+	mov	rax, qword ptr [rbp - 8] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	movzx	edx, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	mov	rax, qword ptr [rbp - 0x10] # Size:4, Opcode: 0x8b,0x00,0x00,0x00
+	movzx	eax, byte ptr [rax] # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	movzx	eax, al # Size:3, Opcode: 0x0f,0xb6,0x00,0x00
+	sub	edx, eax # Size:2, Opcode: 0x29,0x00,0x00,0x00
+	mov	eax, edx # Size:2, Opcode: 0x89,0x00,0x00,0x00
+.label_44:
+	pop	rbp # Size:1, Opcode: 0x5d,0x00,0x00,0x00
+	ret	 # Size:1, Opcode: 0xc3,0x00,0x00,0x00
+
+
+	.section .comment
+	.align 32
+	.globl xxxxxxxxxxxxxxxxx
+	.type xxxxxxxxxxxxxxxxx, @other
+xxxxxxxxxxxxxxxxx:
+	.byte 127
+	.byte 69
+	.byte 76
+	.byte 70
+	.byte 2
+	.byte 1
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 3
+	.byte 0
+	.byte 62
+	.byte 0
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 64
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 232
+	.byte 25
+
+	.section .symtab
+	.align 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 64
+	.byte 0
+	.byte 56
+	.byte 0
+	.byte 9
+	.byte 0
+	.byte 64
+	.byte 0
+	.byte 28
+	.byte 0
+	.byte 27
+	.byte 0
+	.byte 6
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 4
+	.byte 0
+	.quad 999999999999
+	.quad 999999999999
+	.quad 999999999999
+	.byte 0
+	.byte 0
+	.byte 248
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 248
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 8
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 3
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 56
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 56
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 56
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 28
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 28
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 5
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 152
+	.byte 12
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 152
+	.byte 12
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 6
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+	.byte 13
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+
+	.section .shstrtab
+	.align 32
+	label_52:
+
+	.section .symtab
+	.align 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+	.byte 13
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 32
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 40
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 6
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 14
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 14
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 14
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 192
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 192
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 8
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 84
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 84
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 84
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 68
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 68
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 80
+	.byte 229
+	.byte 116
+	.byte 100
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 20
+	.byte 10
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 20
+	.byte 10
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 20
+	.byte 10
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 124
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 124
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 81
+	.byte 229
+	.byte 116
+	.byte 100
+	.byte 6
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 16
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 82
+	.byte 229
+	.byte 116
+	.byte 100
+	.byte 4
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+	.byte 13
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+	.byte 13
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 240
+	.byte 13
+	.byte 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 16
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 16
+	.byte 2
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 1
+	.byte 0
+	.byte 0
+	.byte 0
+
+	.section .strtab
+	.align 32
+	label_51:
+
+	.section .symtab
+	.align 32
+	.label_50:
+
+	.section .rodata
+	.align 16
+	.byte 1
+	.byte 0
+	.byte 2
+	.byte 0
+
+	.section .data
+	.align 32
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+
+	.section .bss
+	.align 16
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+	.byte 0
+		.globl _end
+	.type _end, @notype
+_end:

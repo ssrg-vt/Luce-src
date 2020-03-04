@@ -1,0 +1,244 @@
+(*
+Copyright 2018
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*)
+theory dequeue_pop_mem
+  imports dequeue
+begin
+
+context assembly
+begin
+
+interpretation until_ret: cfg_system step \<open>until {(ts_ret, pc_ret)}\<close> wf_state location
+  by standard (simp add: wf_state_def det_system.is_weak_invar_def)
+
+declare until_def[simp]
+declare wf_state_def[simp]
+declare location_def[simp]
+
+text \<open>
+  This method runs symbolic execution per instruction.
+  It unfolds the step function, fetches the next instruction,
+  inserts master-information and then simplifies until no further let's are in the goal.
+  Then, the masters are cleaned up again (to prevent littering of the subgoal).
+\<close>
+method symbolic_execution uses masters add del =
+  (rule wps_rls)?,
+  (simp del: del)?,
+  simp only: assembly_def cong: Let'_weak_cong,
+  rewrite_one_let',
+  rewrite_one_let' del: del,
+  rewrite_one_let' add: exec_instr.simps del: del,
+  rewrite_one_let' add: unfold_semantics del: del,
+  insert masters,
+  (rewrite_one_let' add: add del: del)+,
+  (thin_tac \<open>master _ _ _\<close>)+,
+  rule until_ret.linvar_unfoldI,
+  simp del: del
+
+text \<open>
+  Symbolic execution can produce multiple subgoals (e.g., due to conditional jumps).
+  If one subgoal is finished, call this method once to restart the symbolic execution on the unfinished
+  next subgoal.
+\<close>
+method restart_symbolic_execution uses add del =
+  (rewrite_one_let' add: add del: del)+,
+  (thin_tac \<open>master _ _ _\<close>)+,
+  rule until_ret.linvar_unfoldI,
+  simp del: del
+|
+  ((thin_tac \<open>master _ _ _\<close>)+)?,
+  rule until_ret.linvar_unfoldI,
+  simp del: del
+
+text \<open>If symbolic execution is finished, the subgoal often contains a large term, possibly with let's.
+  This can be simplified by inserting information on the masters and running simplification.
+\<close>
+method finish_symbolic_execution uses add del masters =
+  insert masters,
+  simp add: simp_rules add del: del,
+  (rewrite_one_let' add: add del: del)+,
+  (simp add: simp_rules add del: del; fail)?,
+  ((thin_tac \<open>master _ _ _\<close>)+)?
+
+text \<open>
+  The Floyd invariant expresses for some locations properties that are invariably true.
+  Simply expresses that a byte in the memory remains untouched.
+\<close>
+definition pp_\<Theta> :: \<open>_ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> floyd_invar\<close> where
+  \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r out\<^sub>p\<^sub>t\<^sub>r s buffer\<^sub>p\<^sub>t\<^sub>r front a v\<^sub>0 pop_ret ts_ret pc_ret \<equiv> [
+    \<comment> \<open>precondition\<close>
+    (2, 0) \<mapsto> \<lambda>\<sigma>. RSP \<sigma> = rsp\<^sub>0
+                \<and> RDI \<sigma> = dequeue\<^sub>p\<^sub>t\<^sub>r
+                \<and> RSI \<sigma> = out\<^sub>p\<^sub>t\<^sub>r
+                \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r + 16,8] = buffer\<^sub>p\<^sub>t\<^sub>r
+                \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r,8] = front
+                \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r + 32,8] = s
+                \<and> buffer\<^sub>p\<^sub>t\<^sub>r + front * s \<noteq> (0::64 word)
+                \<and> 0 < unat s
+                \<and> unat s \<le> 8
+                \<and> \<sigma> \<turnstile> *[a,1] = (v\<^sub>0::8 word)
+                \<and> \<sigma> \<turnstile> *[rsp\<^sub>0,8] = pop_ret,
+    \<comment> \<open>postcondition\<close>
+    (ts_ret, pc_ret - 1) \<mapsto> \<lambda>\<sigma>. \<sigma> \<turnstile> *[a,1] = v\<^sub>0
+                              \<and> RSP \<sigma> = rsp\<^sub>0 + 8
+  ]\<close>
+
+schematic_goal pp_\<Theta>_zero[simp]: \<comment> \<open>@{term 0} is not a numeral\<close>
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r out\<^sub>p\<^sub>t\<^sub>r s buffer\<^sub>p\<^sub>t\<^sub>r front a v\<^sub>0 pop_ret ts_ret pc_ret (2, 0) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+schematic_goal pp_\<Theta>_one[simp]: \<comment> \<open>@{term 1} is not a numeral\<close>
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r out\<^sub>p\<^sub>t\<^sub>r s buffer\<^sub>p\<^sub>t\<^sub>r front a v\<^sub>0 pop_ret ts_ret pc_ret (2, 1) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+schematic_goal pp_\<Theta>_numeral[simp]:
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r out\<^sub>p\<^sub>t\<^sub>r s buffer\<^sub>p\<^sub>t\<^sub>r front a v\<^sub>0 pop_ret ts_ret pc_ret (2, numeral m) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+schematic_goal pp_\<Theta>_ret[simp]:
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r out\<^sub>p\<^sub>t\<^sub>r s buffer\<^sub>p\<^sub>t\<^sub>r front a v\<^sub>0 pop_ret ts_ret pc_ret (ts_ret, pc_ret - 1) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+
+lemma rewrite_dequeue_pop:
+  assumes \<open>seps blocks\<close>
+      and \<open>(2, rsp\<^sub>0 - 0x28, 0x28) \<in> blocks\<close>
+      and \<open>(3, dequeue\<^sub>p\<^sub>t\<^sub>r , 0x28) \<in> blocks\<close>
+      and \<open>(4, a, 1) \<in> blocks\<close>
+      and \<open>(5, out\<^sub>p\<^sub>t\<^sub>r, unat s) \<in> blocks\<close>
+      and \<open>(6, buffer\<^sub>p\<^sub>t\<^sub>r + front * s, unat s) \<in> blocks\<close>
+      and \<open>(7, rsp\<^sub>0, 8) \<in> blocks\<close>
+      and \<open>0x28 \<le> rsp\<^sub>0\<close>
+      and \<open>label_to_index \<alpha> (the (address_to_label pop_ret)) = Some (ts_ret, pc_ret)\<close>
+      and \<open>ts_ret \<noteq> 2\<close>
+    shows \<open>until_ret.is_std_invar ts_ret pc_ret (until_ret.floyd.invar ts_ret pc_ret (pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r out\<^sub>p\<^sub>t\<^sub>r s buffer\<^sub>p\<^sub>t\<^sub>r front a v\<^sub>0 pop_ret ts_ret pc_ret))\<close>
+proof -
+  (* Boilerplate code for setting up the master blocks: *)
+  note 1 = order_trans[OF _ assms(8)]
+  note 2 = word_sub_le[OF 1]
+  have masters:
+    \<open>master blocks (rsp\<^sub>0 - 8, 8) 2\<close>
+    \<open>master blocks (rsp\<^sub>0 - 16, 8) 2\<close>
+    \<open>master blocks (rsp\<^sub>0 - 24, 8) 2\<close>
+    \<open>master blocks (rsp\<^sub>0 - 32, 8) 2\<close>
+    \<open>master blocks (rsp\<^sub>0 - 40, 8) 2\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r, 8) 3\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 8, 8) 3\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 16, 8) 3\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 24, 8) 3\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 32, 8) 3\<close>
+    \<open>master blocks (a, 1) 4\<close>
+    \<open>master blocks (out\<^sub>p\<^sub>t\<^sub>r, unat s) 5\<close>
+    \<open>master blocks (buffer\<^sub>p\<^sub>t\<^sub>r + front * s, unat s) 6\<close>
+    \<open>master blocks (rsp\<^sub>0, 8) 7\<close>
+    by (find_master' assms: assms add: 1 2)+
+
+  show ?thesis
+    (* Boilerplate code  to start the VCG *)
+    apply (rule until_ret.floyd_invarI)
+    apply (rewrite at \<open>until_ret.floyd_vcs ts_ret pc_ret \<hole> _\<close> pp_\<Theta>_def)
+    apply (intro until_ret.floyd_vcsI; clarsimp?)
+
+    (* Subgoal for (ts, pc) = (2, 0) to (ts_ret, pc_ret - 1) *)
+    subgoal premises prems for \<sigma> \<comment> \<open>Only one subgoal so this style isn't really necessary.\<close>
+      (* Insert relevant knowledge *)
+      apply (insert prems assms 1 2)
+      (* Apply VCG/symb. execution *)
+      apply (symbolic_execution masters: masters) (* push *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* sub *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* cmp *)
+      apply (symbolic_execution masters: masters) (* sete *)
+       apply (symbolic_execution masters: masters) (* movzx *)
+       apply (symbolic_execution masters: masters) (* test *)
+       apply (symbolic_execution masters: masters) (* je .label_18 (jump condition not satisfied) *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* jmp .label_17 *)
+       apply (symbolic_execution masters: masters) (* leave *)
+       apply (symbolic_execution masters: masters) (* ret *)
+       apply (finish_symbolic_execution masters: masters)
+
+      (* continue after sete *)
+      apply (restart_symbolic_execution)
+      apply (symbolic_execution masters: masters) (* movzx *)
+      apply (symbolic_execution masters: masters) (* test *)
+      apply (symbolic_execution masters: masters) (* je .label_18 *)
+      apply (symbolic_execution masters: masters) (* cmp *)
+      apply (symbolic_execution masters: masters) (* sete *)
+       apply (symbolic_execution masters: masters) (* movzx *)
+       apply (symbolic_execution masters: masters) (* test *)
+       apply (symbolic_execution masters: masters) (* je .label_16 (jump condition not satisfied) *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* jmp .label_17 *)
+       apply (symbolic_execution masters: masters) (* leave *)
+       apply (symbolic_execution masters: masters) (* ret *)
+       apply (finish_symbolic_execution masters: masters)
+
+      (* continue after sete *)
+      apply restart_symbolic_execution
+      apply (symbolic_execution masters: masters) (* movzx *)
+      apply (symbolic_execution masters: masters) (* test *)
+      apply (symbolic_execution masters: masters) (* je .label_16 *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* cmp *)
+      apply (symbolic_execution masters: masters) (* jne .label_19 *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* imul *)
+       apply (symbolic_execution masters: masters) (* add *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* call memcpy *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* lea *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* div *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* mov *)
+       apply (symbolic_execution masters: masters) (* leave *)
+       apply (symbolic_execution masters: masters) (* ret *)
+       apply (finish_symbolic_execution masters: masters)
+
+      (* continue after jne .label_19 condition not satisfied *)
+      apply restart_symbolic_execution
+      apply (symbolic_execution masters: masters) (* mov *)
+      apply (symbolic_execution masters: masters) (* jmp .label_17 *)
+      apply (symbolic_execution masters: masters) (* leave *)
+      apply (symbolic_execution masters: masters) (* ret *)
+      apply (finish_symbolic_execution masters: masters)
+      done
+    done
+qed
+
+end
+
+end

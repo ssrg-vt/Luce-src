@@ -1,0 +1,403 @@
+(*
+Copyright 2018
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*)
+theory Simplified_Semantics
+  imports reassembly_all_execution_debug.Leviathan_Setup
+begin
+
+(* TODO: the following theorems should be moved up to theor respective theories. They are duplicated in pow2. *)
+lemma bv_NOT_bool_to_bv[simp]:
+  shows "bv_NOT (bool_to_bv b) = bool_to_bv (\<not>b)"
+  by (cases b, auto simp add: max_word_def) 
+
+lemma bool_to_bv_eq[simp]:
+  shows "bool_to_bv b = (x, Suc 0) \<longleftrightarrow> (x \<in> {0,1} \<and> ((x = 1) \<longleftrightarrow> b))"
+  by (cases b,auto)
+
+lemma bv_slice_nth_bit[simp]:
+  assumes "h < \<M>"
+  shows "bv_slice h h a = bool_to_bv (fst a !! h)"
+proof-
+  {
+    fix i :: nat
+    assume "i < \<M>"
+    hence "((\<langle>h,h\<rangle>(fst a))::longword) !! i = (if fst a !! h then 1::longword else 0) !! i"
+      using assms
+      by (auto simp add: test_bit_of_take_bits)
+  }
+  hence "((\<langle>h,h\<rangle>(fst a))::longword) = (if fst a !! h then 1::longword else 0)"
+    apply (intro word_eqI)
+    by (auto simp add: word_size)
+  thus ?thesis
+    by (cases a;auto simp add: bv_slice.simps)
+qed
+
+lemma msb_is_gt_2p:
+  fixes a :: "'a::len word"
+  shows "msb a \<longleftrightarrow> a \<ge> 2 ^ (LENGTH('a) - 1)"
+proof-
+  {
+    assume 1: "a !! (LENGTH('a) - 1)"
+    hence "a \<ge> 2 ^ (LENGTH('a) - 1)"
+      using bang_is_le
+      by (auto simp add: word_size)
+  }
+  moreover
+  {
+    assume 1: "\<not>a!! (LENGTH('a) - 1)"
+    {
+      fix i :: nat
+      assume "i < LENGTH('a)"
+      hence "(a AND mask (LENGTH('a) - 1)) !! i = a !! i"
+        using 1
+        by (cases "i=LENGTH('a) - 1",auto simp add: word_ao_nth word_size)
+    }
+    hence "a AND mask (LENGTH('a) - 1) = a"
+      apply (intro word_eqI)
+      by (auto simp add: word_size)
+    hence "a < 2 ^ (LENGTH('a) - 1)"
+      using mask_eq_iff_w2p[of "LENGTH('a) - 1" a]
+      by (auto simp add: word_size)
+  }
+  ultimately
+  show ?thesis
+    unfolding msb_nth
+    using linorder_not_le
+    by blast
+qed
+
+lemma test_bit_of_add_2p:
+  fixes a :: "'a::len word"
+  assumes "i < n"
+      and "n < LENGTH('a)"
+      and "\<langle>n-1,0\<rangle>a = a"
+    shows "(2^n + a) !! i = a !! i"
+proof-
+  {
+    fix j :: nat
+    assume "j < LENGTH('a) - n"
+    hence "take (LENGTH('a) - n) (to_bl a) ! j = replicate (LENGTH('a) - n) False ! j"
+      apply (auto)
+      apply (subst (asm) assms(3)[symmetric])
+      apply (subst (asm) to_bl_nth)
+      using assms
+      by (auto simp add: word_size test_bit_of_take_bits split: if_split_asm)
+  }
+  hence "take (LENGTH('a) - n) (to_bl a) = replicate (LENGTH('a) - n) False"
+    apply (intro nth_equalityI)
+    by (auto)
+  hence "rev (to_bl (2^n + a)) ! i = a !! i"
+    using assms
+    apply (subst aligned_bl_add_size[where n=n])
+    apply (simp add: word_size)
+    apply (subst shiftl_1[symmetric])+
+    apply (simp only: word_size bl_shiftl)
+    apply (simp del: to_bl_one)
+    apply (subst shiftl_1[symmetric])+
+    apply (simp only: word_size bl_shiftl) defer
+    by (auto simp add: rev_nth nth_append word_size test_bit_bl)
+  thus ?thesis
+    by (auto simp add: test_bit_bl word_size)
+qed
+
+lemma bitNOT_nth:
+  "(NOT x) !! n \<longleftrightarrow> n < LENGTH('a) \<and> \<not>x !! n"
+  for x :: "'a::len0 word"
+  using test_bit_size[of "NOT x" n]
+  by (auto simp add: word_size word_ops_nth_size)
+
+lemma zero_le_2p:
+  assumes "n < LENGTH('a)"
+  shows "(0::'a::len word) < 2 ^ n"
+  using assms
+proof(induct n)
+  case 0
+  thus ?case
+    by auto
+next
+  case (Suc n)
+  thus ?case
+    using shiftl_1[symmetric,of "n+1",where 'a='a]
+    using is_zero_shiftl[of "1::'a word" "n+1"]
+    apply (auto simp del: shiftl_1)
+    by fastforce
+qed
+
+lemma ucast_bitNOT:
+  fixes a :: "'a ::len word"
+assumes "LENGTH('b) = LENGTH('a) + 1"
+  shows "((ucast (NOT a))::'b::len word) = NOT (2 ^ LENGTH('a) + ucast a)"
+proof-
+  have "uint a < 2^LENGTH('a)"
+    by (auto)
+  hence 0: "(2 ^ LENGTH('a) + ucast a :: 'b word) \<ge> 2 ^ LENGTH('a)"
+    using assms
+    apply uint_arith
+    apply (auto simp add: is_up uint_up_ucast)
+    apply (subst (asm) uint_2p)
+    by (simp add: zero_le_2p)+
+  {
+
+    fix i :: nat
+    assume i: "i < LENGTH('b)"
+    have "(2 ^ LENGTH('a) + ucast a :: 'b word) !! LENGTH('a)"
+      using 0 msb_is_gt_2p[unfolded msb_nth,where 'a='b] assms
+      by auto
+    moreover
+    have "i < LENGTH('a) \<Longrightarrow> ((2 ^ LENGTH('a) + ucast a)::'b word) !! i = a !! i"
+      using assms
+      apply (subst test_bit_of_add_2p)
+      by (auto simp add: nth_ucast)
+    ultimately
+    have "((ucast (NOT a))::'b word) !! i = (NOT (2 ^ LENGTH('a) + ucast a :: 'b word)) !! i"
+      using assms
+      by (cases "i = LENGTH('a)",auto simp add: bitNOT_nth word_size nth_ucast)
+  }
+  thus ?thesis
+    apply (intro word_eqI)
+    by (auto simp add: word_size)
+qed
+
+
+
+lemma take_bits_le_bit32:
+  fixes a b :: "'b::len0 word"
+  assumes "32 < LENGTH('a)"
+      and "32 \<le> LENGTH('b)"
+  shows "(((\<langle>31,0\<rangle>a)::'a::len0 word) \<le> ((\<langle>31,0\<rangle>b)::'a::len0 word)) = (((\<langle>31,0\<rangle>a)::32 word) \<le> ((\<langle>31,0\<rangle>b)::32 word))"
+proof-
+  have "(((\<langle>31,0\<rangle>a)::'a::len0 word) = ((\<langle>31,0\<rangle>b)::'a::len0 word)) = (((\<langle>31,0\<rangle>a)::32 word) = ((\<langle>31,0\<rangle>b)::32 word))"
+  proof-
+    {
+      assume "(((\<langle>31,0\<rangle>a)::'a::len0 word) = ((\<langle>31,0\<rangle>b)::'a::len0 word))"
+      hence "\<forall> i < 32 . (((\<langle>31,0\<rangle>a)::'a::len0 word) !! i = (((\<langle>31,0\<rangle>b)::'a::len0 word)) !! i)"
+        using assms
+        by (auto simp add: test_bit_of_take_bits)
+      hence "\<forall> i < 32 . (((\<langle>31,0\<rangle>a)::32 word) !! i = (((\<langle>31,0\<rangle>b)::32 word)) !! i)"
+        using assms
+        by (auto simp add: test_bit_of_take_bits)
+      hence "(((\<langle>31,0\<rangle>a)::32 word) = ((\<langle>31,0\<rangle>b)::32 word))"
+        apply (intro word_eqI)
+        by (auto simp add: word_size)
+    }
+    moreover
+    {
+      assume "(((\<langle>31,0\<rangle>a)::32 word) = ((\<langle>31,0\<rangle>b)::32 word))"
+      hence "\<forall> i < 32 . (((\<langle>31,0\<rangle>a)::32 word) !! i = (((\<langle>31,0\<rangle>b)::32 word)) !! i)"
+        using assms
+        by (auto simp add: test_bit_of_take_bits)
+      hence "\<forall> i < LENGTH('a) . (((\<langle>31,0\<rangle>a)::'a::len0 word) !! i = (((\<langle>31,0\<rangle>b)::'a::len0 word)) !! i)"
+        using assms
+        by (auto simp add: test_bit_of_take_bits)
+      hence "(((\<langle>31,0\<rangle>a)::'a::len0 word) = ((\<langle>31,0\<rangle>b)::'a::len0 word))"
+        using assms
+        apply (intro word_eqI)
+        by (auto simp add: word_size)
+    }
+    ultimately
+    show ?thesis
+      by auto
+  qed
+  thus ?thesis
+    using assms
+    apply (cases "(((\<langle>31,0\<rangle>a)::'a::len0 word) = ((\<langle>31,0\<rangle>b)::'a::len0 word))"; cases "(((\<langle>31,0\<rangle>a)::32 word) = ((\<langle>31,0\<rangle>b)::32 word))";auto)
+    by (meson less_imp_le_nat linorder_not_le take_bits_lt_bit32)+
+qed
+
+lemma overflow_sub_bit32[simp]:
+  fixes a b:: "'a :: len0 word"
+  assumes "31 < LENGTH('a)"
+  shows "((1::33 word) + (((\<langle>31,0\<rangle>a)::33 word) + ucast (NOT ((\<langle>31,0\<rangle>b):: 32 word)))) !! 32 = (((\<langle>31,0\<rangle>a)::32 word) \<ge> \<langle>31,0\<rangle>b)"
+proof-
+  have 3: "(((\<langle>31,0\<rangle>a)::33 word) \<ge> \<langle>31,0\<rangle>b) = (((\<langle>31,0\<rangle>a)::32 word) \<ge> \<langle>31,0\<rangle>b)"
+    using assms
+    by (subst take_bits_le_bit32,simp,simp,simp)
+
+  have 1: "\<not> ((\<langle>31,0\<rangle>a)::33 word) !! 32"
+   and 2: "\<not> ((\<langle>31,0\<rangle>b)::33 word) !! 32"
+    using assms
+    by (auto simp add: test_bit_of_take_bits)
+  have "uint ((\<langle>31,0\<rangle>a)::33 word) < 4294967296"
+   and "uint ((\<langle>31,0\<rangle>b)::33 word) < 4294967296"
+    using msb_is_gt_2p[unfolded msb_nth,where 'a=33,simplified] 1
+    apply (uint_arith)
+    using msb_is_gt_2p[unfolded msb_nth,where 'a=33,simplified] 2
+    by (uint_arith)
+  hence "((1::33 word) + (((\<langle>31,0\<rangle>a)::33 word) + ucast (NOT ((\<langle>31,0\<rangle>b):: 32 word)))) !! 32 = (((\<langle>31,0\<rangle>a)::33 word) \<ge> \<langle>31,0\<rangle>b)"
+    apply (subst ucast_bitNOT)
+    apply simp
+    apply (subst twos_complement_subtraction)
+    apply simp
+    apply (subst msb_is_gt_2p[unfolded msb_nth,where 'a=33,simplified])
+    apply auto
+    apply uint_arith
+    using assms
+    apply (auto simp add: is_up)
+    apply uint_arith
+    using assms
+    by (auto simp add: is_up)
+  thus ?thesis
+    using 3
+    by auto
+qed
+
+
+lemma sign_sub_bit32[simp]:
+  fixes a b:: "'a :: len0 word"
+  assumes "31 < LENGTH('a)"
+  shows "((1::33 word) + (((\<langle>31,0\<rangle>a)::33 word) + ucast (NOT ((\<langle>31,0\<rangle>b):: 32 word)))) !! 31 \<longleftrightarrow> sint (((\<langle>31,0\<rangle>a):: 32 word) - \<langle>31,0\<rangle>b) < 0"
+proof-
+  have 1: "\<And> a :: 33 word . a !! 31 = ((\<langle>31,0\<rangle>a):: 32 word) !! 31"
+    using assms
+    by (auto simp add: test_bit_of_take_bits nth_ucast)
+  have 2: "\<langle>31,0\<rangle>((1::33 word) + (((\<langle>31,0\<rangle>a)::33 word) + ucast (NOT ((\<langle>31,0\<rangle>b):: 32 word)))) = (((\<langle>31,0\<rangle>a)::32 word) - \<langle>31,0\<rangle>b)"
+    using assms
+    apply (subst ucast_bitNOT)
+    apply simp
+    apply (subst twos_complement_subtraction)
+    apply (subst take_bits_minus)
+    apply (simp)
+    apply (simp)
+    by (simp)
+  have 3: "... !! 31 \<longleftrightarrow> sint (((\<langle>31,0\<rangle>a):: 32 word) - \<langle>31,0\<rangle>b) < 0"
+    using msb_nth[symmetric, where 'a=32]
+    by (simp add: word_msb_sint)
+  show ?thesis
+    apply (subst 1)
+    apply (subst 2)
+    apply (subst 3)
+    by simp
+qed
+
+lemma twos_complement_subtraction_r[simp]:
+  fixes a b :: "'a::len0 word"
+  shows "1 + (NOT b + a) = a - b"
+  by (auto simp add: word_succ_p1 twos_complement)
+
+
+
+
+
+
+
+
+(* TODO: here we can build a locale with semantics for each instruction *)
+definition xor :: "bool \<Rightarrow> bool \<Rightarrow> bool" (infixr "\<otimes>" 36)
+  where "a \<otimes> b \<equiv> (a \<and> \<not>b) \<or> (\<not>a \<and> b)"
+
+definition parity :: "'a::len0 word \<Rightarrow> bool"
+  where "parity a \<equiv> fold (\<otimes>) (drop (LENGTH('a) - 8) (to_bl a)) True"
+
+(*5 flags generation CF,SF,OF,ZF,PF *)
+instruction_semantics_parser "../InstructionSemantics/strata_rules_5flags"   
+lemmas strata_rules_5flags.semantics_def [code]
+
+
+locale execution_plus_strata_rules_5flags = execution_context + strata_rules_5flags
+begin
+
+fun get_OP1 :: "bitvector_formula list \<Rightarrow> BV_var"
+  where
+    "get_OP1 [] = undefined" 
+  | "get_OP1 ((BV_Assignment v bvf)#_) = v"
+  | "get_OP1 (_#bfs) = get_OP1 bfs"
+
+fun writes_pflag :: "bitvector_formula list \<Rightarrow> bool"
+  where
+    "writes_pflag [] = False" 
+  | "writes_pflag ((BV_Assignment v bvf)#bfs) = writes_pflag bfs"
+  | "writes_pflag ((BV_Flag_Assignment flag_pf bvf)#bfs) = True"
+  | "writes_pflag ((BV_Flag_Assignment _ bvf)#bfs) = writes_pflag bfs"
+  | "writes_pflag _ = undefined"
+
+fun exec_learned_instr' :: "bitvector_formula list \<Rightarrow> instr \<Rightarrow> state \<Rightarrow> state"
+  where 
+  "exec_learned_instr' [] i \<sigma> = \<sigma>"
+| "exec_learned_instr' ((BV_Assignment v bvf)#bfs) i \<sigma> =
+    (let' bv = ((exec_chum_bvf bvf i \<sigma>));
+          od = operand_src_to_operand_dest (resolve_BV_Var i v);
+          \<sigma>' = exec_learned_instr' bfs i \<sigma> in
+      bv_put od bv \<sigma>')"
+| "exec_learned_instr' ((BV_Flag_Assignment flag_pf bvf)#bfs) i \<sigma> = \<comment> \<open>TODO\<close>
+    (let' \<sigma>' = exec_learned_instr' bfs i \<sigma> in
+        \<sigma>')"
+| "exec_learned_instr' ((BV_Flag_Assignment flg bvf)#bfs) i \<sigma> =
+    (let' \<sigma>' = exec_learned_instr' bfs i \<sigma>;
+           e  = exec_chum_bvf bvf i \<sigma>;
+           f  = bv_to_bool e;
+           \<sigma>'' = write_flg flg f \<sigma>' in
+        \<sigma>'')"
+| "exec_learned_instr' _ i \<sigma> = undefined"
+
+
+definition write_pflag :: "instr \<Rightarrow> BV_var \<Rightarrow> state \<Rightarrow> state"
+  where "write_pflag i op1 \<sigma> \<equiv>
+  let' op1 = resolve_BV_Var i op1 ;
+       (a,s) = exec_chum_bv_get  \<sigma> i op1 in
+    write_flg flag_pf (parity a) \<sigma>"
+
+lemma parity_ucast[simp]:
+  fixes a :: "'b::len0 word"
+  assumes "LENGTH('a) > LENGTH('b)"
+      and "LENGTH('b) \<ge> 8"
+  shows "parity (ucast a :: 'a::len0 word) = parity a"
+  using assms
+  unfolding parity_def
+  by (auto simp add: to_bl_ucast)    
+
+definition get_semantics :: "instr \<Rightarrow> state \<Rightarrow> state"
+  where
+    "get_semantics insr \<equiv>
+      let' (fam,n,o_sig) = Get_Instr_Sig insr;
+           family_list = instr_semantics semantics fam;
+           manual = (family_list = None);
+           variant_list = (if manual then None else the family_list n);
+           manual = (variant_list = None);
+           bv_formula = (if manual then None else the variant_list o_sig);
+           manual = (bv_formula = None);
+           exec = (if manual then manual_exec_instr insr else exec_learned_instr' (the bv_formula) insr);
+           exec' = (if writes_pflag (the bv_formula) then (write_pflag insr (get_OP1 (the bv_formula)) o exec) else exec) in
+      exec'"
+
+
+abbreviation "read_mem \<sigma> s a \<equiv> fst (read_memory l \<alpha> \<sigma> s a)"
+
+lemma temp[simp]:
+  fixes \<sigma> :: state
+  shows "get_semantics (Binary (IS_8088 Sub) (Reg (General ThirtyTwo r32)) (Storage (Memory 32 a))) \<sigma> = 
+        \<sigma>\<lparr>regs := (regs \<sigma>)(r32 := ucast (\<langle>31,0\<rangle>regs \<sigma> r32 - \<langle>31,0\<rangle>(read_mem \<sigma> 32 a):: 32 word)),
+         flags := (flags \<sigma>)
+          (flag_pf := parity (\<langle>31,0\<rangle>regs \<sigma> r32 - \<langle>31,0\<rangle>(read_mem \<sigma> 32 a) :: 32 word),
+           flag_cf := \<not> \<langle>31,0\<rangle>(read_mem \<sigma> 32 a) \<le> (\<langle>31,0\<rangle>regs \<sigma> r32 :: 32 word),
+           flag_zf := \<langle>31,0\<rangle>regs \<sigma> r32 = (\<langle>31,0\<rangle>(read_mem \<sigma> 32 a) :: 32 word),
+           flag_sf := sint (\<langle>31,0\<rangle>regs \<sigma> r32 - \<langle>31,0\<rangle>(read_mem \<sigma> 32 a) :: 32 word) < 0,
+           flag_of := (\<not> read_mem \<sigma> 32 a !! 31) = regs \<sigma> r32 !! 31 \<and> read_mem \<sigma> 32 a !! 31 = (sint (\<langle>31,0\<rangle>regs \<sigma> r32 - \<langle>31,0\<rangle>(read_mem \<sigma> 32 a) :: 32 word) < 0))\<rparr>"
+  apply (subst get_semantics_def)
+  apply (rewrite_one_let')
+  apply (rewrite_one_let')
+  apply (rewrite_one_let')
+  apply (rewrite_one_let' add: semantics_def)
+  apply (rewrite_one_let')
+  apply (rewrite_one_let')
+  apply (rewrite_one_let')
+  apply (rewrite_one_let')
+  apply (rewrite_one_let')+
+  apply (rewrite_one_let' add: write_pflag_def)+
+  by (simp add: write_pflag_def simp_rules nth_ucast test_bit_of_take_bits)
+
+  
+end
+
+end

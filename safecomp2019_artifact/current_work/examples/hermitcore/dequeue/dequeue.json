@@ -1,0 +1,281 @@
+{
+    "flagData": [
+        {
+            "flags": [
+                "flag_zf"
+            ],
+            "locations": [
+                24,
+                35,
+                145,
+                156,
+                229,
+                363,
+                374,
+                389,
+                400,
+                446
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "blockAddrsToConditionals": [
+                [
+                    0,
+                    38
+                ]
+            ],
+            "cutpoints": [
+                117,
+                122,
+                127
+            ],
+            "edges": [
+                {
+                    "children": [
+                        47,
+                        40
+                    ],
+                    "vertex": 0
+                },
+                {
+                    "children": [
+                        122
+                    ],
+                    "vertex": 47
+                },
+                {
+                    "children": [
+                        127
+                    ],
+                    "vertex": 40
+                },
+                {
+                    "children": [],
+                    "vertex": 127
+                },
+                {
+                    "children": [
+                        127
+                    ],
+                    "vertex": 122
+                }
+            ],
+            "end": 129,
+            "loopEntries": [],
+            "name": "dequeue_init",
+            "postCallsiteOffsets": [
+                122
+            ],
+            "start": 0
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    129,
+                    159
+                ],
+                [
+                    187,
+                    233
+                ]
+            ],
+            "cutpoints": [
+                182,
+                187,
+                246,
+                251,
+                307,
+                312,
+                335,
+                340,
+                345
+            ],
+            "edges": [
+                {
+                    "children": [
+                        171,
+                        161
+                    ],
+                    "vertex": 129
+                },
+                {
+                    "children": [
+                        187
+                    ],
+                    "vertex": 171
+                },
+                {
+                    "children": [
+                        345
+                    ],
+                    "vertex": 161
+                },
+                {
+                    "children": [],
+                    "vertex": 345
+                },
+                {
+                    "children": [
+                        258,
+                        235
+                    ],
+                    "vertex": 187
+                },
+                {
+                    "children": [
+                        251
+                    ],
+                    "vertex": 235
+                },
+                {
+                    "children": [
+                        312
+                    ],
+                    "vertex": 258
+                },
+                {
+                    "children": [
+                        340
+                    ],
+                    "vertex": 312
+                },
+                {
+                    "children": [
+                        345
+                    ],
+                    "vertex": 251
+                },
+                {
+                    "children": [
+                        345
+                    ],
+                    "vertex": 340
+                }
+            ],
+            "end": 347,
+            "loopEntries": [],
+            "name": "dequeue_push",
+            "postCallsiteOffsets": [
+                187,
+                251,
+                312,
+                340
+            ],
+            "start": 129
+        },
+        {
+            "blockAddrsToConditionals": [
+                [
+                    347,
+                    377
+                ],
+                [
+                    389,
+                    403
+                ],
+                [
+                    431,
+                    449
+                ]
+            ],
+            "cutpoints": [
+                426,
+                431,
+                462,
+                467,
+                522,
+                527,
+                575,
+                580,
+                585
+            ],
+            "edges": [
+                {
+                    "children": [
+                        389,
+                        379
+                    ],
+                    "vertex": 347
+                },
+                {
+                    "children": [
+                        415,
+                        405
+                    ],
+                    "vertex": 389
+                },
+                {
+                    "children": [
+                        585
+                    ],
+                    "vertex": 379
+                },
+                {
+                    "children": [
+                        431
+                    ],
+                    "vertex": 415
+                },
+                {
+                    "children": [
+                        585
+                    ],
+                    "vertex": 405
+                },
+                {
+                    "children": [],
+                    "vertex": 585
+                },
+                {
+                    "children": [
+                        474,
+                        451
+                    ],
+                    "vertex": 431
+                },
+                {
+                    "children": [
+                        467
+                    ],
+                    "vertex": 451
+                },
+                {
+                    "children": [
+                        527
+                    ],
+                    "vertex": 474
+                },
+                {
+                    "children": [
+                        580
+                    ],
+                    "vertex": 527
+                },
+                {
+                    "children": [
+                        585
+                    ],
+                    "vertex": 467
+                },
+                {
+                    "children": [
+                        585
+                    ],
+                    "vertex": 580
+                }
+            ],
+            "end": 587,
+            "loopEntries": [],
+            "name": "dequeue_pop",
+            "postCallsiteOffsets": [
+                431,
+                467,
+                527,
+                580
+            ],
+            "start": 347
+        }
+    ]
+}

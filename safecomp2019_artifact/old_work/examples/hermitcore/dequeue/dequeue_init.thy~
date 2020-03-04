@@ -1,0 +1,159 @@
+(*
+Copyright 2018
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*)
+theory dequeue_init
+  imports dequeue
+begin
+
+context assembly
+begin
+
+text \<open>
+  As we want to verify individual function bodies, it seems useful for now to treat the end of a
+  function's section as the halting point. This may need to be changed if we encounter functions
+  that are split across sections, but for now that is not an issue. For now, each function gets its
+  own @{text halted}.
+\<close>
+
+value \<open>length (instructions (text_sections \<alpha>!0))\<close>
+definition halted :: \<open>state \<Rightarrow> bool\<close> where
+  \<open>halted \<sigma> \<equiv> pc \<sigma> = 28\<close>
+
+interpretation cfg_system step halted wf_state location
+  by standard (simp add: wf_state_def det_system.is_weak_invar_def)
+
+declare halted_def[simp]
+declare wf_state_def[simp]
+declare location_def[simp]
+
+method symbolic_execution uses masters add del =
+  (rule wps_rls)?,
+  (simp (no_asm_simp))?,
+  (simp (no_asm_simp) only: assembly_def cong: Let'_weak_cong,rewrite_one_let'),
+  (rewrite_one_let'),
+  (rewrite_one_let' add: exec_instr.simps),
+  (rewrite_one_let' add: unfold_semantics),
+  (insert masters),
+  (rewrite_one_let' add: add del: del)+,
+  (thin_tac "master _ _ _")+,
+  (rule linvar_unfoldI),
+  (simp (no_asm_simp))
+
+method restart_symbolic_execution uses add del =
+  (rewrite_one_let' add: add del: del)+,
+  (thin_tac "master _ _ _")+,
+  (rule linvar_unfoldI),
+  (simp)
+
+text \<open>
+  The Floyd invariant expresses for some locations properties that are invariably true.
+  For now I am assuming that the order of variables on the stack is the same as the order of
+  function parameters, but that may not necessarily be the case.
+\<close>
+definition pp_\<Theta> :: \<open>_ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> _ \<Rightarrow> floyd_invar\<close> where
+  \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r buffer\<^sub>p\<^sub>t\<^sub>r buffer_length element_size \<equiv> [
+    \<comment> \<open>precondition\<close>
+    (0,  0) \<mapsto> \<lambda>\<sigma>. RSP \<sigma> = rsp\<^sub>0
+                 \<and> RDI \<sigma> = dequeue\<^sub>p\<^sub>t\<^sub>r
+                 \<and> RSI \<sigma> = buffer\<^sub>p\<^sub>t\<^sub>r
+                 \<and> RDX \<sigma> = buffer_length
+                 \<and> RCX \<sigma> = element_size
+                 \<and> buffer\<^sub>p\<^sub>t\<^sub>r \<noteq> 0,
+    \<comment> \<open>postcondition\<close>
+    (0, 28) \<mapsto> \<lambda>\<sigma>. if dequeue\<^sub>p\<^sub>t\<^sub>r = 0 then
+                    EAX \<sigma> = -EINVAL
+                  else
+                    EAX \<sigma> = 0
+                  \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r, 8] = (0::64 word) \<comment> \<open>front\<close>
+                  \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r + 8, 8] = (0::64 word) \<comment> \<open>back\<close>
+                  \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r + 0x10, 8] = buffer\<^sub>p\<^sub>t\<^sub>r
+                  \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r + 0x18, 8] = buffer_length
+                  \<and> \<sigma> \<turnstile> *[dequeue\<^sub>p\<^sub>t\<^sub>r + 0x20, 8] = element_size
+  ]\<close>
+
+text \<open>Add some rules to the simplifier to simplify proofs (pun intended).\<close>
+schematic_goal pp_\<Theta>_zero[simp]: \<comment> \<open>@{term 0} is not a numeral\<close>
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r buffer\<^sub>p\<^sub>t\<^sub>r buffer_length element_size (0, 0) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+schematic_goal pp_\<Theta>_one[simp]: \<comment> \<open>@{term 1} is not a numeral\<close>
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r buffer\<^sub>p\<^sub>t\<^sub>r buffer_length element_size (0, 1) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+schematic_goal pp_\<Theta>_numeral[simp]:
+  shows \<open>pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r buffer\<^sub>p\<^sub>t\<^sub>r buffer_length element_size (0, numeral m) = ?x\<close>
+  unfolding pp_\<Theta>_def
+  by simp
+
+
+
+
+lemma rewrite_dequeue_init:
+  assumes \<open>seps blocks\<close>
+      and \<open>(2, rsp\<^sub>0 - 8, 8) \<in> blocks\<close>
+      and \<open>(3, rsp\<^sub>0 - 0x10, 8) \<in> blocks\<close>
+      and \<open>(4, rsp\<^sub>0 - 0x18, 8) \<in> blocks\<close>
+      and \<open>(5, rsp\<^sub>0 - 0x20, 8) \<in> blocks\<close>
+      and \<open>(6, rsp\<^sub>0 - 0x28, 8) \<in> blocks\<close>
+      and \<open>(7, dequeue\<^sub>p\<^sub>t\<^sub>r, 8) \<in> blocks\<close>
+      and \<open>(8, dequeue\<^sub>p\<^sub>t\<^sub>r + 8, 8) \<in> blocks\<close>
+      and \<open>(9, dequeue\<^sub>p\<^sub>t\<^sub>r + 0x10, 8) \<in> blocks\<close>
+      and \<open>(10, dequeue\<^sub>p\<^sub>t\<^sub>r + 0x18, 8) \<in> blocks\<close>
+      and \<open>(11, dequeue\<^sub>p\<^sub>t\<^sub>r + 0x20, 8) \<in> blocks\<close>
+      and \<open>0x28 \<le> rsp\<^sub>0\<close>
+      and \<open>dequeue\<^sub>p\<^sub>t\<^sub>r \<le> max_word - 0x28\<close>
+    shows \<open>is_std_invar (floyd.invar (pp_\<Theta> rsp\<^sub>0 dequeue\<^sub>p\<^sub>t\<^sub>r buffer\<^sub>p\<^sub>t\<^sub>r buffer_length element_size))\<close>
+proof -
+  (* Boilerplate code for setting up the master blocks: *)
+  note 1 = order_trans[OF _ assms(12)]
+  note 2 = word_sub_le[OF 1]
+
+  have masters:
+    \<open>master blocks (rsp\<^sub>0 - 8, 8) 2\<close>
+    \<open>master blocks (rsp\<^sub>0 - 0x10, 8) 3\<close>
+    \<open>master blocks (rsp\<^sub>0 - 0x18, 8) 4\<close>
+    \<open>master blocks (rsp\<^sub>0 - 0x20, 8) 5\<close>
+    \<open>master blocks (rsp\<^sub>0 - 0x28, 8) 6\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r, 8) 7\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 8, 8) 8\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 0x10, 8) 9\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 0x18, 8) 10\<close>
+    \<open>master blocks (dequeue\<^sub>p\<^sub>t\<^sub>r + 0x20, 8) 11\<close>
+    by (find_master' assms: assms add: 1 2)+
+
+  show ?thesis
+    (* Boilerplate code  to start the VCG *)
+    apply (rule floyd_invarI)
+    apply (rewrite at \<open>floyd_vcs \<hole> _\<close> pp_\<Theta>_def)
+    apply (intro floyd_vcsI; clarsimp?)
+
+    (* Subgoal for (ts, pc) = (0, 0) to (0, 28) *)
+    subgoal premises prems for \<sigma> \<comment> \<open>Only one subgoal so this methodology isn't really necessary.\<close>
+      (* Insert relevant knowledge *)
+      apply (insert prems(1,2,6-) prems(3-5)[symmetric] assms 1 2)
+      (* Apply VCG / symb. execution *)
+      apply (symbolic_execution masters: masters)+
+      apply (restart_symbolic_execution)
+      apply (symbolic_execution masters: masters)+
+      apply (insert masters)
+      apply rewrite_one_let'+
+      apply (simp add: simp_rules)
+      done
+    done
+qed 
+
+end
+
+end
