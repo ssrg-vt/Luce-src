@@ -1,0 +1,16 @@
+session artifact_datatypes = "HOL-Word" + theories MachineDatatypes
+session artifact_machine = artifact_datatypes + theories Machine
+
+session artifact_rewriting = artifact_machine +
+  theories Memory_Rewriting
+session artifact_manual_execution = artifact_rewriting +
+  theories Manual_Execution
+session artifact_setup = artifact_manual_execution +
+  theories
+    "../x86-64_parser/Artifact_Setup"
+    Det_Step
+    "Monads/Abstract_System"
+    "Monads/More_Eisbach_Tools"
+session artifact_all = artifact_setup +
+  theories
+		Presimplified_Semantics

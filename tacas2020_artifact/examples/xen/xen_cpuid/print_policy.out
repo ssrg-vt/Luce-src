@@ -1,0 +1,1639 @@
+--------------------
+Parsed text sections
+--------------------
+// text section print_policy
+29f0: PUSH Reg R14 2
+29f2: XOR Reg EAX, Reg EAX 2
+29f4: PUSH Reg R13 2
+29f6: MOV Reg R13D, Reg R8D 3
+29f9: PUSH Reg R12 2
+29fb: MOV Reg R12D, Reg EDX 3
+29fe: PUSH Reg RBP 1
+29ff: MOV Reg RBP, Reg RCX 3
+2a02: MOV Reg ECX, Reg EDX 2
+2a04: MOV Reg RDX, Reg RDI 3
+2a07: PUSH Reg RBX 1
+2a08: MOV Reg EDI, Immediate 1 5
+2a0d: MOV Reg RBX, Reg RSI 3
+2a10: LEA Reg RSI, Address (AddrPlus (FromReg RIP) (AddrImm 1521)) 7
+2a17: CALL Immediate 8560 <__printf_chk,@plt> 5
+2a1c: LEA Reg RDI, Address (AddrPlus (FromReg RIP) (AddrImm 1813)) 7
+2a23: CALL Immediate 8304 <puts,@plt> 5
+2a28: LEA Reg RAX, Address (AddrPlus (FromReg RIP) (AddrImm 2522)) 7
+2a2f: LEA Reg RCX, Address (AddrPlus (FromReg RIP) (AddrImm 1802)) 7
+2a36: MOV Reg EDI, Immediate 1 5
+2a3b: PUSH Reg RAX 1
+2a3c: LEA Reg RAX, Address (AddrPlus (FromReg RIP) (AddrImm 2443)) 7
+2a43: LEA Reg RSI, Address (AddrPlus (FromReg RIP) (AddrImm 1502)) 7
+2a4a: PUSH Reg RAX 1
+2a4b: LEA Reg R9, Address (AddrPlus (FromReg RIP) (AddrImm 2407)) 7
+2a52: LEA Reg R8, Address (AddrPlus (FromReg RIP) (AddrImm 2379)) 7
+2a59: XOR Reg EAX, Reg EAX 2
+2a5b: LEA Reg RDX, Address (AddrPlus (FromReg RIP) (AddrImm 1761)) 7
+2a62: CALL Immediate 8560 <__printf_chk,@plt> 5
+2a67: POP Reg RCX 1
+2a68: POP Reg RSI 1
+2a69: TEST Reg R12D, Reg R12D 3
+2a6c: JE Immediate 10947 <print_policy,+0xd3> 2
+2a6e: LEA Reg EAX, Address (AddrMinus (FromReg R12) (AddrImm 1)) 5
+2a73: LEA Reg R14, Address (AddrPlus (FromReg RIP) (AddrImm 1494)) 7
+2a7a: LEA Reg RAX, Address (AddrPlus (FromReg RAX) (AddrTimes (FromReg RAX) (AddrImm 2))) 4
+2a7e: LEA Reg R12, Address (AddrPlus (FromReg RBX) (AddrPlus (AddrTimes (FromReg RAX) (AddrImm 8)) (AddrImm 24))) 5
+2a83: NOP Address (SizeDir 32 (AddrPlus (FromReg RAX) (AddrPlus (AddrTimes (FromReg RAX) (AddrImm 1)) (AddrImm 0)))) 5
+2a88: MOV Reg R8D, Address (SizeDir 32 (AddrPlus (FromReg RBX) (AddrImm 8))) 4
+2a8c: MOV Reg R9D, Address (SizeDir 32 (AddrPlus (FromReg RBX) (AddrImm 12))) 4
+2a90: MOV Reg ESI, Address (SizeDir 32 (AddrPlus (FromReg RBX) (AddrImm 20))) 3
+2a93: MOV Reg EDX, Address (SizeDir 32 (AddrPlus (FromReg RBX) (AddrImm 16))) 3
+2a96: MOV Reg EAX, Reg R8D 3
+2a99: OR Reg EAX, Reg R9D 3
+2a9c: OR Reg EAX, Reg ESI 2
+2a9e: OR Reg EAX, Reg EDX 2
+2aa0: JE Immediate 10938 <print_policy,+0xca> 2
+2aa2: MOV Reg ECX, Address (SizeDir 32 (AddrPlus (FromReg RBX) (AddrImm 4))) 3
+2aa5: PUSH Reg RSI 1
+2aa6: MOV Reg EDI, Immediate 1 5
+2aab: MOV Reg RSI, Reg R14 3
+2aae: PUSH Reg RDX 1
+2aaf: MOV Reg EDX, Address (SizeDir 32 (FromReg RBX)) 2
+2ab1: XOR Reg EAX, Reg EAX 2
+2ab3: CALL Immediate 8560 <__printf_chk,@plt> 5
+2ab8: POP Reg RAX 1
+2ab9: POP Reg RDX 1
+2aba: ADD Reg RBX, Immediate 24 4
+2abe: CMP Reg R12, Reg RBX 3
+2ac1: JNE Immediate 10888 <print_policy,+0x98> 2
+2ac3: LEA Reg RDI, Address (AddrPlus (FromReg RIP) (AddrImm 1662)) 7
+2aca: CALL Immediate 8304 <puts,@plt> 5
+2acf: XOR Reg EAX, Reg EAX 2
+2ad1: LEA Reg RCX, Address (AddrPlus (FromReg RIP) (AddrImm 1655)) 7
+2ad8: LEA Reg RDX, Address (AddrPlus (FromReg RIP) (AddrImm 1654)) 7
+2adf: LEA Reg RSI, Address (AddrPlus (FromReg RIP) (AddrImm 1653)) 7
+2ae6: MOV Reg EDI, Immediate 1 5
+2aeb: CALL Immediate 8560 <__printf_chk,@plt> 5
+2af0: TEST Reg R13D, Reg R13D 3
+2af3: JE Immediate 11054 <print_policy,+0x13e> 2
+2af5: LEA Reg EAX, Address (AddrMinus (FromReg R13) (AddrImm 1)) 4
+2af9: MOV Reg RBX, Reg RBP 3
+2afc: SHL Reg RAX, Immediate 4 4
+2b00: LEA Reg R12, Address (AddrPlus (FromReg RBP) (AddrPlus (AddrTimes (FromReg RAX) (AddrImm 1)) (AddrImm 16))) 5
+2b05: LEA Reg RBP, Address (AddrPlus (FromReg RIP) (AddrImm 1632)) 7
+2b0c: NOP Address (SizeDir 32 (AddrPlus (FromReg RAX) (AddrImm 0))) 4
+2b10: MOV Reg RCX, Address (SizeDir 64 (AddrPlus (FromReg RBX) (AddrImm 8))) 4
+2b14: MOV Reg EDX, Address (SizeDir 32 (FromReg RBX)) 2
+2b16: MOV Reg RSI, Reg RBP 3
+2b19: MOV Reg EDI, Immediate 1 5
+2b1e: XOR Reg EAX, Reg EAX 2
+2b20: ADD Reg RBX, Immediate 16 4
+2b24: CALL Immediate 8560 <__printf_chk,@plt> 5
+2b29: CMP Reg RBX, Reg R12 3
+2b2c: JNE Immediate 11024 <print_policy,+0x120> 2
+2b2e: POP Reg RBX 1
+2b2f: POP Reg RBP 1
+2b30: POP Reg R12 2
+2b32: POP Reg R13 2
+2b34: POP Reg R14 2
+2b36: RET  1
+-------------------
+.dot code for CFGs.
+-------------------
+diGraph print_policy{
+	print_policy_0  [label="[2aa2,2ab1]"]
+	print_policy_1  [label="[2ab3,2ab3]"]
+	print_policy_2  [label="[2ab8,2ab9]"]
+	print_policy_3  [label="[2aba,2ac1]"]
+	print_policy_4  [label="[2a6e,2a83]"]
+	print_policy_5  [label="[2a88,2aa0]"]
+	print_policy_6  [label="[2af5,2b0c]"]
+	print_policy_7  [label="[2b10,2b20]"]
+	print_policy_8  [label="[2b24,2b24]"]
+	print_policy_9  [label="[2b29,2b2c]"]
+	print_policy_10  [label="[2b2e,2b36]"]
+	print_policy_11  [label="[2ac3,2ac3]"]
+	print_policy_12  [label="[2aca,2aca]"]
+	print_policy_13  [label="[2acf,2ae6]"]
+	print_policy_14  [label="[2aeb,2aeb]"]
+	print_policy_15  [label="[2af0,2af3]"]
+	print_policy_16  [label="[29f0,2a10]"]
+	print_policy_17  [label="[2a17,2a17]"]
+	print_policy_18  [label="[2a1c,2a1c]"]
+	print_policy_19  [label="[2a23,2a23]"]
+	print_policy_20  [label="[2a28,2a5b]"]
+	print_policy_21  [label="[2a62,2a62]"]
+	print_policy_22  [label="[2a67,2a6c]"]
+
+	print_policy_0 -> print_policy_1;
+	print_policy_1 -> print_policy_2;
+	print_policy_2 -> print_policy_3;
+	print_policy_3 -> print_policy_5 [label="!ZF"];
+	print_policy_3 -> print_policy_11 [label="ZF"];
+	print_policy_4 -> print_policy_5;
+	print_policy_5 -> print_policy_3 [label="ZF"];
+	print_policy_5 -> print_policy_0 [label="!ZF"];
+	print_policy_6 -> print_policy_7;
+	print_policy_7 -> print_policy_8;
+	print_policy_8 -> print_policy_9;
+	print_policy_9 -> print_policy_7 [label="!ZF"];
+	print_policy_9 -> print_policy_10 [label="ZF"];
+
+	print_policy_11 -> print_policy_12;
+	print_policy_12 -> print_policy_13;
+	print_policy_13 -> print_policy_14;
+	print_policy_14 -> print_policy_15;
+	print_policy_15 -> print_policy_10 [label="ZF"];
+	print_policy_15 -> print_policy_6 [label="!ZF"];
+	print_policy_16 -> print_policy_17;
+	print_policy_17 -> print_policy_18;
+	print_policy_18 -> print_policy_19;
+	print_policy_19 -> print_policy_20;
+	print_policy_20 -> print_policy_21;
+	print_policy_21 -> print_policy_22;
+	print_policy_22 -> print_policy_11 [label="ZF"];
+	print_policy_22 -> print_policy_4 [label="!ZF"];
+}
+
+--------------
+Abstract Code:
+--------------
+Function 0 of print_policy:
+[29f0->2a10]; 
+[2a17->2a17]; 
+[2a1c->2a1c]; 
+[2a23->2a23]; 
+[2a28->2a5b]; 
+[2a62->2a62]; 
+[2a67->2a6c]; 
+if ZF then
+  skip
+else
+  [2a6e->2a83]; 
+  while True do
+    [2a88->2aa0]; 
+    if ZF then
+      skip
+    else
+      [2aa2->2ab1]; 
+      [2ab3->2ab3]; 
+      [2ab8->2ab9]
+    fi; 
+    [2aba->2ac1]; 
+    if !ZF then
+      continue
+    else
+      break 
+    fi
+  od
+fi; 
+[2ac3->2ac3]; 
+[2aca->2aca]; 
+[2acf->2ae6]; 
+[2aeb->2aeb]; 
+[2af0->2af3]; 
+if ZF then
+  skip
+else
+  [2af5->2b0c]; 
+  while True do
+    [2b10->2b20]; 
+    [2b24->2b24]; 
+    [2b29->2b2c]; 
+    if !ZF then
+      continue
+    else
+      break 
+    fi
+  od
+fi; 
+[2b2e->2b36]
+
+
+-------------------
+Symbolic execution:
+-------------------
+Function 0 of print_policy:
+RAX := 0, RBX := RSI, RCX := <31,0>(RDX), RDX := RDI, RDI := 1, RSI := 12296, RSP := (RSP - 40), RBP := RCX, R13 := <31,0>(R8), R12 := <31,0>(RDX)
+[(RSP - 8),8] := R14, [(RSP - 16),8] := R13, [(RSP - 24),8] := R12, [(RSP - 32),8] := RBP, [(RSP - 40),8] := RBX
+ZF := 0, CF := 0, SF := 0, OF := 0, PF := 0; 
+RAX := __printf_chk@2a17()
+[(RSP - 8),8] := 10780; 
+RDI := 12600; 
+RAX := puts@2a23(RDI)
+[(RSP - 8),8] := 10792; 
+RAX := 0, RCX := 12608, RDX := 12611, RDI := 1, RSI := 12328, RSP := (RSP - 16), R9 := 13241, R8 := 13220
+[(RSP - 8),8] := 13321, [(RSP - 16),8] := 13262
+ZF := 0, CF := 0, SF := 0, OF := 0, PF := 0; 
+RAX := __printf_chk@2a62()
+[(RSP - 8),8] := 10855; 
+RCX := [RSP,8], RSI := [(RSP + 8),8], RSP := (RSP + 16)
+ZF := TEST(<31,0>(R12),<31,0>(R12)), CF := TEST(<31,0>(R12),<31,0>(R12)), SF := TEST(<31,0>(R12),<31,0>(R12)), OF := TEST(<31,0>(R12),<31,0>(R12)), PF := TEST(<31,0>(R12),<31,0>(R12)); 
+if (<31,0>(R12) == 0) then
+  skip
+else
+  RAX := (<31,0>((R12 - 1)) + <63,0>((<31,0>((R12 - 1)) * 2))), R14 := 12368, R12 := (RBX + (<63,0>(((<31,0>((R12 - 1)) + <63,0>((<31,0>((R12 - 1)) * 2))) * 8)) + 24)); 
+  while True do
+    RAX := OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]), RDX := [(RBX + 16),4], RSI := [(RBX + 20),4], R9 := [(RBX + 12),4], R8 := [(RBX + 8),4]
+    ZF := OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]), CF := OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]), SF := OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]), OF := OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]), PF := OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]); 
+    if (OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]) == 0) then
+      skip
+    else
+      RAX := 0, RCX := [(RBX + 4),4], RDX := [RBX,4], RDI := 1, RSI := R14, RSP := (RSP - 16)
+      [(RSP - 8),8] := RSI, [(RSP - 16),8] := RDX
+      ZF := 0, CF := 0, SF := 0, OF := 0, PF := 0; 
+      RAX := __printf_chk@2ab3()
+      [(RSP - 8),8] := 10936; 
+      RAX := [RSP,8], RDX := [(RSP + 8),8], RSP := (RSP + 16)
+    fi; 
+    RBX := (RBX + 24)
+    ZF := CMP(R12,(RBX + 24)), CF := CMP(R12,(RBX + 24)), SF := CMP(R12,(RBX + 24)), OF := CMP(R12,(RBX + 24)), PF := CMP(R12,(RBX + 24)); 
+    if (R12 != (RBX + 24)) then
+      continue
+    else
+      break 
+    fi
+  od
+fi; 
+RDI := 12616; 
+RAX := puts@2aca(RDI)
+[(RSP - 8),8] := 10959; 
+RAX := 0, RCX := 12623, RDX := 12629, RDI := 1, RSI := 12635
+ZF := 0, CF := 0, SF := 0, OF := 0, PF := 0; 
+RAX := __printf_chk@2aeb()
+[(RSP - 8),8] := 10992; 
+ZF := TEST(<31,0>(R13),<31,0>(R13)), CF := TEST(<31,0>(R13),<31,0>(R13)), SF := TEST(<31,0>(R13),<31,0>(R13)), OF := TEST(<31,0>(R13),<31,0>(R13)), PF := TEST(<31,0>(R13),<31,0>(R13)); 
+if (<31,0>(R13) == 0) then
+  skip
+else
+  RAX := SHL(<31,0>((R13 - 1)),4), RBX := RBP, RBP := 12652, R12 := (RBP + (<63,0>((<63,0>(SHL(<31,0>((R13 - 1)),4)) * 1)) + 16))
+  ZF := SHL(<31,0>((R13 - 1)),4), CF := SHL(<31,0>((R13 - 1)),4), SF := SHL(<31,0>((R13 - 1)),4), OF := SHL(<31,0>((R13 - 1)),4), PF := SHL(<31,0>((R13 - 1)),4); 
+  while True do
+    RAX := 0, RBX := (RBX + 16), RCX := [(RBX + 8),8], RDX := [RBX,4], RDI := 1, RSI := RBP
+    ZF := (RBX + 16), CF := (RBX + 16), SF := (RBX + 16), OF := (RBX + 16), PF := (RBX + 16); 
+    RAX := __printf_chk@2b24()
+    [(RSP - 8),8] := 11049; 
+    ZF := CMP(RBX,R12), CF := CMP(RBX,R12), SF := CMP(RBX,R12), OF := CMP(RBX,R12), PF := CMP(RBX,R12); 
+    if (RBX != R12) then
+      continue
+    else
+      break 
+    fi
+  od
+fi; 
+RBX := [RSP,8], RSP := (RSP + 48), RBP := [(RSP + 8),8], R14 := [(RSP + 32),8], R13 := [(RSP + 24),8], R12 := [(RSP + 16),8]
+
+
+------------------------
+Program Transformations:
+------------------------
+Function 0 of print_policy:
+{{RAX == RAX0; RBX == RBX0; RCX == RCX0; RDX == RDX0; RDI == RDI0; RSI == RSI0; RSP == RSP0; RBP == RBP0; R14 == R140; R13 == R130; R12 == R120; R9 == R90; R8 == R80; [RSP0,8] == ret_address}}
+RBX := RSI0
+[(RSP0 - 8),8] := R140, [(RSP0 - 16),8] := R130, [(RSP0 - 24),8] := R120, [(RSP0 - 32),8] := RBP0, [(RSP0 - 40),8] := RBX0; 
+{{RAX == 0; RBX == RSI0; RCX == <31,0>(RDX0); RDX == RDI0; RDI == 1; RSI == 12296; RSP == (RSP0 - 40); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == R90; R8 == R80; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+RAX := __printf_chk@2a17()
+[(RSP0 - 48),8] := 10780; 
+{{RAX == __printf_chk@2a17(); RBX == RSI0; RCX == <31,0>(RDX0); RDX == RDI0; RDI == 1; RSI == 12296; RSP == (RSP0 - 40); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == R90; R8 == R80; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10780}}
+skip'; 
+{{RAX == __printf_chk@2a17(); RBX == RSI0; RCX == <31,0>(RDX0); RDX == RDI0; RDI == 12600; RSI == 12296; RSP == (RSP0 - 40); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == R90; R8 == R80; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10780}}
+RAX := puts@2a23(12600)
+[(RSP0 - 48),8] := 10792; 
+{{RAX == puts@2a23(12600); RBX == RSI0; RCX == <31,0>(RDX0); RDX == RDI0; RDI == 12600; RSI == 12296; RSP == (RSP0 - 40); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == R90; R8 == R80; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10792}}
+[(RSP0 - 48),8] := 13321, [(RSP0 - 56),8] := 13262; 
+{{RAX == 0; RBX == RSI0; RCX == 12608; RDX == 12611; RDI == 1; RSI == 12328; RSP == (RSP0 - 56); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == 13241; R8 == 13220; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 13321; [(RSP0 - 56),8] == 13262}}
+RAX := __printf_chk@2a62()
+[(RSP0 - 64),8] := 10855; 
+{{RAX == __printf_chk@2a62(); RBX == RSI0; RCX == 12608; RDX == 12611; RDI == 1; RSI == 12328; RSP == (RSP0 - 56); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == 13241; R8 == 13220; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 13321; [(RSP0 - 56),8] == 13262; [(RSP0 - 64),8] == 10855}}
+[(RSP0 - 48),8] := 13321, [(RSP0 - 56),8] := 13262; 
+if (<31,0>(RDX0) == 0) then
+  {{RAX == __printf_chk@2a62(); RBX == RSI0; RCX == 13262; RDX == 12611; RDI == 1; RSI == 13321; RSP == (RSP0 - 40); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == 13241; R8 == 13220; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 13321; [(RSP0 - 56),8] == 13262; [(RSP0 - 64),8] == 10855}}
+  skip'
+else
+  {{RAX == __printf_chk@2a62(); RBX == RSI0; RCX == 13262; RDX == 12611; RDI == 1; RSI == 13321; RSP == (RSP0 - 40); RBP == RCX0; R14 == R140; R13 == <31,0>(R80); R12 == <31,0>(RDX0); R9 == 13241; R8 == 13220; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 13321; [(RSP0 - 56),8] == 13262; [(RSP0 - 64),8] == 10855}}
+  skip'; 
+  while True do
+    {{RDI == 1; RSP == (RSP0 - 40); RBP == RCX0; R14 == 12368; R13 == <31,0>(R80); R12 == (RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+    skip'; 
+    if (OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]) == 0) then
+      {{RAX == OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]); RDX == [(RBX + 16),4]; RDI == 1; RSI == [(RBX + 20),4]; RSP == (RSP0 - 40); RBP == RCX0; R14 == 12368; R13 == <31,0>(R80); R12 == (RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)); R9 == [(RBX + 12),4]; R8 == [(RBX + 8),4]; [RSP0,8] == ret_address; [(RBX + 8),4] == [(RBX + 8),4]; [(RBX + 12),4] == [(RBX + 12),4]; [(RBX + 16),4] == [(RBX + 16),4]; [(RBX + 20),4] == [(RBX + 20),4]; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+      skip'
+    else
+      {{RAX == OR(OR(OR([(RBX + 8),4],[(RBX + 12),4]),[(RBX + 20),4]),[(RBX + 16),4]); RDX == [(RBX + 16),4]; RDI == 1; RSI == [(RBX + 20),4]; RSP == (RSP0 - 40); RBP == RCX0; R14 == 12368; R13 == <31,0>(R80); R12 == (RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)); R9 == [(RBX + 12),4]; R8 == [(RBX + 8),4]; [RSP0,8] == ret_address; [(RBX + 8),4] == [(RBX + 8),4]; [(RBX + 12),4] == [(RBX + 12),4]; [(RBX + 16),4] == [(RBX + 16),4]; [(RBX + 20),4] == [(RBX + 20),4]; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+      [(RSP0 - 48),8] := [(RBX + 20),4], [(RSP0 - 56),8] := [(RBX + 16),4]; 
+      {{RAX == 0; RCX == [(RBX + 4),4]; RDX == [RBX,4]; RDI == 1; RSI == 12368; RSP == (RSP0 - 56); RBP == RCX0; R14 == 12368; R13 == <31,0>(R80); R12 == (RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)); R9 == [(RBX + 12),4]; R8 == [(RBX + 8),4]; [RBX,4] == [RBX,4]; [RSP0,8] == ret_address; [(RBX + 4),4] == [(RBX + 4),4]; [(RBX + 8),4] == [(RBX + 8),4]; [(RBX + 12),4] == [(RBX + 12),4]; [(RBX + 16),4] == [(RBX + 16),4]; [(RBX + 20),4] == [(RBX + 20),4]; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == [(RBX + 20),4]; [(RSP0 - 56),8] == [(RBX + 16),4]}}
+      RAX := __printf_chk@2ab3()
+      [(RSP0 - 64),8] := 10936; 
+      {{RAX == __printf_chk@2ab3(); RCX == [(RBX + 4),4]; RDX == [RBX,4]; RDI == 1; RSI == 12368; RSP == (RSP0 - 56); RBP == RCX0; R14 == 12368; R13 == <31,0>(R80); R12 == (RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)); R9 == [(RBX + 12),4]; R8 == [(RBX + 8),4]; [RBX,4] == [RBX,4]; [RSP0,8] == ret_address; [(RBX + 4),4] == [(RBX + 4),4]; [(RBX + 8),4] == [(RBX + 8),4]; [(RBX + 12),4] == [(RBX + 12),4]; [(RBX + 16),4] == [(RBX + 16),4]; [(RBX + 20),4] == [(RBX + 20),4]; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == [(RBX + 20),4]; [(RSP0 - 56),8] == [(RBX + 16),4]; [(RSP0 - 64),8] == 10936}}
+      [(RSP0 - 48),8] := [(RBX + 20),4], [(RSP0 - 56),8] := [(RBX + 16),4]
+    fi; 
+    {{RDI == 1; RSP == (RSP0 - 40); RBP == RCX0; R14 == 12368; R13 == <31,0>(R80); R12 == (RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)); R9 == [(RBX + 12),4]; R8 == [(RBX + 8),4]; [RSP0,8] == ret_address; [(RBX + 8),4] == [(RBX + 8),4]; [(RBX + 12),4] == [(RBX + 12),4]; [(RBX + 16),4] == [(RBX + 16),4]; [(RBX + 20),4] == [(RBX + 20),4]; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+    RBX := (RBX + 24); 
+    if ((RSI0 + (<63,0>(((<31,0>((<31,0>(RDX0) - 1)) + <63,0>((<31,0>((<31,0>(RDX0) - 1)) * 2))) * 8)) + 24)) != (RBX + 24)) then
+      {{RDI == 1; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+      skip'
+    else
+      {{RDI == 1; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+      skip'
+    fi
+  od
+fi; 
+{{RDI == 1; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+skip'; 
+{{RDI == 12616; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+RAX := puts@2aca(12616)
+[(RSP0 - 48),8] := 10959; 
+{{RDI == 12616; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10959}}
+skip'; 
+{{RAX == 0; RCX == 12623; RDX == 12629; RDI == 1; RSI == 12635; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10959}}
+RAX := __printf_chk@2aeb()
+[(RSP0 - 48),8] := 10992; 
+{{RAX == __printf_chk@2aeb(); RCX == 12623; RDX == 12629; RDI == 1; RSI == 12635; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10992}}
+skip'; 
+if (<31,0>(R80) == 0) then
+  {{RAX == __printf_chk@2aeb(); RCX == 12623; RDX == 12629; RDI == 1; RSI == 12635; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10992}}
+  skip'
+else
+  {{RAX == __printf_chk@2aeb(); RCX == 12623; RDX == 12629; RDI == 1; RSI == 12635; RSP == (RSP0 - 40); RBP == RCX0; R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 10992}}
+  RBX := RCX0; 
+  while True do
+    {{RDI == 1; RSP == (RSP0 - 40); RBP == 12652; R13 == <31,0>(R80); R12 == (RCX0 + (<63,0>((<63,0>(SHL(<31,0>((<31,0>(R80) - 1)),4)) * 1)) + 16)); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+    RBX := (RBX + 16); 
+    {{RAX == 0; RDI == 1; RSI == 12652; RSP == (RSP0 - 40); RBP == 12652; R13 == <31,0>(R80); R12 == (RCX0 + (<63,0>((<63,0>(SHL(<31,0>((<31,0>(R80) - 1)),4)) * 1)) + 16)); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+    RAX := __printf_chk@2b24()
+    [(RSP0 - 48),8] := 11049; 
+    {{RAX == __printf_chk@2b24(); RDI == 1; RSI == 12652; RSP == (RSP0 - 40); RBP == 12652; R13 == <31,0>(R80); R12 == (RCX0 + (<63,0>((<63,0>(SHL(<31,0>((<31,0>(R80) - 1)),4)) * 1)) + 16)); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0; [(RSP0 - 48),8] == 11049}}
+    skip'; 
+    if (RBX != (RCX0 + (<63,0>((<63,0>(SHL(<31,0>((<31,0>(R80) - 1)),4)) * 1)) + 16))) then
+      {{RDI == 1; RSP == (RSP0 - 40); R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+      skip'
+    else
+      {{RDI == 1; RSP == (RSP0 - 40); R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+      skip'
+    fi
+  od
+fi; 
+{{RDI == 1; RSP == (RSP0 - 40); R13 == <31,0>(R80); [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+[RSP0,8] := ret_address, [(RSP0 - 8),8] := R140, [(RSP0 - 16),8] := R130, [(RSP0 - 24),8] := R120, [(RSP0 - 32),8] := RBP0, [(RSP0 - 40),8] := RBX0; 
+{{RBX == RBX0; RDI == 1; RSP == (RSP0 + 8); RBP == RBP0; R14 == R140; R13 == R130; R12 == R120; [RSP0,8] == ret_address; [(RSP0 - 8),8] == R140; [(RSP0 - 16),8] == R130; [(RSP0 - 24),8] == R120; [(RSP0 - 32),8] == RBP0; [(RSP0 - 40),8] == RBX0}}
+skip'
+
+
+------------------------
+Isabelle Code:
+------------------------
+locale "xen_cpuid" = execution_context + exec_code +
+  fixes printf_chk_0x2a17_retval\<^sub>v puts_0x2a23_retval\<^sub>v printf_chk_0x2a62_retval\<^sub>v printf_chk_0x2ab3_retval\<^sub>v puts_0x2aca_retval\<^sub>v printf_chk_0x2aeb_retval\<^sub>v printf_chk_0x2b24_retval\<^sub>v printf_chk_addr puts_addr :: \<open>64 word\<close>
+    and printf_chk_acode puts_acode :: ACode
+  assumes fetch:
+    "fetch 0x29f0 \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour r14))), 2)"
+    "fetch 0x29f2 \<equiv> (Binary (IS_8088 Xor) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rax))), 2)"
+    "fetch 0x29f4 \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour r13))), 2)"
+    "fetch 0x29f6 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo r13)) (Storage (Reg (General ThirtyTwo r8))), 3)"
+    "fetch 0x29f9 \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour r12))), 2)"
+    "fetch 0x29fb \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo r12)) (Storage (Reg (General ThirtyTwo rdx))), 3)"
+    "fetch 0x29fe \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour rbp))), 1)"
+    "fetch 0x29ff \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rbp)) (Storage (Reg (General SixtyFour rcx))), 3)"
+    "fetch 0x2a02 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rcx)) (Storage (Reg (General ThirtyTwo rdx))), 2)"
+    "fetch 0x2a04 \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rdx)) (Storage (Reg (General SixtyFour rdi))), 3)"
+    "fetch 0x2a07 \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour rbx))), 1)"
+    "fetch 0x2a08 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdi)) (Immediate SixtyFour (ImmVal 1)), 5)"
+    "fetch 0x2a0d \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rbx)) (Storage (Reg (General SixtyFour rsi))), 3)"
+    "fetch 0x2a10 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rsi)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1521)))), 7)"
+    "fetch 0x2a17 \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''__printf_chk'')), 5)"
+    "fetch 0x2a1c \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rdi)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1813)))), 7)"
+    "fetch 0x2a23 \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''puts'')), 5)"
+    "fetch 0x2a28 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rax)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 2522)))), 7)"
+    "fetch 0x2a2f \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rcx)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1802)))), 7)"
+    "fetch 0x2a36 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdi)) (Immediate SixtyFour (ImmVal 1)), 5)"
+    "fetch 0x2a3b \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour rax))), 1)"
+    "fetch 0x2a3c \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rax)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 2443)))), 7)"
+    "fetch 0x2a43 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rsi)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1502)))), 7)"
+    "fetch 0x2a4a \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour rax))), 1)"
+    "fetch 0x2a4b \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour r9)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 2407)))), 7)"
+    "fetch 0x2a52 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour r8)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 2379)))), 7)"
+    "fetch 0x2a59 \<equiv> (Binary (IS_8088 Xor) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rax))), 2)"
+    "fetch 0x2a5b \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rdx)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1761)))), 7)"
+    "fetch 0x2a62 \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''__printf_chk'')), 5)"
+    "fetch 0x2a67 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour rcx))), 1)"
+    "fetch 0x2a68 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour rsi))), 1)"
+    "fetch 0x2a69 \<equiv> (Binary (IS_8088 Test) (Reg (General ThirtyTwo r12)) (Storage (Reg (General ThirtyTwo r12))), 3)"
+    "fetch 0x2a6c \<equiv> (Unary (IS_8088 Je) (Immediate SixtyFour (ImmVal 10947)), 2)"
+    "fetch 0x2a6e \<equiv> (Binary (IS_8088 Lea) (Reg (General ThirtyTwo rax)) (Storage (Memory SixtyFour (A_Minus (A_FromReg (General SixtyFour r12)) (A_WordConstant 1)))), 5)"
+    "fetch 0x2a73 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour r14)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1494)))), 7)"
+    "fetch 0x2a7a \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rax)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rax)) (A_Mult 2 (A_FromReg (General SixtyFour rax)))))), 4)"
+    "fetch 0x2a7e \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour r12)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rbx)) (A_Plus (A_Mult 8 (A_FromReg (General SixtyFour rax))) (A_WordConstant 24))))), 5)"
+    "fetch 0x2a83 \<equiv> (Unary (IS_8088 Nop) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rax)) (A_Plus (A_Mult 1 (A_FromReg (General SixtyFour rax))) (A_WordConstant 0)))))), 5)"
+    "fetch 0x2a88 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo r8)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rbx)) (A_WordConstant 8))))), 4)"
+    "fetch 0x2a8c \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo r9)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rbx)) (A_WordConstant 12))))), 4)"
+    "fetch 0x2a90 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rsi)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rbx)) (A_WordConstant 20))))), 3)"
+    "fetch 0x2a93 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdx)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rbx)) (A_WordConstant 16))))), 3)"
+    "fetch 0x2a96 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo r8))), 3)"
+    "fetch 0x2a99 \<equiv> (Binary (IS_8088 Or) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo r9))), 3)"
+    "fetch 0x2a9c \<equiv> (Binary (IS_8088 Or) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rsi))), 2)"
+    "fetch 0x2a9e \<equiv> (Binary (IS_8088 Or) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rdx))), 2)"
+    "fetch 0x2aa0 \<equiv> (Unary (IS_8088 Je) (Immediate SixtyFour (ImmVal 10938)), 2)"
+    "fetch 0x2aa2 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rcx)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rbx)) (A_WordConstant 4))))), 3)"
+    "fetch 0x2aa5 \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour rsi))), 1)"
+    "fetch 0x2aa6 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdi)) (Immediate SixtyFour (ImmVal 1)), 5)"
+    "fetch 0x2aab \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rsi)) (Storage (Reg (General SixtyFour r14))), 3)"
+    "fetch 0x2aae \<equiv> (Unary (IS_8088 Push) (Storage (Reg (General SixtyFour rdx))), 1)"
+    "fetch 0x2aaf \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdx)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_FromReg (General SixtyFour rbx))))), 2)"
+    "fetch 0x2ab1 \<equiv> (Binary (IS_8088 Xor) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rax))), 2)"
+    "fetch 0x2ab3 \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''__printf_chk'')), 5)"
+    "fetch 0x2ab8 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour rax))), 1)"
+    "fetch 0x2ab9 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour rdx))), 1)"
+    "fetch 0x2aba \<equiv> (Binary (IS_8088 Add) (Reg (General SixtyFour rbx)) (Immediate SixtyFour (ImmVal 24)), 4)"
+    "fetch 0x2abe \<equiv> (Binary (IS_8088 Cmp) (Reg (General SixtyFour r12)) (Storage (Reg (General SixtyFour rbx))), 3)"
+    "fetch 0x2ac1 \<equiv> (Unary (IS_8088 Jne) (Immediate SixtyFour (ImmVal 10888)), 2)"
+    "fetch 0x2ac3 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rdi)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1662)))), 7)"
+    "fetch 0x2aca \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''puts'')), 5)"
+    "fetch 0x2acf \<equiv> (Binary (IS_8088 Xor) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rax))), 2)"
+    "fetch 0x2ad1 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rcx)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1655)))), 7)"
+    "fetch 0x2ad8 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rdx)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1654)))), 7)"
+    "fetch 0x2adf \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rsi)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1653)))), 7)"
+    "fetch 0x2ae6 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdi)) (Immediate SixtyFour (ImmVal 1)), 5)"
+    "fetch 0x2aeb \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''__printf_chk'')), 5)"
+    "fetch 0x2af0 \<equiv> (Binary (IS_8088 Test) (Reg (General ThirtyTwo r13)) (Storage (Reg (General ThirtyTwo r13))), 3)"
+    "fetch 0x2af3 \<equiv> (Unary (IS_8088 Je) (Immediate SixtyFour (ImmVal 11054)), 2)"
+    "fetch 0x2af5 \<equiv> (Binary (IS_8088 Lea) (Reg (General ThirtyTwo rax)) (Storage (Memory SixtyFour (A_Minus (A_FromReg (General SixtyFour r13)) (A_WordConstant 1)))), 4)"
+    "fetch 0x2af9 \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rbx)) (Storage (Reg (General SixtyFour rbp))), 3)"
+    "fetch 0x2afc \<equiv> (Binary (IS_8088 Shl) (Reg (General SixtyFour rax)) (Immediate SixtyFour (ImmVal 4)), 4)"
+    "fetch 0x2b00 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour r12)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rbp)) (A_Plus (A_Mult 1 (A_FromReg (General SixtyFour rax))) (A_WordConstant 16))))), 5)"
+    "fetch 0x2b05 \<equiv> (Binary (IS_8088 Lea) (Reg (General SixtyFour rbp)) (Storage (Memory SixtyFour (A_Plus (A_FromReg (General SixtyFour rip)) (A_WordConstant 1632)))), 7)"
+    "fetch 0x2b0c \<equiv> (Unary (IS_8088 Nop) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_Plus (A_FromReg (General SixtyFour rax)) (A_WordConstant 0))))), 4)"
+    "fetch 0x2b10 \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rcx)) (Storage (Memory SixtyFour (A_SizeDirective 64 (A_Plus (A_FromReg (General SixtyFour rbx)) (A_WordConstant 8))))), 4)"
+    "fetch 0x2b14 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdx)) (Storage (Memory ThirtyTwo (A_SizeDirective 32 (A_FromReg (General SixtyFour rbx))))), 2)"
+    "fetch 0x2b16 \<equiv> (Binary (IS_8088 Mov) (Reg (General SixtyFour rsi)) (Storage (Reg (General SixtyFour rbp))), 3)"
+    "fetch 0x2b19 \<equiv> (Binary (IS_8088 Mov) (Reg (General ThirtyTwo rdi)) (Immediate SixtyFour (ImmVal 1)), 5)"
+    "fetch 0x2b1e \<equiv> (Binary (IS_8088 Xor) (Reg (General ThirtyTwo rax)) (Storage (Reg (General ThirtyTwo rax))), 2)"
+    "fetch 0x2b20 \<equiv> (Binary (IS_8088 Add) (Reg (General SixtyFour rbx)) (Immediate SixtyFour (ImmVal 16)), 4)"
+    "fetch 0x2b24 \<equiv> (Unary (IS_8088 Call) (Immediate SixtyFour (ImmLabel ''__printf_chk'')), 5)"
+    "fetch 0x2b29 \<equiv> (Binary (IS_8088 Cmp) (Reg (General SixtyFour rbx)) (Storage (Reg (General SixtyFour r12))), 3)"
+    "fetch 0x2b2c \<equiv> (Unary (IS_8088 Jne) (Immediate SixtyFour (ImmVal 11024)), 2)"
+    "fetch 0x2b2e \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour rbx))), 1)"
+    "fetch 0x2b2f \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour rbp))), 1)"
+    "fetch 0x2b30 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour r12))), 2)"
+    "fetch 0x2b32 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour r13))), 2)"
+    "fetch 0x2b34 \<equiv> (Unary (IS_8088 Pop) (Storage (Reg (General SixtyFour r14))), 2)"
+    "fetch 0x2b36 \<equiv> (Nullary (IS_8088 Ret), 1)"
+    and \<alpha>_def: \<open>\<alpha> = \<lparr>text_sections = [], data_sections = [], labels_to_offsets = [], binary_offset = 0\<rparr>\<close>
+    and printf_chk\<^sub>a\<^sub>d\<^sub>d\<^sub>r[simp]: \<open>the (label_to_address \<alpha> ''__printf_chk'') = printf_chk_addr\<close>
+    and puts\<^sub>a\<^sub>d\<^sub>d\<^sub>r[simp]: \<open>the (label_to_address \<alpha> ''puts'') = puts_addr\<close>
+begin
+
+text \<open>Using definitions that don't get unfolded immediately prevents locale argument issues.\<close>
+definition \<open>printf_chk_0x2a17_retval \<equiv> printf_chk_0x2a17_retval\<^sub>v\<close>
+definition \<open>puts_0x2a23_retval \<equiv> puts_0x2a23_retval\<^sub>v\<close>
+definition \<open>printf_chk_0x2a62_retval \<equiv> printf_chk_0x2a62_retval\<^sub>v\<close>
+definition \<open>printf_chk_0x2ab3_retval \<equiv> printf_chk_0x2ab3_retval\<^sub>v\<close>
+definition \<open>puts_0x2aca_retval \<equiv> puts_0x2aca_retval\<^sub>v\<close>
+definition \<open>printf_chk_0x2aeb_retval \<equiv> printf_chk_0x2aeb_retval\<^sub>v\<close>
+definition \<open>printf_chk_0x2b24_retval \<equiv> printf_chk_0x2b24_retval\<^sub>v\<close>
+
+text \<open>
+  Going with a binary offset of 0 for now to make things easier. (We do want to keep that field
+  around, though, for future more generic usage.)
+\<close>
+lemma \<alpha>_boffset[simp]: \<open>binary_offset \<alpha> = 0\<close>
+  unfolding \<alpha>_def
+  by simp
+
+named_theorems blocks and Ps and Qs
+
+method step uses add del =
+  subst exec_block.simps,
+  rewrite_one_let',
+  rewrite_one_let' add: fetch,
+  rewrite_one_let',
+  auto simp add: simp_rules Let'_def read_region'_def write_block'_def get'_def set'_def step_def exec_instr_def presimplify add simp del: del
+
+method steps uses pre post regionset add del =
+  auto simp: pred_logic pre regionset,
+  (step add: add del: del)+,
+  auto simp: block_usage_def eq_def setcc_def simp_rules Let'_def read_region'_def write_block'_def get'_def set'_def post regionset
+
+method vcg_step uses assms =
+  ((rule htriples)+, rule blocks)+,
+  (simp add: assms pred_logic Ps Qs)?,
+  (((auto simp: eq_def)[])+)?
+
+method vcg uses acode assms =
+  subst acode,
+  (vcg_step assms: assms)+
+
+end
+
+locale "print_policy" = "xen_cpuid" +
+  fixes RAX\<^sub>0\<^sub>v RBX\<^sub>0\<^sub>v RCX\<^sub>0\<^sub>v RDX\<^sub>0\<^sub>v RDI\<^sub>0\<^sub>v RSI\<^sub>0\<^sub>v RSP\<^sub>0\<^sub>v RBP\<^sub>0\<^sub>v R14\<^sub>0\<^sub>v R13\<^sub>0\<^sub>v R12\<^sub>0\<^sub>v R9\<^sub>0\<^sub>v R8\<^sub>0\<^sub>v ret_address\<^sub>v :: \<open>64 word\<close>
+begin
+
+text \<open>Using definitions that don't get unfolded immediately prevents locale argument issues.\<close>
+definition \<open>RAX\<^sub>0 \<equiv> RAX\<^sub>0\<^sub>v\<close>
+definition \<open>RBX\<^sub>0 \<equiv> RBX\<^sub>0\<^sub>v\<close>
+definition \<open>RCX\<^sub>0 \<equiv> RCX\<^sub>0\<^sub>v\<close>
+definition \<open>RDX\<^sub>0 \<equiv> RDX\<^sub>0\<^sub>v\<close>
+definition \<open>RDI\<^sub>0 \<equiv> RDI\<^sub>0\<^sub>v\<close>
+definition \<open>RSI\<^sub>0 \<equiv> RSI\<^sub>0\<^sub>v\<close>
+definition \<open>RSP\<^sub>0 \<equiv> RSP\<^sub>0\<^sub>v\<close>
+definition \<open>RBP\<^sub>0 \<equiv> RBP\<^sub>0\<^sub>v\<close>
+definition \<open>R14\<^sub>0 \<equiv> R14\<^sub>0\<^sub>v\<close>
+definition \<open>R13\<^sub>0 \<equiv> R13\<^sub>0\<^sub>v\<close>
+definition \<open>R12\<^sub>0 \<equiv> R12\<^sub>0\<^sub>v\<close>
+definition \<open>R9\<^sub>0 \<equiv> R9\<^sub>0\<^sub>v\<close>
+definition \<open>R8\<^sub>0 \<equiv> R8\<^sub>0\<^sub>v\<close>
+definition \<open>ret_address \<equiv> ret_address\<^sub>v\<close>
+
+definition P_0x29f0_0 :: state_pred where
+  \<open>P_0x29f0_0 \<sigma> \<equiv> RIP \<sigma> = 0x29f0 \<and> RAX \<sigma> = RAX\<^sub>0 \<and> RBX \<sigma> = RBX\<^sub>0 \<and> RCX \<sigma> = RCX\<^sub>0 \<and> RDX \<sigma> = RDX\<^sub>0 \<and> RDI \<sigma> = RDI\<^sub>0 \<and> RSI \<sigma> = RSI\<^sub>0 \<and> RSP \<sigma> = RSP\<^sub>0 \<and> RBP \<sigma> = RBP\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = R13\<^sub>0 \<and> R12 \<sigma> = R12\<^sub>0 \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address\<close>
+declare P_0x29f0_0_def[Ps]
+
+definition P_0x29f0_0_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x29f0_0_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x29f0_0_regions :: state_pred where
+  \<open>P_0x29f0_0_regions \<sigma> \<equiv> \<exists>regions. P_0x29f0_0_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2a17_0 :: state_pred where
+  \<open>Q_0x2a17_0 \<sigma> \<equiv> RIP \<sigma> = 0x2a17 \<and> RAX \<sigma> = 0x0 \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3008 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2a17_0_def[Qs]
+
+schematic_goal print_policy_0_14_0x29f0_0x2a10_0[blocks]:
+  assumes \<open>(P_0x29f0_0 && P_0x29f0_0_regions) \<sigma>\<close>
+  shows \<open>exec_block 14 0x2a10 0 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2a17_0 ?\<sigma> \<and> block_usage P_0x29f0_0_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x29f0_0_def P_0x29f0_0_regions_def post: Q_0x2a17_0_def regionset: P_0x29f0_0_regions_set_def)
+
+definition P_0x2a17_1 :: state_pred where
+  \<open>P_0x2a17_1 \<sigma> \<equiv> RIP \<sigma> = 0x2a17 \<and> RAX \<sigma> = 0x0 \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3008 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2a17_1_def[Ps]
+
+definition P_0x2a17_1_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a17_1_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2a17_1_regions :: state_pred where
+  \<open>P_0x2a17_1_regions \<sigma> \<equiv> \<exists>regions. P_0x2a17_1_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_printf_chk_addr_0x2a17_1 :: state_pred where
+  \<open>Q_printf_chk_addr_0x2a17_1 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x30) \<and> RIP \<sigma> = printf_chk_addr \<and> RAX \<sigma> = 0x0 \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3008 \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2a1c\<close>
+declare Q_printf_chk_addr_0x2a17_1_def[Qs]
+
+schematic_goal print_policy_0_1_0x2a17_0x2a17_1[blocks]:
+  assumes \<open>(P_0x2a17_1 && P_0x2a17_1_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2a17 (Suc 0) \<sigma> \<triangleq> ?\<sigma> \<and> Q_printf_chk_addr_0x2a17_1 ?\<sigma> \<and> block_usage P_0x2a17_1_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a17_1_def P_0x2a17_1_regions_def post: Q_printf_chk_addr_0x2a17_1_def regionset: P_0x2a17_1_regions_set_def)
+
+definition P_0x2a1c_2 :: state_pred where
+  \<open>P_0x2a1c_2 \<sigma> \<equiv> RIP \<sigma> = 0x2a1c \<and> RAX \<sigma> = printf_chk_0x2a17_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3008 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2a1c\<close>
+declare P_0x2a1c_2_def[Ps]
+
+definition P_0x2a1c_2_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a1c_2_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2a1c_2_regions :: state_pred where
+  \<open>P_0x2a1c_2_regions \<sigma> \<equiv> \<exists>regions. P_0x2a1c_2_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2a23_2 :: state_pred where
+  \<open>Q_0x2a23_2 \<sigma> \<equiv> RIP \<sigma> = 0x2a23 \<and> RAX \<sigma> = printf_chk_0x2a17_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x3138 \<and> RSI \<sigma> = 0x3008 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2a1c\<close>
+declare Q_0x2a23_2_def[Qs]
+
+schematic_goal print_policy_0_1_0x2a1c_0x2a1c_2[blocks]:
+  assumes \<open>(P_0x2a1c_2 && P_0x2a1c_2_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2a1c 2 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2a23_2 ?\<sigma> \<and> block_usage P_0x2a1c_2_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a1c_2_def P_0x2a1c_2_regions_def post: Q_0x2a23_2_def regionset: P_0x2a1c_2_regions_set_def)
+
+definition P_0x2a23_3 :: state_pred where
+  \<open>P_0x2a23_3 \<sigma> \<equiv> RIP \<sigma> = 0x2a23 \<and> RAX \<sigma> = printf_chk_0x2a17_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x3138 \<and> RSI \<sigma> = 0x3008 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2a1c\<close>
+declare P_0x2a23_3_def[Ps]
+
+definition P_0x2a23_3_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a23_3_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2a23_3_regions :: state_pred where
+  \<open>P_0x2a23_3_regions \<sigma> \<equiv> \<exists>regions. P_0x2a23_3_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_puts_addr_0x2a23_3 :: state_pred where
+  \<open>Q_puts_addr_0x2a23_3 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x30) \<and> RIP \<sigma> = puts_addr \<and> RAX \<sigma> = printf_chk_0x2a17_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x3138 \<and> RSI \<sigma> = 0x3008 \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2a28\<close>
+declare Q_puts_addr_0x2a23_3_def[Qs]
+
+schematic_goal print_policy_0_1_0x2a23_0x2a23_3[blocks]:
+  assumes \<open>(P_0x2a23_3 && P_0x2a23_3_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2a23 3 \<sigma> \<triangleq> ?\<sigma> \<and> Q_puts_addr_0x2a23_3 ?\<sigma> \<and> block_usage P_0x2a23_3_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a23_3_def P_0x2a23_3_regions_def post: Q_puts_addr_0x2a23_3_def regionset: P_0x2a23_3_regions_set_def)
+
+definition P_0x2a28_4 :: state_pred where
+  \<open>P_0x2a28_4 \<sigma> \<equiv> RIP \<sigma> = 0x2a28 \<and> RAX \<sigma> = ucast (puts_0x2a23_retval) \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> RDX \<sigma> = RDI\<^sub>0 \<and> RDI \<sigma> = 0x3138 \<and> RSI \<sigma> = 0x3008 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = R9\<^sub>0 \<and> R8 \<sigma> = R8\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2a28\<close>
+declare P_0x2a28_4_def[Ps]
+
+definition P_0x2a28_4_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a28_4_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x38), 8)
+  }\<close>
+
+definition P_0x2a28_4_regions :: state_pred where
+  \<open>P_0x2a28_4_regions \<sigma> \<equiv> \<exists>regions. P_0x2a28_4_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2a62_4 :: state_pred where
+  \<open>Q_0x2a62_4 \<sigma> \<equiv> RIP \<sigma> = 0x2a62 \<and> RAX \<sigma> = 0x0 \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x3140 \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3028 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x38) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce\<close>
+declare Q_0x2a62_4_def[Qs]
+
+schematic_goal print_policy_0_11_0x2a28_0x2a5b_4[blocks]:
+  assumes \<open>(P_0x2a28_4 && P_0x2a28_4_regions) \<sigma>\<close>
+  shows \<open>exec_block 11 0x2a5b 4 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2a62_4 ?\<sigma> \<and> block_usage P_0x2a28_4_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a28_4_def P_0x2a28_4_regions_def post: Q_0x2a62_4_def regionset: P_0x2a28_4_regions_set_def)
+
+definition P_0x2a62_5 :: state_pred where
+  \<open>P_0x2a62_5 \<sigma> \<equiv> RIP \<sigma> = 0x2a62 \<and> RAX \<sigma> = 0x0 \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x3140 \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3028 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x38) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce\<close>
+declare P_0x2a62_5_def[Ps]
+
+definition P_0x2a62_5_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a62_5_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x38), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x40), 8)
+  }\<close>
+
+definition P_0x2a62_5_regions :: state_pred where
+  \<open>P_0x2a62_5_regions \<sigma> \<equiv> \<exists>regions. P_0x2a62_5_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_printf_chk_addr_0x2a62_5 :: state_pred where
+  \<open>Q_printf_chk_addr_0x2a62_5 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x40) \<and> RIP \<sigma> = printf_chk_addr \<and> RAX \<sigma> = 0x0 \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x3140 \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3028 \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2a67\<close>
+declare Q_printf_chk_addr_0x2a62_5_def[Qs]
+
+schematic_goal print_policy_0_1_0x2a62_0x2a62_5[blocks]:
+  assumes \<open>(P_0x2a62_5 && P_0x2a62_5_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2a62 5 \<sigma> \<triangleq> ?\<sigma> \<and> Q_printf_chk_addr_0x2a62_5 ?\<sigma> \<and> block_usage P_0x2a62_5_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a62_5_def P_0x2a62_5_regions_def post: Q_printf_chk_addr_0x2a62_5_def regionset: P_0x2a62_5_regions_set_def)
+
+definition P_0x2a67_6 :: state_pred where
+  \<open>P_0x2a67_6 \<sigma> \<equiv> RIP \<sigma> = 0x2a67 \<and> RAX \<sigma> = printf_chk_0x2a62_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x3140 \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3028 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x38) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2a67\<close>
+declare P_0x2a67_6_def[Ps]
+
+definition P_0x2a67_6_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a67_6_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x38), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x40), 8)
+  }\<close>
+
+definition P_0x2a67_6_regions :: state_pred where
+  \<open>P_0x2a67_6_regions \<sigma> \<equiv> \<exists>regions. P_0x2a67_6_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2a6c_6 :: state_pred where
+  \<open>Q_0x2a6c_6 \<sigma> \<equiv> RIP \<sigma> = 0x2a6c \<and> RAX \<sigma> = printf_chk_0x2a62_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x33ce \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3409 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2a67\<close>
+declare Q_0x2a6c_6_def[Qs]
+
+schematic_goal print_policy_0_3_0x2a67_0x2a69_6[blocks]:
+  assumes \<open>(P_0x2a67_6 && P_0x2a67_6_regions) \<sigma>\<close>
+  shows \<open>exec_block 3 0x2a69 6 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2a6c_6 ?\<sigma> \<and> block_usage P_0x2a67_6_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a67_6_def P_0x2a67_6_regions_def post: Q_0x2a6c_6_def regionset: P_0x2a67_6_regions_set_def)
+
+definition P_0x2a6c_true_7 :: state_pred where
+  \<open>P_0x2a6c_true_7 \<sigma> \<equiv> RIP \<sigma> = 0x2a6c \<and> RAX \<sigma> = printf_chk_0x2a62_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x33ce \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3409 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2a67\<close>
+declare P_0x2a6c_true_7_def[Ps]
+
+definition P_0x2a6c_true_7_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a6c_true_7_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x38), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x40), 8)
+  }\<close>
+
+definition P_0x2a6c_true_7_regions :: state_pred where
+  \<open>P_0x2a6c_true_7_regions \<sigma> \<equiv> \<exists>regions. P_0x2a6c_true_7_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2ac3_7 :: state_pred where
+  \<open>Q_0x2ac3_7 \<sigma> \<equiv> RIP \<sigma> = 0x2ac3 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2ac3_7_def[Qs]
+
+schematic_goal print_policy_0_1_0x2a6c_0x2a6c_7[blocks]:
+  assumes \<open>(P_0x2a6c_true_7 && P_0x2a6c_true_7_regions && ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2a6c 7 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2ac3_7 ?\<sigma> \<and> block_usage P_0x2a6c_true_7_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a6c_true_7_def P_0x2a6c_true_7_regions_def post: Q_0x2ac3_7_def regionset: P_0x2a6c_true_7_regions_set_def)
+
+definition P_0x2a6c_false_8 :: state_pred where
+  \<open>P_0x2a6c_false_8 \<sigma> \<equiv> RIP \<sigma> = 0x2a6c \<and> RAX \<sigma> = printf_chk_0x2a62_retval \<and> RBX \<sigma> = RSI\<^sub>0 \<and> RCX \<sigma> = 0x33ce \<and> RDX \<sigma> = 0x3143 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3409 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ucast ((\<langle>31,0\<rangle>RDX\<^sub>0::32 word)) \<and> R9 \<sigma> = 0x33b9 \<and> R8 \<sigma> = 0x33a4 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x3409 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = 0x33ce \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2a67\<close>
+declare P_0x2a6c_false_8_def[Ps]
+
+definition P_0x2a6c_false_8_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a6c_false_8_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x38), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x40), 8)
+  }\<close>
+
+definition P_0x2a6c_false_8_regions :: state_pred where
+  \<open>P_0x2a6c_false_8_regions \<sigma> \<equiv> \<exists>regions. P_0x2a6c_false_8_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2a88_8 :: state_pred where
+  \<open>Q_0x2a88_8 \<sigma> \<equiv> RIP \<sigma> = 0x2a88 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2a88_8_def[Qs]
+
+schematic_goal print_policy_0_6_0x2a6c_0x2a83_8[blocks]:
+  assumes \<open>(P_0x2a6c_false_8 && P_0x2a6c_false_8_regions && ! ZF) \<sigma>\<close>
+  shows \<open>exec_block 6 0x2a83 8 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2a88_8 ?\<sigma> \<and> block_usage P_0x2a6c_false_8_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a6c_false_8_def P_0x2a6c_false_8_regions_def post: Q_0x2a88_8_def regionset: P_0x2a6c_false_8_regions_set_def)
+
+definition P_0x2a88_9 :: state_pred where
+  \<open>P_0x2a88_9 \<sigma> \<equiv> RIP \<sigma> = 0x2a88 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2a88_9_def[Ps]
+
+definition P_0x2a88_9_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2a88_9_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RBX \<sigma>::64 word) + 0x8), 4),
+    (2, ((RBX \<sigma>::64 word) + 0xc), 4),
+    (3, ((RBX \<sigma>::64 word) + 0x10), 4),
+    (4, ((RBX \<sigma>::64 word) + 0x14), 4),
+    (5, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (9, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2a88_9_regions :: state_pred where
+  \<open>P_0x2a88_9_regions \<sigma> \<equiv> \<exists>regions. P_0x2a88_9_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2aa0_9 :: state_pred where
+  \<open>Q_0x2aa0_9 \<sigma> \<equiv> RIP \<sigma> = 0x2aa0 \<and> RAX \<sigma> = ucast ((((((((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word))::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word))::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word))) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2aa0_9_def[Qs]
+
+schematic_goal print_policy_0_8_0x2a88_0x2a9e_9[blocks]:
+  assumes \<open>(P_0x2a88_9 && P_0x2a88_9_regions) \<sigma>\<close>
+  shows \<open>exec_block 8 0x2a9e 9 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2aa0_9 ?\<sigma> \<and> block_usage P_0x2a88_9_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2a88_9_def P_0x2a88_9_regions_def post: Q_0x2aa0_9_def regionset: P_0x2a88_9_regions_set_def)
+
+definition P_0x2aa0_true_10 :: state_pred where
+  \<open>P_0x2aa0_true_10 \<sigma> \<equiv> RIP \<sigma> = 0x2aa0 \<and> RAX \<sigma> = ucast ((((((((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word))::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word))::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word))) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2aa0_true_10_def[Ps]
+
+definition P_0x2aa0_true_10_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2aa0_true_10_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RBX \<sigma>::64 word) + 0x8), 4),
+    (2, ((RBX \<sigma>::64 word) + 0xc), 4),
+    (3, ((RBX \<sigma>::64 word) + 0x10), 4),
+    (4, ((RBX \<sigma>::64 word) + 0x14), 4),
+    (5, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (9, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2aa0_true_10_regions :: state_pred where
+  \<open>P_0x2aa0_true_10_regions \<sigma> \<equiv> \<exists>regions. P_0x2aa0_true_10_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2aba_10 :: state_pred where
+  \<open>Q_0x2aba_10 \<sigma> \<equiv> RIP \<sigma> = 0x2aba \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2aba_10_def[Qs]
+
+schematic_goal print_policy_0_1_0x2aa0_0x2aa0_10[blocks]:
+  assumes \<open>(P_0x2aa0_true_10 && P_0x2aa0_true_10_regions && ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2aa0 10 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2aba_10 ?\<sigma> \<and> block_usage P_0x2aa0_true_10_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2aa0_true_10_def P_0x2aa0_true_10_regions_def post: Q_0x2aba_10_def regionset: P_0x2aa0_true_10_regions_set_def)
+
+definition P_0x2aa0_false_11 :: state_pred where
+  \<open>P_0x2aa0_false_11 \<sigma> \<equiv> RIP \<sigma> = 0x2aa0 \<and> RAX \<sigma> = ucast ((((((((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word))::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word))::32 word) OR (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word))) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2aa0_false_11_def[Ps]
+
+definition P_0x2aa0_false_11_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2aa0_false_11_regions_set \<sigma> \<equiv> {
+    (0, RBX \<sigma>, 4),
+    (1, RSP\<^sub>0, 8),
+    (2, ((RBX \<sigma>::64 word) + 0x4), 4),
+    (3, ((RBX \<sigma>::64 word) + 0x8), 4),
+    (4, ((RBX \<sigma>::64 word) + 0xc), 4),
+    (5, ((RBX \<sigma>::64 word) + 0x10), 4),
+    (6, ((RBX \<sigma>::64 word) + 0x14), 4),
+    (7, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (9, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (10, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (11, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (12, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (13, ((RSP\<^sub>0::64 word) - 0x38), 8)
+  }\<close>
+
+definition P_0x2aa0_false_11_regions :: state_pred where
+  \<open>P_0x2aa0_false_11_regions \<sigma> \<equiv> \<exists>regions. P_0x2aa0_false_11_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2ab3_11 :: state_pred where
+  \<open>Q_0x2ab3_11 \<sigma> \<equiv> RIP \<sigma> = 0x2ab3 \<and> RAX \<sigma> = 0x0 \<and> RCX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3050 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x38) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word) = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word))\<close>
+declare Q_0x2ab3_11_def[Qs]
+
+schematic_goal print_policy_0_8_0x2aa0_0x2ab1_11[blocks]:
+  assumes \<open>(P_0x2aa0_false_11 && P_0x2aa0_false_11_regions && ! ZF) \<sigma>\<close>
+  shows \<open>exec_block 8 0x2ab1 11 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2ab3_11 ?\<sigma> \<and> block_usage P_0x2aa0_false_11_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2aa0_false_11_def P_0x2aa0_false_11_regions_def post: Q_0x2ab3_11_def regionset: P_0x2aa0_false_11_regions_set_def)
+
+definition P_0x2ab3_12 :: state_pred where
+  \<open>P_0x2ab3_12 \<sigma> \<equiv> RIP \<sigma> = 0x2ab3 \<and> RAX \<sigma> = 0x0 \<and> RCX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3050 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x38) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word) = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word))\<close>
+declare P_0x2ab3_12_def[Ps]
+
+definition P_0x2ab3_12_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2ab3_12_regions_set \<sigma> \<equiv> {
+    (0, RBX \<sigma>, 4),
+    (1, RSP\<^sub>0, 8),
+    (2, ((RBX \<sigma>::64 word) + 0x4), 4),
+    (3, ((RBX \<sigma>::64 word) + 0x8), 4),
+    (4, ((RBX \<sigma>::64 word) + 0xc), 4),
+    (5, ((RBX \<sigma>::64 word) + 0x10), 4),
+    (6, ((RBX \<sigma>::64 word) + 0x14), 4),
+    (7, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (9, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (10, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (11, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (12, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (13, ((RSP\<^sub>0::64 word) - 0x38), 8),
+    (14, ((RSP\<^sub>0::64 word) - 0x40), 8)
+  }\<close>
+
+definition P_0x2ab3_12_regions :: state_pred where
+  \<open>P_0x2ab3_12_regions \<sigma> \<equiv> \<exists>regions. P_0x2ab3_12_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_printf_chk_addr_0x2ab3_12 :: state_pred where
+  \<open>Q_printf_chk_addr_0x2ab3_12 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x40) \<and> RIP \<sigma> = printf_chk_addr \<and> RAX \<sigma> = 0x0 \<and> RCX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3050 \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word) = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2ab8\<close>
+declare Q_printf_chk_addr_0x2ab3_12_def[Qs]
+
+schematic_goal print_policy_0_1_0x2ab3_0x2ab3_12[blocks]:
+  assumes \<open>(P_0x2ab3_12 && P_0x2ab3_12_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2ab3 12 \<sigma> \<triangleq> ?\<sigma> \<and> Q_printf_chk_addr_0x2ab3_12 ?\<sigma> \<and> block_usage P_0x2ab3_12_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2ab3_12_def P_0x2ab3_12_regions_def post: Q_printf_chk_addr_0x2ab3_12_def regionset: P_0x2ab3_12_regions_set_def)
+
+definition P_0x2ab8_13 :: state_pred where
+  \<open>P_0x2ab8_13 \<sigma> \<equiv> RIP \<sigma> = 0x2ab8 \<and> RAX \<sigma> = printf_chk_0x2ab3_retval \<and> RCX \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> RDX \<sigma> = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x3050 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x38) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word) = ucast ((\<sigma> \<turnstile> *[RBX \<sigma>,4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x4),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x38),8]::64 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x40),8]::64 word) = 0x2ab8\<close>
+declare P_0x2ab8_13_def[Ps]
+
+definition P_0x2ab8_13_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2ab8_13_regions_set \<sigma> \<equiv> {
+    (0, RBX \<sigma>, 4),
+    (1, RSP\<^sub>0, 8),
+    (2, ((RBX \<sigma>::64 word) + 0x4), 4),
+    (3, ((RBX \<sigma>::64 word) + 0x8), 4),
+    (4, ((RBX \<sigma>::64 word) + 0xc), 4),
+    (5, ((RBX \<sigma>::64 word) + 0x10), 4),
+    (6, ((RBX \<sigma>::64 word) + 0x14), 4),
+    (7, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (9, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (10, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (11, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (12, ((RSP\<^sub>0::64 word) - 0x30), 8),
+    (13, ((RSP\<^sub>0::64 word) - 0x38), 8),
+    (14, ((RSP\<^sub>0::64 word) - 0x40), 8)
+  }\<close>
+
+definition P_0x2ab8_13_regions :: state_pred where
+  \<open>P_0x2ab8_13_regions \<sigma> \<equiv> \<exists>regions. P_0x2ab8_13_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2aba_13 :: state_pred where
+  \<open>Q_0x2aba_13 \<sigma> \<equiv> RIP \<sigma> = 0x2aba \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2aba_13_def[Qs]
+
+schematic_goal print_policy_0_2_0x2ab8_0x2ab9_13[blocks]:
+  assumes \<open>(P_0x2ab8_13 && P_0x2ab8_13_regions) \<sigma>\<close>
+  shows \<open>exec_block 2 0x2ab9 13 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2aba_13 ?\<sigma> \<and> block_usage P_0x2ab8_13_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2ab8_13_def P_0x2ab8_13_regions_def post: Q_0x2aba_13_def regionset: P_0x2ab8_13_regions_set_def)
+
+definition P_0x2aba_14 :: state_pred where
+  \<open>P_0x2aba_14 \<sigma> \<equiv> RIP \<sigma> = 0x2aba \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R14 \<sigma> = 0x3050 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RSI\<^sub>0::64 word) + (((\<langle>63,0\<rangle>((((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) + ((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>RDX\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) * (0x2::64 word))::64 word)::64 word))::64 word) * 0x8)::64 word)::64 word) + 0x18)) \<and> R9 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> R8 \<sigma> = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x8),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0xc),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x10),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word) = ucast ((\<sigma> \<turnstile> *[((RBX \<sigma>::64 word) + 0x14),4]::32 word)) \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2aba_14_def[Ps]
+
+definition P_0x2aba_14_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2aba_14_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RBX \<sigma>::64 word) + 0x8), 4),
+    (2, ((RBX \<sigma>::64 word) + 0xc), 4),
+    (3, ((RBX \<sigma>::64 word) + 0x10), 4),
+    (4, ((RBX \<sigma>::64 word) + 0x14), 4),
+    (5, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (8, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (9, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2aba_14_regions :: state_pred where
+  \<open>P_0x2aba_14_regions \<sigma> \<equiv> \<exists>regions. P_0x2aba_14_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2ac1_14 :: state_pred where
+  \<open>Q_0x2ac1_14 \<sigma> \<equiv> RIP \<sigma> = 0x2ac1 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2ac1_14_def[Qs]
+
+schematic_goal print_policy_0_2_0x2aba_0x2abe_14[blocks]:
+  assumes \<open>(P_0x2aba_14 && P_0x2aba_14_regions) \<sigma>\<close>
+  shows \<open>exec_block 2 0x2abe 14 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2ac1_14 ?\<sigma> \<and> block_usage P_0x2aba_14_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2aba_14_def P_0x2aba_14_regions_def post: Q_0x2ac1_14_def regionset: P_0x2aba_14_regions_set_def)
+
+definition P_0x2ac1_true_15 :: state_pred where
+  \<open>P_0x2ac1_true_15 \<sigma> \<equiv> RIP \<sigma> = 0x2ac1 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2ac1_true_15_def[Ps]
+
+definition P_0x2ac1_true_15_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2ac1_true_15_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2ac1_true_15_regions :: state_pred where
+  \<open>P_0x2ac1_true_15_regions \<sigma> \<equiv> \<exists>regions. P_0x2ac1_true_15_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2a88_15 :: state_pred where
+  \<open>Q_0x2a88_15 \<sigma> \<equiv> RIP \<sigma> = 0x2a88 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2a88_15_def[Qs]
+
+schematic_goal print_policy_0_1_0x2ac1_0x2ac1_15[blocks]:
+  assumes \<open>(P_0x2ac1_true_15 && P_0x2ac1_true_15_regions && !ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2ac1 15 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2a88_15 ?\<sigma> \<and> block_usage P_0x2ac1_true_15_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2ac1_true_15_def P_0x2ac1_true_15_regions_def post: Q_0x2a88_15_def regionset: P_0x2ac1_true_15_regions_set_def)
+
+definition P_0x2ac1_false_16 :: state_pred where
+  \<open>P_0x2ac1_false_16 \<sigma> \<equiv> RIP \<sigma> = 0x2ac1 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2ac1_false_16_def[Ps]
+
+definition P_0x2ac1_false_16_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2ac1_false_16_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2ac1_false_16_regions :: state_pred where
+  \<open>P_0x2ac1_false_16_regions \<sigma> \<equiv> \<exists>regions. P_0x2ac1_false_16_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2ac3_16 :: state_pred where
+  \<open>Q_0x2ac3_16 \<sigma> \<equiv> RIP \<sigma> = 0x2ac3 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2ac3_16_def[Qs]
+
+schematic_goal print_policy_0_1_0x2ac1_0x2ac1_16[blocks]:
+  assumes \<open>(P_0x2ac1_false_16 && P_0x2ac1_false_16_regions && ! !ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2ac1 16 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2ac3_16 ?\<sigma> \<and> block_usage P_0x2ac1_false_16_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2ac1_false_16_def P_0x2ac1_false_16_regions_def post: Q_0x2ac3_16_def regionset: P_0x2ac1_false_16_regions_set_def)
+
+definition P_0x2ac3_17 :: state_pred where
+  \<open>P_0x2ac3_17 \<sigma> \<equiv> RIP \<sigma> = 0x2ac3 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2ac3_17_def[Ps]
+
+definition P_0x2ac3_17_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2ac3_17_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2ac3_17_regions :: state_pred where
+  \<open>P_0x2ac3_17_regions \<sigma> \<equiv> \<exists>regions. P_0x2ac3_17_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2aca_17 :: state_pred where
+  \<open>Q_0x2aca_17 \<sigma> \<equiv> RIP \<sigma> = 0x2aca \<and> RDI \<sigma> = 0x3148 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2aca_17_def[Qs]
+
+schematic_goal print_policy_0_1_0x2ac3_0x2ac3_17[blocks]:
+  assumes \<open>(P_0x2ac3_17 && P_0x2ac3_17_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2ac3 17 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2aca_17 ?\<sigma> \<and> block_usage P_0x2ac3_17_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2ac3_17_def P_0x2ac3_17_regions_def post: Q_0x2aca_17_def regionset: P_0x2ac3_17_regions_set_def)
+
+definition P_0x2aca_18 :: state_pred where
+  \<open>P_0x2aca_18 \<sigma> \<equiv> RIP \<sigma> = 0x2aca \<and> RDI \<sigma> = 0x3148 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2aca_18_def[Ps]
+
+definition P_0x2aca_18_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2aca_18_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2aca_18_regions :: state_pred where
+  \<open>P_0x2aca_18_regions \<sigma> \<equiv> \<exists>regions. P_0x2aca_18_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_puts_addr_0x2aca_18 :: state_pred where
+  \<open>Q_puts_addr_0x2aca_18 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x30) \<and> RIP \<sigma> = puts_addr \<and> RDI \<sigma> = 0x3148 \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2acf\<close>
+declare Q_puts_addr_0x2aca_18_def[Qs]
+
+schematic_goal print_policy_0_1_0x2aca_0x2aca_18[blocks]:
+  assumes \<open>(P_0x2aca_18 && P_0x2aca_18_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2aca 18 \<sigma> \<triangleq> ?\<sigma> \<and> Q_puts_addr_0x2aca_18 ?\<sigma> \<and> block_usage P_0x2aca_18_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2aca_18_def P_0x2aca_18_regions_def post: Q_puts_addr_0x2aca_18_def regionset: P_0x2aca_18_regions_set_def)
+
+definition P_0x2acf_19 :: state_pred where
+  \<open>P_0x2acf_19 \<sigma> \<equiv> RIP \<sigma> = 0x2acf \<and> RDI \<sigma> = 0x3148 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2acf\<close>
+declare P_0x2acf_19_def[Ps]
+
+definition P_0x2acf_19_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2acf_19_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2acf_19_regions :: state_pred where
+  \<open>P_0x2acf_19_regions \<sigma> \<equiv> \<exists>regions. P_0x2acf_19_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2aeb_19 :: state_pred where
+  \<open>Q_0x2aeb_19 \<sigma> \<equiv> RIP \<sigma> = 0x2aeb \<and> RAX \<sigma> = 0x0 \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2acf\<close>
+declare Q_0x2aeb_19_def[Qs]
+
+schematic_goal print_policy_0_5_0x2acf_0x2ae6_19[blocks]:
+  assumes \<open>(P_0x2acf_19 && P_0x2acf_19_regions) \<sigma>\<close>
+  shows \<open>exec_block 5 0x2ae6 19 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2aeb_19 ?\<sigma> \<and> block_usage P_0x2acf_19_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2acf_19_def P_0x2acf_19_regions_def post: Q_0x2aeb_19_def regionset: P_0x2acf_19_regions_set_def)
+
+definition P_0x2aeb_20 :: state_pred where
+  \<open>P_0x2aeb_20 \<sigma> \<equiv> RIP \<sigma> = 0x2aeb \<and> RAX \<sigma> = 0x0 \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2acf\<close>
+declare P_0x2aeb_20_def[Ps]
+
+definition P_0x2aeb_20_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2aeb_20_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2aeb_20_regions :: state_pred where
+  \<open>P_0x2aeb_20_regions \<sigma> \<equiv> \<exists>regions. P_0x2aeb_20_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_printf_chk_addr_0x2aeb_20 :: state_pred where
+  \<open>Q_printf_chk_addr_0x2aeb_20 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x30) \<and> RIP \<sigma> = printf_chk_addr \<and> RAX \<sigma> = 0x0 \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2af0\<close>
+declare Q_printf_chk_addr_0x2aeb_20_def[Qs]
+
+schematic_goal print_policy_0_1_0x2aeb_0x2aeb_20[blocks]:
+  assumes \<open>(P_0x2aeb_20 && P_0x2aeb_20_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2aeb 20 \<sigma> \<triangleq> ?\<sigma> \<and> Q_printf_chk_addr_0x2aeb_20 ?\<sigma> \<and> block_usage P_0x2aeb_20_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2aeb_20_def P_0x2aeb_20_regions_def post: Q_printf_chk_addr_0x2aeb_20_def regionset: P_0x2aeb_20_regions_set_def)
+
+definition P_0x2af0_21 :: state_pred where
+  \<open>P_0x2af0_21 \<sigma> \<equiv> RIP \<sigma> = 0x2af0 \<and> RAX \<sigma> = printf_chk_0x2aeb_retval \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2af0\<close>
+declare P_0x2af0_21_def[Ps]
+
+definition P_0x2af0_21_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2af0_21_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2af0_21_regions :: state_pred where
+  \<open>P_0x2af0_21_regions \<sigma> \<equiv> \<exists>regions. P_0x2af0_21_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2af3_21 :: state_pred where
+  \<open>Q_0x2af3_21 \<sigma> \<equiv> RIP \<sigma> = 0x2af3 \<and> RAX \<sigma> = printf_chk_0x2aeb_retval \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2af0\<close>
+declare Q_0x2af3_21_def[Qs]
+
+schematic_goal print_policy_0_1_0x2af0_0x2af0_21[blocks]:
+  assumes \<open>(P_0x2af0_21 && P_0x2af0_21_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2af0 21 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2af3_21 ?\<sigma> \<and> block_usage P_0x2af0_21_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2af0_21_def P_0x2af0_21_regions_def post: Q_0x2af3_21_def regionset: P_0x2af0_21_regions_set_def)
+
+definition P_0x2af3_true_22 :: state_pred where
+  \<open>P_0x2af3_true_22 \<sigma> \<equiv> RIP \<sigma> = 0x2af3 \<and> RAX \<sigma> = printf_chk_0x2aeb_retval \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2af0\<close>
+declare P_0x2af3_true_22_def[Ps]
+
+definition P_0x2af3_true_22_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2af3_true_22_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2af3_true_22_regions :: state_pred where
+  \<open>P_0x2af3_true_22_regions \<sigma> \<equiv> \<exists>regions. P_0x2af3_true_22_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2b2e_22 :: state_pred where
+  \<open>Q_0x2b2e_22 \<sigma> \<equiv> RIP \<sigma> = 0x2b2e \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2b2e_22_def[Qs]
+
+schematic_goal print_policy_0_1_0x2af3_0x2af3_22[blocks]:
+  assumes \<open>(P_0x2af3_true_22 && P_0x2af3_true_22_regions && ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2af3 22 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2b2e_22 ?\<sigma> \<and> block_usage P_0x2af3_true_22_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2af3_true_22_def P_0x2af3_true_22_regions_def post: Q_0x2b2e_22_def regionset: P_0x2af3_true_22_regions_set_def)
+
+definition P_0x2af3_false_23 :: state_pred where
+  \<open>P_0x2af3_false_23 \<sigma> \<equiv> RIP \<sigma> = 0x2af3 \<and> RAX \<sigma> = printf_chk_0x2aeb_retval \<and> RCX \<sigma> = 0x314f \<and> RDX \<sigma> = 0x3155 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x315b \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = RCX\<^sub>0 \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2af0\<close>
+declare P_0x2af3_false_23_def[Ps]
+
+definition P_0x2af3_false_23_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2af3_false_23_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2af3_false_23_regions :: state_pred where
+  \<open>P_0x2af3_false_23_regions \<sigma> \<equiv> \<exists>regions. P_0x2af3_false_23_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2b10_23 :: state_pred where
+  \<open>Q_0x2b10_23 \<sigma> \<equiv> RIP \<sigma> = 0x2b10 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = 0x316c \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RCX\<^sub>0::64 word) + (((\<langle>63,0\<rangle>(((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>R8\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) << (0x4::64 word))::64 word)::64 word) * 0x1)::64 word)::64 word) + 0x10)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2b10_23_def[Qs]
+
+schematic_goal print_policy_0_7_0x2af3_0x2b0c_23[blocks]:
+  assumes \<open>(P_0x2af3_false_23 && P_0x2af3_false_23_regions && ! ZF) \<sigma>\<close>
+  shows \<open>exec_block 7 0x2b0c 23 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2b10_23 ?\<sigma> \<and> block_usage P_0x2af3_false_23_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2af3_false_23_def P_0x2af3_false_23_regions_def post: Q_0x2b10_23_def regionset: P_0x2af3_false_23_regions_set_def)
+
+definition P_0x2b10_24 :: state_pred where
+  \<open>P_0x2b10_24 \<sigma> \<equiv> RIP \<sigma> = 0x2b10 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = 0x316c \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RCX\<^sub>0::64 word) + (((\<langle>63,0\<rangle>(((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>R8\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) << (0x4::64 word))::64 word)::64 word) * 0x1)::64 word)::64 word) + 0x10)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2b10_24_def[Ps]
+
+definition P_0x2b10_24_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2b10_24_regions_set \<sigma> \<equiv> {
+    (0, RBX \<sigma>, 4),
+    (1, RSP\<^sub>0, 8),
+    (2, ((RBX \<sigma>::64 word) + 0x8), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (7, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2b10_24_regions :: state_pred where
+  \<open>P_0x2b10_24_regions \<sigma> \<equiv> \<exists>regions. P_0x2b10_24_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2b24_24 :: state_pred where
+  \<open>Q_0x2b24_24 \<sigma> \<equiv> RIP \<sigma> = 0x2b24 \<and> RAX \<sigma> = 0x0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x316c \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = 0x316c \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RCX\<^sub>0::64 word) + (((\<langle>63,0\<rangle>(((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>R8\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) << (0x4::64 word))::64 word)::64 word) * 0x1)::64 word)::64 word) + 0x10)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2b24_24_def[Qs]
+
+schematic_goal print_policy_0_6_0x2b10_0x2b20_24[blocks]:
+  assumes \<open>(P_0x2b10_24 && P_0x2b10_24_regions) \<sigma>\<close>
+  shows \<open>exec_block 6 0x2b20 24 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2b24_24 ?\<sigma> \<and> block_usage P_0x2b10_24_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2b10_24_def P_0x2b10_24_regions_def post: Q_0x2b24_24_def regionset: P_0x2b10_24_regions_set_def)
+
+definition P_0x2b24_25 :: state_pred where
+  \<open>P_0x2b24_25 \<sigma> \<equiv> RIP \<sigma> = 0x2b24 \<and> RAX \<sigma> = 0x0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x316c \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = 0x316c \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RCX\<^sub>0::64 word) + (((\<langle>63,0\<rangle>(((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>R8\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) << (0x4::64 word))::64 word)::64 word) * 0x1)::64 word)::64 word) + 0x10)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2b24_25_def[Ps]
+
+definition P_0x2b24_25_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2b24_25_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2b24_25_regions :: state_pred where
+  \<open>P_0x2b24_25_regions \<sigma> \<equiv> \<exists>regions. P_0x2b24_25_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_printf_chk_addr_0x2b24_25 :: state_pred where
+  \<open>Q_printf_chk_addr_0x2b24_25 \<sigma> \<equiv> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x30) \<and> RIP \<sigma> = printf_chk_addr \<and> RAX \<sigma> = 0x0 \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x316c \<and> RBP \<sigma> = 0x316c \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RCX\<^sub>0::64 word) + (((\<langle>63,0\<rangle>(((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>R8\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) << (0x4::64 word))::64 word)::64 word) * 0x1)::64 word)::64 word) + 0x10)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2b29\<close>
+declare Q_printf_chk_addr_0x2b24_25_def[Qs]
+
+schematic_goal print_policy_0_1_0x2b24_0x2b24_25[blocks]:
+  assumes \<open>(P_0x2b24_25 && P_0x2b24_25_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2b24 25 \<sigma> \<triangleq> ?\<sigma> \<and> Q_printf_chk_addr_0x2b24_25 ?\<sigma> \<and> block_usage P_0x2b24_25_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2b24_25_def P_0x2b24_25_regions_def post: Q_printf_chk_addr_0x2b24_25_def regionset: P_0x2b24_25_regions_set_def)
+
+definition P_0x2b29_26 :: state_pred where
+  \<open>P_0x2b29_26 \<sigma> \<equiv> RIP \<sigma> = 0x2b29 \<and> RAX \<sigma> = printf_chk_0x2b24_retval \<and> RDI \<sigma> = 0x1 \<and> RSI \<sigma> = 0x316c \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> RBP \<sigma> = 0x316c \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> R12 \<sigma> = ((RCX\<^sub>0::64 word) + (((\<langle>63,0\<rangle>(((\<langle>63,0\<rangle>((ucast((\<langle>31,0\<rangle>((ucast((\<langle>31,0\<rangle>R8\<^sub>0::32 word))::64 word) - (0x1::64 word))::32 word))::64 word) << (0x4::64 word))::64 word)::64 word) * 0x1)::64 word)::64 word) + 0x10)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x30),8]::64 word) = 0x2b29\<close>
+declare P_0x2b29_26_def[Ps]
+
+definition P_0x2b29_26_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2b29_26_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8),
+    (6, ((RSP\<^sub>0::64 word) - 0x30), 8)
+  }\<close>
+
+definition P_0x2b29_26_regions :: state_pred where
+  \<open>P_0x2b29_26_regions \<sigma> \<equiv> \<exists>regions. P_0x2b29_26_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2b2c_26 :: state_pred where
+  \<open>Q_0x2b2c_26 \<sigma> \<equiv> RIP \<sigma> = 0x2b2c \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2b2c_26_def[Qs]
+
+schematic_goal print_policy_0_1_0x2b29_0x2b29_26[blocks]:
+  assumes \<open>(P_0x2b29_26 && P_0x2b29_26_regions) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2b29 26 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2b2c_26 ?\<sigma> \<and> block_usage P_0x2b29_26_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2b29_26_def P_0x2b29_26_regions_def post: Q_0x2b2c_26_def regionset: P_0x2b29_26_regions_set_def)
+
+definition P_0x2b2c_true_27 :: state_pred where
+  \<open>P_0x2b2c_true_27 \<sigma> \<equiv> RIP \<sigma> = 0x2b2c \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2b2c_true_27_def[Ps]
+
+definition P_0x2b2c_true_27_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2b2c_true_27_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2b2c_true_27_regions :: state_pred where
+  \<open>P_0x2b2c_true_27_regions \<sigma> \<equiv> \<exists>regions. P_0x2b2c_true_27_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2b10_27 :: state_pred where
+  \<open>Q_0x2b10_27 \<sigma> \<equiv> RIP \<sigma> = 0x2b10 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2b10_27_def[Qs]
+
+schematic_goal print_policy_0_1_0x2b2c_0x2b2c_27[blocks]:
+  assumes \<open>(P_0x2b2c_true_27 && P_0x2b2c_true_27_regions && !ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2b2c 27 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2b10_27 ?\<sigma> \<and> block_usage P_0x2b2c_true_27_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2b2c_true_27_def P_0x2b2c_true_27_regions_def post: Q_0x2b10_27_def regionset: P_0x2b2c_true_27_regions_set_def)
+
+definition P_0x2b2c_false_28 :: state_pred where
+  \<open>P_0x2b2c_false_28 \<sigma> \<equiv> RIP \<sigma> = 0x2b2c \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2b2c_false_28_def[Ps]
+
+definition P_0x2b2c_false_28_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2b2c_false_28_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2b2c_false_28_regions :: state_pred where
+  \<open>P_0x2b2c_false_28_regions \<sigma> \<equiv> \<exists>regions. P_0x2b2c_false_28_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_0x2b2e_28 :: state_pred where
+  \<open>Q_0x2b2e_28 \<sigma> \<equiv> RIP \<sigma> = 0x2b2e \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_0x2b2e_28_def[Qs]
+
+schematic_goal print_policy_0_1_0x2b2c_0x2b2c_28[blocks]:
+  assumes \<open>(P_0x2b2c_false_28 && P_0x2b2c_false_28_regions && ! !ZF) \<sigma>\<close>
+  shows \<open>exec_block (Suc 0) 0x2b2c 28 \<sigma> \<triangleq> ?\<sigma> \<and> Q_0x2b2e_28 ?\<sigma> \<and> block_usage P_0x2b2c_false_28_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2b2c_false_28_def P_0x2b2c_false_28_regions_def post: Q_0x2b2e_28_def regionset: P_0x2b2c_false_28_regions_set_def)
+
+definition P_0x2b2e_29 :: state_pred where
+  \<open>P_0x2b2e_29 \<sigma> \<equiv> RIP \<sigma> = 0x2b2e \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) - 0x28) \<and> R13 \<sigma> = ucast ((\<langle>31,0\<rangle>R8\<^sub>0::32 word)) \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare P_0x2b2e_29_def[Ps]
+
+definition P_0x2b2e_29_regions_set :: \<open>state \<Rightarrow> (nat \<times> 64 word \<times> nat) set\<close> where
+  \<open>P_0x2b2e_29_regions_set \<sigma> \<equiv> {
+    (0, RSP\<^sub>0, 8),
+    (1, ((RSP\<^sub>0::64 word) - 0x8), 8),
+    (2, ((RSP\<^sub>0::64 word) - 0x10), 8),
+    (3, ((RSP\<^sub>0::64 word) - 0x18), 8),
+    (4, ((RSP\<^sub>0::64 word) - 0x20), 8),
+    (5, ((RSP\<^sub>0::64 word) - 0x28), 8)
+  }\<close>
+
+definition P_0x2b2e_29_regions :: state_pred where
+  \<open>P_0x2b2e_29_regions \<sigma> \<equiv> \<exists>regions. P_0x2b2e_29_regions_set \<sigma> \<subseteq> regions
+  \<and> (\<forall>i r. (i, r) \<in> regions \<longrightarrow> no_block_overflow r)
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<sqsubseteq> r' = (i = i' \<or> (i, i') \<in> {}))
+  \<and> (\<forall>i r i' r'. (i, r) \<in> regions \<longrightarrow> (i', r') \<in> regions \<longrightarrow> r \<bowtie> r' = (i \<noteq> i' \<and> (i, i') \<notin> {}))
+\<close>
+
+definition Q_ret_address_29 :: state_pred where
+  \<open>Q_ret_address_29 \<sigma> \<equiv> RIP \<sigma> = ret_address \<and> RBX \<sigma> = RBX\<^sub>0 \<and> RDI \<sigma> = 0x1 \<and> RSP \<sigma> = ((RSP\<^sub>0::64 word) + 0x8) \<and> RBP \<sigma> = RBP\<^sub>0 \<and> R14 \<sigma> = R14\<^sub>0 \<and> R13 \<sigma> = R13\<^sub>0 \<and> R12 \<sigma> = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[RSP\<^sub>0,8]::64 word) = ret_address \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x8),8]::64 word) = R14\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x10),8]::64 word) = R13\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x18),8]::64 word) = R12\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x20),8]::64 word) = RBP\<^sub>0 \<and> (\<sigma> \<turnstile> *[((RSP\<^sub>0::64 word) - 0x28),8]::64 word) = RBX\<^sub>0\<close>
+declare Q_ret_address_29_def[Qs]
+
+schematic_goal print_policy_0_6_0x2b2e_0x2b36_29[blocks]:
+  assumes \<open>(P_0x2b2e_29 && P_0x2b2e_29_regions) \<sigma>\<close>
+  shows \<open>exec_block 6 0x2b36 29 \<sigma> \<triangleq> ?\<sigma> \<and> Q_ret_address_29 ?\<sigma> \<and> block_usage P_0x2b2e_29_regions_set \<sigma> ?\<sigma>\<close>
+  using assms
+  by (steps pre: P_0x2b2e_29_def P_0x2b2e_29_regions_def post: Q_ret_address_29_def regionset: P_0x2b2e_29_regions_set_def)
+
+definition print_policy_acode :: ACode where
+  \<open>print_policy_acode =
+    Block 14 0x2a10 0;
+    Block (Suc 0) 0x2a17 (Suc 0);
+    CALL printf_chk_acode;
+    Block (Suc 0) 0x2a1c 2;
+    Block (Suc 0) 0x2a23 3;
+    CALL puts_acode;
+    Block 11 0x2a5b 4;
+    Block (Suc 0) 0x2a62 5;
+    CALL printf_chk_acode;
+    Block 3 0x2a69 6;
+    IF ZF THEN
+      Block (Suc 0) 0x2a6c 7
+    ELSE
+      Block 6 0x2a83 8;
+      WHILE P_0x2a88_9 DO
+        Block 8 0x2a9e 9;
+        IF ZF THEN
+          Block (Suc 0) 0x2aa0 10
+        ELSE
+          Block 8 0x2ab1 11;
+          Block (Suc 0) 0x2ab3 12;
+          CALL printf_chk_acode;
+          Block 2 0x2ab9 13
+        FI;
+        Block 2 0x2abe 14;
+        IF !ZF THEN
+          Block (Suc 0) 0x2ac1 15
+        ELSE
+          Block (Suc 0) 0x2ac1 16
+        FI
+      OD
+    FI;
+    Block (Suc 0) 0x2ac3 17;
+    Block (Suc 0) 0x2aca 18;
+    CALL puts_acode;
+    Block 5 0x2ae6 19;
+    Block (Suc 0) 0x2aeb 20;
+    CALL printf_chk_acode;
+    Block (Suc 0) 0x2af0 21;
+    IF ZF THEN
+      Block (Suc 0) 0x2af3 22
+    ELSE
+      Block 7 0x2b0c 23;
+      WHILE P_0x2b10_24 DO
+        Block 6 0x2b20 24;
+        Block (Suc 0) 0x2b24 25;
+        CALL printf_chk_acode;
+        Block (Suc 0) 0x2b29 26;
+        IF !ZF THEN
+          Block (Suc 0) 0x2b2c 27
+        ELSE
+          Block (Suc 0) 0x2b2c 28
+        FI
+      OD
+    FI;
+    Block 6 0x2b36 29
+  \<close>
+
+schematic_goal "print_policy":
+  assumes
+    \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a17 \<longrightarrow> P_0x2a17_1_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a1c \<longrightarrow> P_0x2a1c_2_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a23 \<longrightarrow> P_0x2a23_3_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a28 \<longrightarrow> P_0x2a28_4_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a62 \<longrightarrow> P_0x2a62_5_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a67 \<longrightarrow> P_0x2a67_6_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a6c \<longrightarrow> P_0x2a6c_true_7_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a6c \<longrightarrow> P_0x2a6c_false_8_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2a88 \<longrightarrow> P_0x2a88_9_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2aa0 \<longrightarrow> P_0x2aa0_true_10_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2aa0 \<longrightarrow> P_0x2aa0_false_11_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2ab3 \<longrightarrow> P_0x2ab3_12_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2ab8 \<longrightarrow> P_0x2ab8_13_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2aba \<longrightarrow> P_0x2aba_14_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2ac1 \<longrightarrow> P_0x2ac1_true_15_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2ac1 \<longrightarrow> P_0x2ac1_false_16_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2ac3 \<longrightarrow> P_0x2ac3_17_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2aca \<longrightarrow> P_0x2aca_18_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2acf \<longrightarrow> P_0x2acf_19_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2aeb \<longrightarrow> P_0x2aeb_20_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2af0 \<longrightarrow> P_0x2af0_21_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2af3 \<longrightarrow> P_0x2af3_true_22_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2af3 \<longrightarrow> P_0x2af3_false_23_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2b10 \<longrightarrow> P_0x2b10_24_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2b24 \<longrightarrow> P_0x2b24_25_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2b29 \<longrightarrow> P_0x2b29_26_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2b2c \<longrightarrow> P_0x2b2c_true_27_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2b2c \<longrightarrow> P_0x2b2c_false_28_regions \<sigma>\<close>
+    and \<open>\<forall>\<sigma>. RIP \<sigma> = 0x2b2e \<longrightarrow> P_0x2b2e_29_regions \<sigma>\<close>
+    and [blocks]: \<open>{{Q_printf_chk_addr_0x2a17_1}} \<box>printf_chk_acode {{P_0x2a1c_2;M_0x2a17}}\<close>
+    and [blocks]: \<open>{{Q_puts_addr_0x2a23_3}} \<box>puts_acode {{P_0x2a28_4;M_0x2a23}}\<close>
+    and [blocks]: \<open>{{Q_printf_chk_addr_0x2a62_5}} \<box>printf_chk_acode {{P_0x2a67_6;M_0x2a62}}\<close>
+    and [blocks]: \<open>{{Q_printf_chk_addr_0x2ab3_12}} \<box>printf_chk_acode {{P_0x2ab8_13;M_0x2ab3}}\<close>
+    and [blocks]: \<open>{{Q_puts_addr_0x2aca_18}} \<box>puts_acode {{P_0x2acf_19;M_0x2aca}}\<close>
+    and [blocks]: \<open>{{Q_printf_chk_addr_0x2aeb_20}} \<box>printf_chk_acode {{P_0x2af0_21;M_0x2aeb}}\<close>
+    and [blocks]: \<open>{{Q_printf_chk_addr_0x2b24_25}} \<box>printf_chk_acode {{P_0x2b29_26;M_0x2b24}}\<close>
+  shows \<open>{{?P}} print_policy_acode {{?Q;?M}}\<close>
+  by (vcg acode: print_policy_acode_def assms: assms)
+
+end

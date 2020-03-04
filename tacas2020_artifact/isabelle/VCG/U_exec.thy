@@ -1,0 +1,412 @@
+(*
+Copyright 2018
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*)
+theory U_exec
+  imports "../Presimplified_Semantics_Manual2"
+begin
+
+
+section \<open>Logical operators over predicates.\<close>
+
+definition pred_AND :: "('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool)" (infixr "&&" 35)
+  where "pred_AND p0 p1 s \<equiv> p0 s \<and> p1 s"
+
+definition pred_OR :: "('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool)" (infixr "||" 30)
+  where "pred_OR p0 p1 s \<equiv> p0 s \<or> p1 s"
+
+definition pred_NOT :: "('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool)" ("! _" [40] 40)
+  where "pred_NOT p0 s \<equiv> \<not> p0 s"
+
+definition pred_IMP :: "('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool) \<Rightarrow> 's \<Rightarrow> bool" (infixr "\<longmapsto>" 25)
+  where "pred_IMP p0 p1 s \<equiv> p0 s \<longrightarrow> p1 s"
+
+definition pred_True :: "('s \<Rightarrow> bool) \<Rightarrow> bool" ("\<turnstile> _ "[25] 25)
+  where "pred_True p0 \<equiv> \<forall>s. p0 s"
+
+definition pred_EQ :: "('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool) \<Rightarrow> 's \<Rightarrow> bool" (infixl "===" 50)
+  where "pred_EQ p\<^sub>0 p\<^sub>1 s \<equiv> p\<^sub>0 s = p\<^sub>1 s"
+
+definition pred_NOTEQ :: "('s \<Rightarrow> bool) \<Rightarrow> ('s \<Rightarrow> bool) \<Rightarrow> 's \<Rightarrow> bool" (infixl "!=" 50)
+  where "pred_NOTEQ p\<^sub>0 p\<^sub>1 s \<equiv> p\<^sub>0 s \<noteq> p\<^sub>1 s"
+
+lemmas pred_logic = pred_AND_def pred_OR_def pred_NOT_def pred_IMP_def pred_True_def pred_EQ_def
+  pred_NOTEQ_def
+
+lemma pred_OR_False[simp]:
+  \<open>(a || (\<lambda>_. False)) = a\<close>
+  by (rule ext) (simp add: pred_OR_def)
+
+lemma pred_OR_False'[simp]:
+  \<open>((\<lambda>_. False) || a) = a\<close>
+  by (rule ext) (simp add: pred_OR_def)
+
+lemma pred_OR_lambda[simp]: \<comment> \<open>This might work better as a member of @{thm pred_logic}\<close>
+  \<open>((\<lambda>a. P a) || (\<lambda>a. Q a)) = (\<lambda>a. P a \<or> Q a)\<close>
+  by (rule ext) (simp add: pred_OR_def)
+
+section \<open>Execution stuff start\<close>
+
+type_synonym state_pred = \<open>state \<Rightarrow> bool\<close>
+
+definition eq (infix "\<triangleq>" 50) where
+  \<open>eq = (=)\<close> \<comment> \<open>Used to prevent schematic goals from finishing early\<close>
+
+lemma eq_eq: \<comment> \<open>Rule to go from @{const eq} to @{const HOL.eq} in forward fashion.\<close>
+  assumes \<open>a \<triangleq> b\<close>
+  shows \<open>a = b\<close>
+  using assms
+  by (simp add: eq_def)
+
+locale exec_code = presimplified_semantics +
+  fixes fetch :: \<open>64 word \<Rightarrow> instr \<times> nat\<close>
+    and \<alpha> :: assembly \<comment> \<open>*** wants to get rid of this eventually.\<close>
+begin
+
+fun all_flag_annotation :: flag_annotation where
+  \<open>all_flag_annotation loc = UNIV\<close>
+
+definition step :: \<open>instr \<Rightarrow> nat \<Rightarrow> state \<Rightarrow> state\<close> where
+  \<open>step i s \<sigma> \<equiv> exec_instr \<alpha> semantics all_flag_annotation i s \<sigma>\<close>
+
+(* START TO BE MERGED *)
+
+
+lemma ucast_dereference[simp]:
+  assumes "s * 8 = LENGTH('b)"
+      and "LENGTH('a) > LENGTH('b)"
+  shows "ucast (\<sigma> \<turnstile> *[a,s] :: 'a::len word) = (\<sigma> \<turnstile> *[a,s]::'b::len word)"
+  apply (rule word_eqI)
+  using assms
+  by (auto simp add: read_region_def word_size nth_ucast test_bit_of_cat_bytes length_read_bytes)
+
+lemma take_too_many_bits_to_ucast[simp]:
+  fixes a :: "'a::len0 word"
+  assumes "h \<ge> LENGTH('a)"
+  shows "(\<langle>h,0\<rangle>a :: 'b::len word) = ucast a"
+  apply (rule word_eqI)
+  using assms
+  by (auto simp add: take_bits_def word_size nth_ucast ucast_bl)
+
+
+lemma byte0_of_bv_cat:
+  fixes b :: \<open>'a::len word \<times> nat\<close>
+  assumes \<open>snd b = 8\<close>
+    and \<open>LENGTH('a) \<ge> 8\<close>
+  shows \<open>\<lbrace>0,0\<rbrace>fst (bv_cat a b) = [ucast (fst b)]\<close>
+  using assms
+  apply (intro nth_equalityI)
+   apply auto
+  apply (subst nth_bytes_of)
+   apply auto
+  apply (cases a)
+  apply (cases b)
+  apply (auto simp: bv_cat.simps)
+  apply (intro word_eqI)
+  apply (auto simp: word_size test_bit_of_take_bits word_ao_nth nth_ucast nth_shiftl test_bit_of_byte_of)
+  done
+
+text \<open>Some @{const sint} lemmas that are interesting, though no longer immediately useful.\<close>
+lemma sint_1:
+  assumes \<open>LENGTH('a) > 1\<close>
+  shows \<open>sint (1::'a::len word) = 1\<close>
+  using assms
+  by (metis (full_types) diff_zero less_irrefl uint_1 word_msb_1 word_sint_msb_eq)
+
+lemma sint_minus_1_lt_0_not_lt_0_is_0:
+  fixes w :: \<open>'a::len word\<close>
+  assumes
+    \<open>LENGTH('a) > 1\<close>
+    \<open>sint (w - 1) < 0\<close>
+    \<open>\<not> sint w < 0\<close>
+shows \<open>w = 0\<close>
+  using assms
+  by (smt arith_simps(16) arith_simps(52) mem_Collect_eq sint_1 sint_word_ariths(2) sints_num word_sbin.inverse_norm word_sint.Abs_inverse' word_sint.Rep)
+
+lemma shift_truncate_0:
+  fixes w :: \<open>'a::len word\<close>
+  assumes \<open>7 < LENGTH('a)\<close>
+  shows \<open>\<langle>7,0\<rangle>(w << 8) = (0::'b::len word)\<close>
+proof -
+  {
+    fix i :: nat
+    assume \<open>i < LENGTH('b)\<close>
+    hence \<open>(\<langle>7,0\<rangle>(w << 8)::'b word) !! i = (0::'b::len word) !! i\<close>
+      using assms
+      by (auto simp: test_bit_of_take_bits nth_shiftl)
+  }
+  note idxs = this
+  show ?thesis
+    apply (rule word_eqI)
+    using idxs
+    by (auto simp: word_size)
+qed
+
+lemma shift_truncate_1:
+  fixes w :: \<open>'a::len word\<close>
+  assumes \<open>7 < LENGTH('a)\<close>
+  shows \<open>\<langle>7,0\<rangle>((w << 8) OR 1) = (1::'b::len word)\<close>
+  apply (rule word_eqI)
+  using assms
+  by (auto simp: word_size test_bit_of_take_bits nth_shiftl word_ao_nth simp del: take_bits_bitOR)
+
+lemma sextend_useless_32_32:
+  \<open>sextend a 32 32 = a\<close> for a :: \<open>32 word\<close>
+  unfolding sextend.simps
+  apply (auto simp add: simp_rules mask_def)
+  apply (subst useless_and[where ?a=\<open>a OR - 4294967296::32 word\<close>, simplified])
+  using or_mask_all_0[of a]
+  by auto
+
+lemma w_minus_1_le_1_is_1_or_2:
+  fixes w :: \<open>32 word\<close>
+  assumes \<open>w - 1 \<le> 1\<close>
+  shows \<open>w = 1 \<or> w = 2\<close>
+  using assms
+  by unat_arith simp
+
+lemma ucast_ucast:
+  fixes a :: "'a::len word"
+  shows "(ucast (ucast a::'c::len word) :: 'b::len word) = (if LENGTH('b) \<le> LENGTH('c) then ucast a else \<langle>(min LENGTH('a) LENGTH('c)) -1,0\<rangle> a)"
+  apply (intro word_eqI)
+  using test_bit_bl[of a]
+  by (auto simp add: word_size nth_ucast test_bit_of_take_bits max_def min_def)
+
+
+(* TODO updates in TakeBits_Rewriting *)
+lemma take_bits_to_ucast[simp]:
+  assumes "LENGTH('a) > LENGTH('b)"
+      and "h = LENGTH('b) - 1"
+    shows "(\<langle>h,0\<rangle>(a::'b::len word) ::'a::len word) = ucast a"
+  using assms
+  by (simp add: take_bits_remove)
+declare take_bits_remove[simp del]
+
+lemma ucast_take_bits'[simp]:
+  fixes a :: "'a::len word"
+  assumes "LENGTH('a) > LENGTH('b)"
+      and "h = LENGTH('b) - 1"
+    shows "(ucast (\<langle>h,0\<rangle>a::'a word) :: 'b::len0 word) = \<langle>h,0\<rangle>a"
+  apply (rule word_eqI)
+  using assms
+  by (auto simp add: word_size nth_ucast test_bit_of_take_bits)
+
+lemma take_bits_ucast_bit16[simp]:
+  fixes a :: "32 word"
+  shows "(\<langle>63,16\<rangle>(ucast a::64 word) ::64 word) = ucast (\<langle>31,16\<rangle>a::48 word)"
+  apply (rule word_eqI)
+  subgoal for i
+  using test_bit_size[of "\<langle>31,16\<rangle>a::48 word" i] test_bit_size[of a "16+i"]
+  apply (auto simp add: word_size nth_ucast test_bit_of_take_bits )
+  done
+  done
+
+
+lemma take_bits_high_byte_ucast[simp]:
+  fixes a :: "'a::len0 word"
+  assumes "LENGTH('a) \<ge> 16"
+      and "LENGTH('b) \<ge> 16"
+  shows "\<langle>15,8\<rangle>(ucast a :: 'b::len0 word) = (\<langle>15,8\<rangle>a :: 'c::len0 word)"
+  apply (rule word_eqI)
+  using assms
+  by (auto simp add: word_size nth_ucast test_bit_of_take_bits)
+
+declare take_bits_bitAND_bit64[simp del]
+declare take_bits_bitAND_bit32[simp del]
+declare take_bits_bitAND_bit64_high[simp del]
+declare take_bits_bitOR_bit32[simp del]
+declare take_bits_bitXOR_bit32[simp del]
+
+lemma ucast_shiftl:
+  fixes a :: "'a :: len word"
+  assumes "LENGTH('b) \<le> LENGTH('a)"
+  shows "(ucast (a << n) :: 'b::len word) = ucast a << n"
+  apply (rule word_eqI)
+  using assms
+  by (auto simp add: nth_shiftl word_size nth_ucast)
+
+lemma take_bits_shiftl[simp]:
+  fixes a :: "'b::len word"
+  assumes "h+1 = LENGTH('a)"
+      and "h < LENGTH('b)"
+  shows "(\<langle>h,0\<rangle>(a << n) :: 'a::len word) = (\<langle>h,0\<rangle> a :: 'a::len word) << n"
+  apply (rule word_eqI)
+  using assms
+  by (auto simp add: word_size test_bit_of_take_bits nth_shiftl min_def split: if_split_asm)
+
+lemma bv_cat_normalize[simp]:
+  assumes "s0 > h+1-l"
+  shows "fst (bv_cat (\<langle>h,l\<rangle>a, s0) (b,s1)) = fst (bv_cat (\<langle>h,l\<rangle>a, h+1-l) (b,s1))"
+  by (auto simp add: bv_cat.simps)
+
+(* END updates in TakeBits_Rewriting *)
+
+
+
+lemma udiv_64bit[simp]:
+  fixes a b :: "64 word"
+  shows "(ucast a :: 128 word) udiv b = a div b"
+  apply (auto simp add: unat_word_ariths udiv_def unat_ucast is_up)
+  apply (unat_arith)
+  by (auto simp add: uint_nat of_nat_div uno_simps)
+
+lemma udiv_32bit[simp]:
+  fixes a b :: "32 word"
+  shows "(ucast a :: 64 word) udiv b = a div b"
+  apply (auto simp add: unat_word_ariths udiv_def unat_ucast is_up)
+  apply (unat_arith)
+  by (auto simp add: uint_nat of_nat_div uno_simps)
+
+
+text \<open>Set up rewriting of signed comparisons. Everything is rewritten to either <s or <=s\<close>
+declare signed_not_le[simp del]
+declare signed_le_def[symmetric,simp del]
+
+lemma ge_signed_to_lt_signed[simp]:
+  shows "a \<ge>s b \<longleftrightarrow> \<not> a <s b"
+  by (auto simp add: signed_greater_than_def signed_ge_def word_sless_def word_sle_def)
+
+lemma signed_not_le[simp]:
+  shows "a \<le>s b \<longleftrightarrow> a <=s b"
+  unfolding signed_le_def signed_greater_than_def
+  by auto
+
+lemma gt_signed_to_le_signed[simp]:
+  shows "a >s b \<longleftrightarrow> \<not> a <=s b"
+  by (auto simp add: signed_greater_than_def signed_ge_def word_sless_def word_sle_def)
+
+lemma unequal_and_le_to_le_signed[simp]:
+  shows "a \<noteq> b \<and> b <=s a \<longleftrightarrow> b <s a"
+  by (auto simp add: signed_greater_than_def signed_ge_def word_sless_def word_sle_def)
+
+declare sf_neq_of_iff_le[simp add]
+
+lemma word_and_1_is_0_for_all_sizes:
+  fixes w :: \<open>'a::len word\<close>
+  assumes \<open>\<langle>h,0\<rangle>w AND 1 = (0::'b::len word)\<close>
+  and \<open>h < LENGTH('a)\<close>
+  shows \<open>\<langle>h,0\<rangle>w AND 1 = (0::'c::len word)\<close>
+proof -
+  {
+    fix i :: nat
+    assume \<open>i < LENGTH('b)\<close> \<open>i < LENGTH('c)\<close>
+    hence \<open>(\<langle>h,0\<rangle>w AND 1::'b word) !! i = (\<langle>h,0\<rangle>w AND 1::'c word) !! i\<close>
+      using assms
+      by (smt test_bit_1 test_bit_of_take_bits word_ao_nth)
+  }
+  thus ?thesis
+    using assms
+    by (smt is_zero_all_bits nth_0 test_bit_1 word_ao_nth)
+qed
+
+lemmas simp_rules = assembly.defs(1) Let_def ucast_ucast ucast_shiftl
+                    Suc3_eq_add_3 semantics.defs(1)
+                    incr_rip_def apply_binop_def jmp_def case_prod_unfold
+                    take_rev drop_rev ucast_id unat_ucast is_up
+                    get_set_rewrite_rules
+                    memory_read_rewrite_rules memory_write_rewrite_rules nth_ucast
+                    algebra_simps(1-8,11-) eq_diff_eq[symmetric]
+                    byte0_of_bv_cat
+                    shift_truncate_0 shift_truncate_1 sextend_useless_32_32
+                    w_minus_1_le_1_is_1_or_2 word_and_1_is_0_for_all_sizes
+
+abbreviation \<open>update_rip i s \<equiv> s\<lparr>regs := (regs s)(rip := i)\<rparr>\<close>
+
+(* END TO BE MERGED *)
+
+method rewrite_one_let' uses add del =
+  \<comment> \<open>First, rewrite the first let'\<close>
+  (simp add: add simp_rules del: del imp_disjL cong: Let'_weak_cong)?,
+  \<comment> \<open>This may produce '-versions of functions, which should be substituted by their original\<close>
+  (subst get'_def)?, (subst set'_def)?, (subst write_block'_def)?, (subst read_region'_def)?,
+  \<comment> \<open>Unfold the rewritten let'\<close>
+  subst inline_Let',
+  \<comment> \<open>If the rewritten let' contained an if statement, split the goal \<close>
+  ((rule ifI | rule conjI | rule impI)+)?,
+  \<comment> \<open>Some cleaning up of the entire goal\<close>
+  (simp only: nat_to_numeral if_not_true not_True_eq_False simp_Let'_mem simp_Let'_mem2 case_prod_unfold)?
+
+section \<open>Correctness\<close>
+
+lemma preservation_write_bytes:
+assumes "write_bytes block m a' \<noteq> m a'"
+    and "no_block_overflow (fst block, length (snd block))"
+  shows "a' \<ge> fst block \<and> a' < fst block + of_nat (length (snd block))"
+  using assms
+proof (induct rule: write_bytes.induct)
+  case (1 a m)
+  then show ?case
+    by (auto simp add: write_bytes.simps)
+next
+  case (2 a'' b bs m)
+  have "no_block_overflow (a'' + 1, length bs)"
+    using 2(3)
+    unfolding no_block_overflow.simps
+    by unat_arith
+  moreover
+  have "a'' < a'' + (1 + of_nat (length bs))"
+    apply (subst x_lt_x_plus_y)
+    using 2(3)
+     apply (simp add: no_block_overflow.simps max_word_eq)
+     apply unat_arith
+     apply (auto simp add: unat_of_nat)
+    using 2(3)
+    apply (simp add: no_block_overflow.simps max_word_eq)
+    apply unat_arith
+    by (auto simp add: unat_of_nat)
+  moreover
+  have "a'' + 1 \<le> a' \<Longrightarrow> a'' \<le> a'"
+    using 2(3)
+    apply (simp add: no_block_overflow.simps)
+    apply unat_arith
+    by (auto simp add: unat_of_nat)
+  ultimately
+  show ?case
+    using 2(1)[of "m(a'' := b)"] 2(2-)
+    apply (subst (asm) write_bytes.simps)
+    by (cases "a' = a''") (auto simp add: Let'_def Machine.set_def fun_upd_def field_simps split: if_split_asm)
+qed
+
+lemma preservation_write_blocks:
+  assumes "no_block_overflow (a, length bs)"
+    and "a' < a \<or> a + of_nat (length bs) \<le> a'"
+  shows "write_blocks [a \<rhd> bs] m a' = m a'"
+  using assms
+  using preservation_write_bytes[of "(a, bs)" m a']
+  apply (auto simp add: simp_rules Let'_def write_blocks.simps(2) write_block.simps)
+   apply unat_arith
+  apply unat_arith
+  by auto
+
+section \<open>Exec and ACode\<close>
+
+text \<open>@{text ii} is a dummy variable used for block rule matching; each block has a unique ID.\<close>
+function exec_block :: \<open>nat \<Rightarrow> 64 word \<Rightarrow> nat \<Rightarrow> state \<Rightarrow> state\<close> where
+  \<open>exec_block n end ii \<sigma> = (let'
+      ip = RIP \<sigma>;
+      (i, s) = fetch ip;
+      \<sigma>' = step i s \<sigma>
+    in if ip = end \<or> n = 0 then
+       \<sigma>'
+    else
+      exec_block (n - 1) end ii \<sigma>'
+  )\<close>
+  by auto
+termination exec_block
+  by (relation \<open>measure (\<lambda>(n, _). n)\<close>) auto
+declare exec_block.simps[simp del]
+
+end
+
+end

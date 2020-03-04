@@ -1,0 +1,10 @@
+This directory contains the tool presented in the TACAS'20 paper entitled "Highly Automated Formal Proofs over Memory Usage of Assembly Code".
+Our tool takes as input a binary and produces Isabelle 2018 code that contains a formal proof of memory preservation.
+It has been used to generate the data of Figure 1 in the paper, as well as the experimental results in Section 4.
+
+All the material supporting the paper, including the Xen proofs, can be found at:
+        cs.ru.nl/~freekver/TACAS_2020/tacas2020_artifact.zip
+
+A more comprehensive techreport can be found at:
+        cs.ru.nl/~freekver/TACAS_2020/techreport.pdf
+
